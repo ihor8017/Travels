@@ -1,0 +1,32 @@
+.social {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin: 0;
+  padding: 0;
+}
+
+.social__item {
+  list-style: none;
+}
+
+.social__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  width: 30px;
+  height: 30px;
+  border: 1px solid rgba($color: $BaseDark, $alpha: 0.3);
+}
+
+.social__link svg {
+  color: $BaseDark;
+}
+
+@media (max-width: $mobile-maxwidth) {
+  .social {
+    justify-content: start;
+  }
+}
