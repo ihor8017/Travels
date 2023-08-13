@@ -1,0 +1,53 @@
+@media (max-width: $tablet-maxwidth) {
+  .no-js {
+    background: $BaseWhite;
+    align-items: start;
+
+    .header__toggle {
+      padding-top: 41px;
+      width: 22px;
+      height: 22px;
+      margin-bottom: 50px;
+      background: $BaseDark;
+      mask-image: url("../../img/close.svg");
+    }
+
+    svg {
+      color: $BaseDark;
+    }
+
+    .header__phones-wrapper {
+      padding-top: 15px;
+    }
+
+    .header__phone {
+      color: $BaseDark;
+      display: block;
+    }
+  }
+
+  .no-js .header__navigation-list {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 46px;
+  }
+}
+
+@media (max-width: $mobile-maxwidth) {
+  .no-js {
+    .header__toggle {
+      padding-top: 22px;
+      margin-bottom: 57px;
+    }
+
+    .header__logo {
+      grid-column: 2 / 3;
+      grid-row: 1 / 2;
+    }
+
+    .header__phones-wrapper {
+      grid-row: 1 / 2;
+      padding-top: 41px;
+    }
+  }
+}
