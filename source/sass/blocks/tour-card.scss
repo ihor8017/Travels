@@ -113,3 +113,92 @@
   content: "";
   z-index: 6;
 }
+
+@media (max-width: $tablet-maxwidth) {
+  .tour-card {
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding-top: 215px;
+    padding-bottom: 201px;
+    width: 100%;
+  }
+
+  .tour-card__video {
+    position: relative;
+    width: fit-content;
+    top: 0;
+    margin: 0 auto;
+  }
+
+  .tour-card__video-image {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 442 / 300;
+  }
+
+  .tour-card__play-button {
+    top: 38.5%;
+  }
+
+  .tour-card__play-button::before {
+    left: 44%;
+  }
+
+  .tour-card__title {
+    margin-bottom: 12px;
+    font-size: 56px;
+    padding-left: 100px;
+    padding-right: 100px;
+    text-align: center;
+  }
+
+  .tour-card__description {
+    padding-left: 165px;
+    padding-right: 165px;
+    margin-bottom: 26px;
+    text-align: center;
+  }
+
+  .tour-card__button {
+    margin: 0 auto;
+  }
+
+  .tour-card__button {
+    width: 27%;
+    margin-bottom: 49px;
+  }
+
+  .tour-card__info {
+    display: none;
+  }
+}
+
+@media (max-width: $mobile-maxwidth) {
+  .tour-card {
+    padding-top: 181px;
+    padding-bottom: 122px;
+  }
+
+  .tour-card__title {
+    font-size: 30px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-bottom: 14px;
+  }
+
+  .tour-card__description {
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 15px;
+    line-height: 20px;
+    margin-bottom: 19px;
+  }
+
+  .tour-card__button {
+    width: 57%;
+  }
+
+  .tour-card__video {
+    display: none;
+  }
+}

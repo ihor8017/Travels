@@ -27,3 +27,10 @@
   color: $BaseWhite;
   border: 1px solid rgba($color: #0266c11a, $alpha: 0.1)
 }
+
+@media (max-width: $mobile-maxwidth) {
+  .button {
+    padding-top: 18px;
+    padding-bottom: 17px;
+  }
+}

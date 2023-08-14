@@ -4,5 +4,5 @@ import swiperHero from "./hero-slider.js";
 import playVideo from "./video.js";
 
 toggleNavigation();
-swiperHero;
+swiperHero();
 playVideo();

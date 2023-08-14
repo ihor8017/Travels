@@ -82,11 +82,11 @@
       </div>
       <section class="hero">
         <h2 class="visually-hidden">Горячие туры</h2>
-        <div class="hero__swiper">
+        <div class="hero__swiper hero__slider">
           <!-- Additional required wrapper -->
-          <div class="swiper-wrapper hero__wraper">
+          <div class="hero__wrapper">
             <!-- Slides -->
-            <div class="swiper-slide">
+            <div class="hero__slide">
               <picture>
                 <source type="image/webp" media="(min-width: 1200px)" srcset="img/hero/desktop1@1x.webp 1x, img/hero/desktop1@2x.webp 2x">
                 <source media="(min-width: 1200px)" srcset="img/hero/desktop1@1x.jpg 1x, img/hero/desktop1@2x.jpg 2x">
@@ -116,11 +116,13 @@
                 </div>
               </div>
             </div>
-            <div class="swiper-slide">Slide 2</div>
-            <div class="swiper-slide">Slide 3</div>
+            <div class="hero__slide">Slide 2</div>
+            <div class="hero__slide">Slide 3</div>
           </div>
           <!-- If we need pagination -->
-          <div class="hero__pagination"></div>
+          <div class="hero__pagination-wrapper">
+            <div class="hero__pagination"></div>
+          </div>
         </div>
       </section>
     </header>
