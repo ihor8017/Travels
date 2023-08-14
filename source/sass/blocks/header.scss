@@ -3,7 +3,11 @@
   padding-bottom: 80px;
   font-size: 16px;
   font-weight: 400;
-  background-color: #0c51ac;
+}
+
+.header__wrapper{
+  width: $desktop-width;
+  margin: 0 auto;
 }
 
 .header__logo {
@@ -16,12 +20,14 @@
 }
 
 .header__navigation {
+  position: absolute;
   width: $desktop-width;
   box-sizing: border-box;
   display: flex;
   justify-content: space-between;
   gap: 30px;
   margin: 0 auto;
+  z-index: 1;
 }
 
 .header__navigation-wrapper {
@@ -61,6 +67,10 @@
   .header {
     padding-top: 0;
     align-items: center;
+  }
+
+  .header__wrapper{
+    width: 100%;
   }
 
   .header__navigation {

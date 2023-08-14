@@ -12,6 +12,7 @@ body {
   min-height: 100%;
   font-family: "Montserrat", "Arial", sans-serif;
   color: $BaseWhite;
+  overflow-x: clip;
 }
 
 a {

@@ -1,0 +1,115 @@
+.tour-card {
+  position: relative;
+  display: flex;
+  margin: 0 auto;
+  flex-direction: column;
+  box-sizing: border-box;
+  justify-content: flex-start;
+  width: $desktop-width;
+  padding-top: 182px;
+  padding-bottom: 79px;
+}
+
+.tour-card__title {
+  margin: 0;
+  margin-bottom: 24px;
+  padding-right: 200px;
+  font-size: 77px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 100%;
+  z-index: 5;
+}
+
+.tour-card__description {
+  margin: 0;
+  margin-bottom: 35px;
+  padding-right: 730px;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.tour-card__video {
+  position: absolute;
+  width: 482px;
+  height: 317px;
+  top: 300px;
+  right: 0;
+
+  picture {
+    position: relative;
+    display: flex;
+    z-index: 4;
+    justify-content: end;
+  }
+}
+
+.tour-card__button {
+  display: flex;
+  box-sizing: border-box;
+  margin-bottom: 148px;
+  width: 220px;
+  height: fit-content;
+  justify-content: center;
+  align-items: center;
+}
+
+.tour-card__duration,
+.tour-card__dificulty {
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 14px 19px;
+  padding-left: 40px;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  border: 1px solid rgba($color: $BaseWhite, $alpha: 0.5);
+}
+
+.tour-card__duration {
+  margin-right: 5px;
+}
+
+.tour-card__duration::before,
+.tour-card__dificulty::before {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+  width: 12px;
+  height: 12px;
+  background: url("../../img/hero/moon.svg");
+  content: "";
+}
+
+.tour-card__dificulty::before {
+  background: url("../../img/hero/level.svg");
+}
+
+.tour-card__play-button {
+  position: absolute;
+  top: 42%;
+  left: 44%;
+  width: 56px;
+  height: 56px;
+  box-sizing: border-box;
+  border: 1px solid $BaseWhite;
+  border-radius: 50%;
+  z-index: 5;
+}
+
+.tour-card__play-button::before {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 49%;
+  width: 12px;
+  height: 22px;
+  background: url("../../img/play-button.svg");
+  content: "";
+  z-index: 6;
+}

@@ -1,0 +1,43 @@
+.hero {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  top: -40px;
+  z-index: 0;
+}
+
+.hero__swiper {
+  max-width: 1440px;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+
+  picture {
+    display: flex;
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+  }
+}
+
+.hero__swiper .swiper-slide {
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 100%;
+  height: auto;
+  background: $SecondaryColor;
+  object-fit: cover;
+}
+
+.hero__image {
+  position: absolute;
+  width: 1440px;
+  height: 800px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.hero__tour {
+  grid-row: 1 / 2;
+  grid-column: 1 / 2;
+  z-index: 2;
+}
