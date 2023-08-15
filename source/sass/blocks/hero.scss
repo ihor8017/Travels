@@ -26,6 +26,7 @@
   height: auto;
   background: $SecondaryColor;
   object-fit: cover;
+  overflow-x: hidden;
 }
 
 .hero__image {
@@ -100,6 +101,10 @@
     right: 50%;
     transform: translateX(50%);
   }
+
+  .hero__no-js {
+    margin-top: 290px;
+  }
 }
 
 @media (max-width: $mobile-maxwidth) {
@@ -126,4 +131,7 @@
     }
   }
 
+  .hero__no-js {
+    margin-top: 250px;
+  }
 }

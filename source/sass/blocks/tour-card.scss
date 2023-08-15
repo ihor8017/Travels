@@ -19,6 +19,10 @@
   font-weight: 800;
   line-height: 100%;
   z-index: 5;
+
+  span {
+    display: block;
+  }
 }
 
 .tour-card__description {
@@ -45,6 +49,56 @@
     justify-content: end;
   }
 }
+
+.tour-card__photo {
+  position: absolute;
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 410px;
+  // height: 459px;
+  top: 296px;
+  right: 0;
+
+  picture {
+    position: relative;
+    display: flex;
+    z-index: 4;
+    justify-content: end;
+  }
+}
+
+.tour-card__card1,
+.tour-card__card2 {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+.tour-card__card1 {
+  transform: translate(-102px, -94px);
+  width: 308px;
+  height: 407px;
+}
+
+.tour-card__card2 {
+  width: 277px;
+  height: 366px;
+}
+
+.tour-card__audio {
+  position: absolute;
+  width: 260px;
+  height: 140px;
+  top: 300px;
+  right: 0;
+
+  picture {
+    position: relative;
+    display: flex;
+    z-index: 4;
+    justify-content: end;
+  }
+}
+
 
 .tour-card__button {
   display: flex;
@@ -123,11 +177,34 @@
     width: 100%;
   }
 
+  .tour-card--kamchatka {
+    padding-bottom: 174px;
+  }
+
   .tour-card__video {
     position: relative;
     width: fit-content;
     top: 0;
     margin: 0 auto;
+  }
+
+  .tour-card__photo {
+    position: relative;
+    width: fit-content;
+    top: 0;
+    margin: 0 auto;
+  }
+
+  .tour-card__card1 {
+    transform: translate(-88px, -15px);
+    width: 100%;
+    height: auto;
+  }
+
+  .tour-card__card2 {
+    transform: translate(87px, 36px);
+    width: 236px;
+    height: 315px;
   }
 
   .tour-card__video-image {
@@ -152,11 +229,21 @@
     text-align: center;
   }
 
+  .tour-card__title--kamchatka {
+    padding-left: 90px;
+    padding-right: 90px;
+  }
+
   .tour-card__description {
     padding-left: 165px;
     padding-right: 165px;
     margin-bottom: 26px;
     text-align: center;
+  }
+
+  .tour-card__description--kamchatka {
+    padding-left: 155px;
+    padding-right: 155px;
   }
 
   .tour-card__button {
@@ -179,6 +266,10 @@
     padding-bottom: 122px;
   }
 
+  .tour-card--kamchatka {
+    padding-bottom: 102px;
+  }
+
   .tour-card__title {
     font-size: 30px;
     padding-left: 15px;
@@ -199,6 +290,10 @@
   }
 
   .tour-card__video {
+    display: none;
+  }
+
+  .tour-card__photo {
     display: none;
   }
 }
