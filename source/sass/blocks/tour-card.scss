@@ -86,17 +86,17 @@
 
 .tour-card__audio {
   position: absolute;
-  width: 260px;
-  height: 140px;
+  width: 340px;
+  height: 220px;
   top: 300px;
-  right: 0;
+  right: 81px;
+}
 
-  picture {
-    position: relative;
-    display: flex;
-    z-index: 4;
-    justify-content: end;
-  }
+.tour-card__audio-frame {
+  display: block;
+  width: 340px;
+  height: 220px;
+  background-color: $BaseWhite;
 }
 
 
@@ -178,7 +178,11 @@
   }
 
   .tour-card--kamchatka {
-    padding-bottom: 174px;
+    padding-bottom: 176px;
+  }
+
+  .tour-card--audio {
+    padding-bottom: 150px;
   }
 
   .tour-card__video {
@@ -192,6 +196,14 @@
     position: relative;
     width: fit-content;
     top: 0;
+    margin: 0 auto;
+  }
+
+  .tour-card__audio {
+    position: relative;
+    width: fit-content;
+    top: 20px;
+    right: auto;
     margin: 0 auto;
   }
 
@@ -234,6 +246,11 @@
     padding-right: 90px;
   }
 
+  .tour-card__title--audio {
+    padding-left: 48px;
+    padding-right: 48px;
+  }
+
   .tour-card__description {
     padding-left: 165px;
     padding-right: 165px;
@@ -244,6 +261,11 @@
   .tour-card__description--kamchatka {
     padding-left: 155px;
     padding-right: 155px;
+  }
+
+  .tour-card__description--audio {
+    padding-left: 160px;
+    padding-right: 160px;
   }
 
   .tour-card__button {
@@ -263,7 +285,7 @@
 @media (max-width: $mobile-maxwidth) {
   .tour-card {
     padding-top: 181px;
-    padding-bottom: 122px;
+    padding-bottom: 102px;
   }
 
   .tour-card--kamchatka {
@@ -294,6 +316,10 @@
   }
 
   .tour-card__photo {
+    display: none;
+  }
+
+  .tour-card__audio {
     display: none;
   }
 }
