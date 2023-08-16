@@ -114,16 +114,12 @@
     .swiper-pagination-bullet {
       width: 8px;
       height: 8px;
-      margin-right: 15px;
+      margin-right: 11px;
     }
 
     .swiper-pagination-bullet-active {
       background: $BaseWhite;
       border: 1px solid $BaseWhite;
-    }
-
-    .swiper-pagination-bullet {
-      margin-right: 11px;
     }
 
     :last-child {
