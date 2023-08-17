@@ -25,7 +25,7 @@ const slider = new Swiper('.upcoming-tours__slider', {
     },
     768: {
       slidesPerView: 2,
-      spaceBetween: 30
+      spaceBetween: 18
     },
     1200: {
       slidesPerView: 3,

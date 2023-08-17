@@ -14,7 +14,7 @@
 .upcoming-tours__title {
   margin: 0;
   margin-bottom: 53px;
-  font-family: "Montserrat";
+  font-family: "Montserrat", "Atal", sans-serif;
   font-size: 35px;
   font-weight: 800;
   line-height: 35px;
@@ -30,7 +30,6 @@
 .upcoming-tours__button-prev,
 .upcoming-tours__button-next {
   position: absolute;
-  top: 0;
   width: 37px;
   height: 35px;
   border: 1px solid $SecondaryColor;
@@ -66,9 +65,53 @@
   font-size: 16px;
   font-style: normal;
   font-weight: 700;
-  line-height: 16px; /* 100% */
+  line-height: 16px;
   letter-spacing: 0.64px;
   text-transform: uppercase;
   color: #2d383f;
   text-align: center;
+}
+
+@media (max-width: $tablet-maxwidth) {
+  .upcoming-tours {
+    width: 100%;
+    box-sizing: border-box;
+    padding-left: 51px;
+    padding-right: 51px;
+    padding-top: 4px;
+  }
+
+  .upcoming-tours__title {
+    font-size: 25px;
+    line-height: 25px;
+    margin-left: -5px;
+    margin-bottom: 44px;
+  }
+
+  .upcoming-tours__slider {
+    position: relative;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+  }
+
+  .upcoming-tours__navigation {
+    position: relative;
+    width: 100%;
+    margin-bottom: 52px;
+  }
+
+  .upcoming-tours__button-next {
+    width: 34px;
+    height: 34px;
+    right: -7px;
+    top: -486px;
+  }
+
+  .upcoming-tours__button-prev {
+    width: 34px;
+    height: 34px;
+    right: 35px;
+    top: -486px;
+  }
 }
