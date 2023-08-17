@@ -2,7 +2,6 @@ import Swiper from './vendor/swiper-bundle.js';
 const heroSlider = document.querySelector('.hero__slider');
 const heroWrapper = document.querySelector('.hero__wrapper');
 const heroSlides = document.querySelectorAll('.hero__slide');
-const hero = document.querySelector('.hero');
 
 const swiperHero = () => {
   heroSlides.forEach(element => {

@@ -159,7 +159,7 @@
 
 .tour-card__play-button:hover,
 .tour-card__play-button:focus {
-  border: 1 px solid #000000;
+  border: 1px solid #000000;
 }
 
 .tour-card__play-button:active {
@@ -171,7 +171,7 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  left: 49%;
+  left: 48%;
   width: 12px;
   height: 22px;
   background: url("../../img/play-button.svg");
@@ -182,6 +182,8 @@
 .tour-card__play-button:hover.tour-card__play-button::before,
 .tour-card__play-button:focus.tour-card__play-button::before {
   background: url("../../img/play-button-active.svg");
+  width: 14px;
+  height: 24px;
 }
 
 @media (max-width: $tablet-maxwidth) {

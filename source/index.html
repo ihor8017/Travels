@@ -183,7 +183,81 @@
         </div>
       </section>
     </header>
-    <main class="main-content"></main>
+    <main class="main-content">
+      <section class="upcoming-tours">
+        <h2 class="upcoming-tours__title">Ближайшие туры</h2>
+        <!-- Slider main container -->
+        <div class="upcoming-tours__slider">
+          <!-- Additional required wrapper -->
+          <div class="upcoming-tours__wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide upcoming-tours__slide tours-card">
+              <picture>
+                <source type="image/webp" media="(min-width: 1200px)" srcset="img/tours/desktop1@1x.webp 1x, img/tours/desktop1@2x.webp 2x">
+                <source media="(min-width: 1200px)" srcset="img/tours/desktop1@1x.jpg 1x, img/tours/desktop1@2x.jpg 2x">
+                <source type="image/webp" srcset="img/tours/tablet1@1x.webp 1x, img/tours/tablet1@2x.webp 2x">
+                <source media="(min-width: 768px)" srcset="img/tours/tablet1@1x.jpg 1x, img/tours/tablet1@2x.jpg 2x">
+                <source type="image/webp" srcset="img/htours/mobile1@1x.webp 1x, img/tours/mobile1@2x.webp 2x">
+                <img class="tours-card__image" src="img/tours/mobile1@1x.jpg" width="380" height="412" srcset="img/tours/mobile1@2x.jpg 2x" alt="вид на горное ущелье">
+              </picture>
+              <div class="tours-card__info">
+                <a class="tours-card__button button" href="#">Кавказ</a>
+                <p class="tours-card__days"><span>4 дня</span></p>
+                <p class="tours-card__nights"><span>3 ночи</span></p>
+                <h3 class="tours-card__title">Путешествие вокруг Эльбруса</h3>
+                <p class="tours-card__dificulty"><span>Сложность:</span> <span>*****</span></p>
+                <p class="tours-card__dates"><span>Даты набора:</span><span>12.06-19.06</span></p>
+                <p class="tours-card__group"><span>Группа:</span><span>до 15 чел.</span></p>
+              </div>
+            </div>
+            <div class="swiper-slide upcoming-tours__slide tours-card">
+              <picture>
+                <source type="image/webp" media="(min-width: 1200px)" srcset="img/tours/desktop2@1x.webp 1x, img/tours/desktop2@2x.webp 2x">
+                <source media="(min-width: 1200px)" srcset="img/tours/desktop2@1x.jpg 1x, img/tours/desktop2@2x.jpg 2x">
+                <source type="image/webp" srcset="img/tours/tablet2@1x.webp 1x, img/tours/tablet2@2x.webp 2x">
+                <source media="(min-width: 768px)" srcset="img/tours/tablet2@1x.jpg 1x, img/tours/tablet2@2x.jpg 2x">
+                <source type="image/webp" srcset="img/htours/mobile2@1x.webp 1x, img/tours/mobile2@2x.webp 2x">
+                <img class="tours-card__image" src="img/tours/mobile2@1x.jpg" width="380" height="412" srcset="img/tours/mobile2@2x.jpg 2x" alt="вид на горное ущелье">
+              </picture>
+              <div class="tours-card__info">
+                <a class="tours-card__button button" href="#">Алтай</a>
+                <p class="tours-card__days"><span>14 дней</span></p>
+                <p class="tours-card__nights"><span>13 ночей</span></p>
+                <h3 class="tours-card__title">Путь к&nbsp;подножию Белухи</h3>
+                <p class="tours-card__dificulty"><span>Сложность:</span> <span>*****</span></p>
+                <p class="tours-card__dates"><span>Даты набора:</span><span>14.06-23.06</span></p>
+                <p class="tours-card__group"><span>Группа:</span><span>до 25 чел.</span></p>
+              </div>
+            </div>
+            <div class="swiper-slide upcoming-tours__slide tours-card">
+              <picture>
+                <source type="image/webp" media="(min-width: 1200px)" srcset="img/tours/desktop3@1x.webp 1x, img/tours/desktop3@2x.webp 2x">
+                <source media="(min-width: 1200px)" srcset="img/tours/desktop3@1x.jpg 1x, img/tours/desktop3@2x.jpg 2x">
+                <source type="image/webp" srcset="img/tours/tablet3@1x.webp 1x, img/tours/tablet3@2x.webp 2x">
+                <source media="(min-width: 768px)" srcset="img/tours/tablet3@1x.jpg 1x, img/tours/tablet3@2x.jpg 2x">
+                <source type="image/webp" srcset="img/htours/mobile3@1x.webp 1x, img/tours/mobile3@2x.webp 2x">
+                <img class="tours-card__image" src="img/tours/mobile3@1x.jpg" width="380" height="412" srcset="img/tours/mobile3@2x.jpg 2x" alt="вид на горное ущелье">
+              </picture>
+              <div class="tours-card__info">
+                <a class="tours-card__button button" href="#">Адыгея</a>
+                <p class="tours-card__days"><span>7 дней</span></p>
+                <p class="tours-card__nights"><span>6 ночей</span></p>
+                <h3 class="tours-card__title">Через Фишт к&nbsp;Черному морю</h3>
+                <p class="tours-card__dificulty"><span>Сложность:</span> <span>*****</span></p>
+                <p class="tours-card__dates"><span>Даты набора:</span><span>15.07-19.07</span></p>
+                <p class="tours-card__group"><span>Группа:</span><span>до 22 чел.</span></p>
+              </div>
+            </div>
+          </div>
+          <!-- If we need navigation buttons -->
+        </div>
+        <div class="upcoming-tours__navigation">
+          <div class="upcoming-tours__button-prev"></div>
+          <div class="upcoming-tours__button-next"></div>
+        </div>
+        <a class="upcoming-tours__all" href="#">Показать все туры ></a>
+      </section>
+    </main>
     <footer class="footer">
       <div class="footer__navigation">
         <a class="footer__logo logo" href="index.html">
