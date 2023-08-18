@@ -2,9 +2,10 @@ import Swiper from './vendor/swiper-bundle.js';
 const upcomingWrapper = document.querySelector('.upcoming-tours__wrapper');
 const upcomingSlides = document.querySelectorAll('.upcoming-tours__slide');
 const upcomingNavigation = document.querySelector('.upcoming-tours__navigation');
-
+const upcomingTours = document.querySelector('.upcoming-tours')
 
 const upcomingSlider = () => {
+  upcomingTours.classList.remove('no-js');
   upcomingNavigation.classList.add('swiper-navigation')
   upcomingWrapper.classList.add('swiper-wrapper');
   upcomingSlides.forEach(element => {

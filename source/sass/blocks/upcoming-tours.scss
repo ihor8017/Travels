@@ -1,12 +1,47 @@
 .upcoming-tours {
+  position: relative;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  overflow-x: clip;
+}
+
+.upcoming-tours__wrapper-content {
+  position: relative;
   width: 1200px;
   margin: 0 auto;
   padding-top: 4px;
 }
 
+.upcoming-tours__bg {
+  position: absolute;
+  width: 100%;
+  bottom: -100px;
+  left: 10px;
+}
+
+.upcoming-tours__bg-clouds {
+  position: absolute;
+  bottom: -653px;
+  right: -120px;
+  z-index: -1;
+}
+
+.upcoming-tours.no-js .upcoming-tours__wrapper {
+  position: static;
+  display: inline-flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.upcoming-tours.no-js .upcoming-tours__slide {
+  width: 380px;
+}
+
 .upcoming-tours__slider {
   position: relative;
   width: 1200px;
+  margin: 0 auto;
   height: auto;
   overflow: hidden;
 }
@@ -19,6 +54,17 @@
   font-weight: 800;
   line-height: 35px;
   color: $BaseDark;
+}
+
+.upcoming-tours__title-shadow {
+  position: absolute;
+  top: -67px;
+  left: 0;
+  font-size: 55px;
+  font-weight: 800;
+  line-height: 55px;
+  color: $BaseDark;
+  opacity: 0.03;
 }
 
 .upcoming-tours__navigation {
@@ -35,7 +81,60 @@
   border: 1px solid $SecondaryColor;
   background: $SecondaryColor;
   right: 0;
-  top: -501px;
+  top: -90px;
+}
+
+.upcoming-tours__button-prev:hover,
+.upcoming-tours__button-next:hover,
+.upcoming-tours__button-prev:focus,
+.upcoming-tours__button-next:focus {
+  background: none;
+  border: 1px solid #1c3374;
+}
+
+.upcoming-tours__button-prev:hover.upcoming-tours__button-prev::after,
+.upcoming-tours__button-next:hover.upcoming-tours__button-next::after,
+.upcoming-tours__button-prev:focus.upcoming-tours__button-prev::after,
+.upcoming-tours__button-next:focus.upcoming-tours__button-next::after {
+  background-color: #1c3374;
+}
+
+.upcoming-tours__button-prev:active,
+.upcoming-tours__button-next:active {
+  background-color: #1c3374;
+  border: 1px solid #1c3374;
+}
+
+.upcoming-tours__button-prev:active.upcoming-tours__button-prev::after,
+.upcoming-tours__button-next:active.upcoming-tours__button-next::after {
+  background-color: $BaseWhite;
+}
+
+.upcoming-tours__button-prev.swiper-button-disabled,
+.upcoming-tours__button-next.swiper-button-disabled,
+.upcoming-tours__button-prev:hover.swiper-button-disabled,
+.upcoming-tours__button-next:hover.swiper-button-disabled,
+.upcoming-tours__button-prev:focus.swiper-button-disabled,
+.upcoming-tours__button-next:focus.swiper-button-disabled,
+.upcoming-tours__button-prev:active.swiper-button-disabled,
+.upcoming-tours__button-next:active.swiper-button-disabled {
+  background-color: rgba(2, 102, 193, 0.1);
+  border: 1px solid rgba(2, 102, 193, 0.1);
+}
+
+.upcoming-tours__button-prev:hover.swiper-button-disabled.upcoming-tours__button-prev::after,
+.upcoming-tours__button-next:hover.swiper-button-disabled.upcoming-tours__button-next::after,
+.upcoming-tours__button-prev:focus.swiper-button-disabled.upcoming-tours__button-prev::after,
+.upcoming-tours__button-next:focus.swiper-button-disabled.upcoming-tours__button-next::after,
+.upcoming-tours__button-prev:active.swiper-button-disabled.upcoming-tours__button-prev::after,
+.upcoming-tours__button-next:active.swiper-button-disabled.upcoming-tours__button-next::after {
+  background-color: $BaseWhite;
+}
+
+.upcoming-tours__button-prev:disabled,
+.upcoming-tours__button-next:disabled {
+  background-color: rgba(2, 102, 193, 0.1);
+  border: 1px solid rgba(2, 102, 193, 0.1);
 }
 
 .upcoming-tours__button-prev {
@@ -72,8 +171,30 @@
   text-align: center;
 }
 
+.tours-card__dificulty-rate {
+  position: relative;
+  display: block;
+  background-image: url("../../img/tours/star.svg");
+  background-repeat: repeat-x;
+  width: 75px;
+  height: 15px;
+}
+
+.tours-card__dificulty-rate::after {
+  position: absolute;
+  height: 15px;
+  width: 45px;
+  background-image: url("../../img/tours/mark-as-favorite-star.svg");
+  background-repeat: repeat-x;
+  content: "";
+}
+
+.tours-card__dificulty-altay::after {
+  width: 30px;
+}
+
 @media (max-width: $tablet-maxwidth) {
-  .upcoming-tours {
+  .upcoming-tours__wrapper-content {
     width: 100%;
     box-sizing: border-box;
     padding-left: 51px;
@@ -81,11 +202,31 @@
     padding-top: 4px;
   }
 
+  .upcoming-tours__bg {
+    display: none;
+  }
+
+  .upcoming-tours__bg-clouds {
+    position: absolute;
+    bottom: -636px;
+    height: 1364px;
+    width: 602px;
+    object-fit: contain;
+    transform: translateX(6%);
+  }
+
   .upcoming-tours__title {
     font-size: 25px;
     line-height: 25px;
     margin-left: -5px;
-    margin-bottom: 44px;
+    margin-bottom: 42px;
+  }
+
+  .upcoming-tours__title-shadow {
+    top: -48px;
+    left: 45px;
+    font-size: 40px;
+    line-height: 40px;
   }
 
   .upcoming-tours__slider {
@@ -98,20 +239,77 @@
   .upcoming-tours__navigation {
     position: relative;
     width: 100%;
-    margin-bottom: 52px;
+    margin-bottom: 37px;
   }
 
   .upcoming-tours__button-next {
     width: 34px;
     height: 34px;
     right: -7px;
-    top: -486px;
+    top: -74px;
   }
 
   .upcoming-tours__button-prev {
     width: 34px;
     height: 34px;
     right: 35px;
-    top: -486px;
+    top: -74px;
+  }
+}
+
+@media (max-width: $mobile-maxwidth) {
+  .upcoming-tours__wrapper-content {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 4px;
+  }
+
+  .upcoming-tours__slider {
+    margin-bottom: 29px;
+  }
+
+  .upcoming-tours__bg-clouds {
+    position: absolute;
+    bottom: -236px;
+    height: 595px;
+    width: 346px;
+    object-fit: contain;
+    transform: translateX(-3%);
+  }
+
+  .upcoming-tours__title {
+    font-size: 22px;
+    line-height: 22px;
+    margin-left: 0;
+    margin-bottom: 29px;
+    padding-right: 75px;
+  }
+
+  .upcoming-tours__title-shadow {
+    top: -25px;
+    left: 15px;
+    font-size: 26px;
+    line-height: 26px;
+  }
+
+  .upcoming-tours__navigation {
+    margin-bottom: 28px;
+  }
+
+  .upcoming-tours__button-next {
+    right: 0;
+    top: -70px;
+  }
+
+  .upcoming-tours__button-prev {
+    right: 41px;
+    top: -70px;
+  }
+
+  .upcoming-tours__all {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 14px;
+    letter-spacing: 0.56px;
   }
 }
