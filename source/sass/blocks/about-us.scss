@@ -1,0 +1,150 @@
+.about-us {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-top: 144px;
+  padding-bottom: 20px;
+  // overflow-x: hidden;
+}
+
+.about-us__wrapper {
+  position: relative;
+  width: 1200px;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 28px;
+  margin: 0 auto;
+}
+
+.about-us__image {
+  display: grid;
+  position: absolute;
+  width: 808px;
+  height: auto;
+  top: -34px;
+  left: -120px;
+}
+
+.about-us__wrapper-text {
+  position: relative;
+  color: $BaseDark;
+}
+
+.about-us__title {
+  margin: 0;
+  margin-bottom: 56px;
+  font-size: 35px;
+  font-weight: 800;
+  line-height: 35px;
+}
+
+.about-us__title-shadow {
+  top: -71px;
+  left: 0;
+}
+
+.about-us__company,
+.about-us__goal {
+  margin: 0;
+  margin-bottom: 17px;
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 21px;
+}
+
+.about-us__company-description,
+.about-us__goal-description {
+  margin: 0;
+  margin-bottom: 27px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+}
+
+@media (max-width: $tablet-maxwidth) {
+  .about-us {
+    padding-top: 71px;
+  }
+
+  .about-us__wrapper {
+    grid-template-columns: 1fr;
+    width: 100%;
+    column-gap: 0;
+    padding-right: 0;
+  }
+
+  .about-us__title-shadow {
+    top: -52px;
+  }
+
+  .about-us__title {
+    font-size: 25px;
+    font-weight: 800;
+    line-height: 25px;
+    margin-bottom: 35px;
+  }
+
+  .about-us__image {
+    width: 475px;
+    height: 402px;
+    top: 7px;
+    left: 0;
+  }
+
+  .about-us__company,
+  .about-us__goal {
+    margin-bottom: 16px;
+    font-size: 18px;
+    line-height: 18px;
+  }
+}
+
+@media (max-width: $mobile-maxwidth) {
+  .about-us {
+    padding-top: 0;
+  }
+
+  .about-us__wrapper {
+    width: 100%;
+    row-gap: 47px;
+    padding-right: 0;
+  }
+
+  .about-us__wrapper-text {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .about-us__title-shadow {
+    top: -52px;
+  }
+
+  .about-us__title {
+    font-size: 22px;
+    line-height: 22px;
+    margin-bottom: 34px;
+  }
+
+  .about-us__image {
+    position: static;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 320 / 402;
+    top: 7px;
+    left: 0;
+  }
+
+  .about-us__company,
+  .about-us__goal {
+    margin-bottom: 16px;
+    font-size: 16px;
+    line-height: 16px;
+  }
+
+  .about-us__company-description,
+  .about-us__goal-description {
+    line-height: 20px;
+    margin-bottom: 43px;
+  }
+}

@@ -1,0 +1,23 @@
+.title-shadow {
+  position: absolute;
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-size: 55px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 55px;
+  opacity: 0.03;
+}
+
+@media (max-width: $tablet-maxwidth) {
+  .title-shadow {
+    font-size: 40px;
+    line-height: 40px;
+  }
+}
+
+@media (max-width: $mobile-maxwidth) {
+  .title-shadow {
+    font-size: 26px;
+    line-height: 26px;
+  }
+}

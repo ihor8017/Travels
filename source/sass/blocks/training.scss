@@ -49,13 +49,13 @@
   padding-right: 380px;
   font-size: 16px;
   font-weight: 400;
-  line-height: 24px
+  line-height: 24px;
 }
 
 .training__trainers {
   margin: 0;
   margin-bottom: 42px;
-  font-size: 21px;;
+  font-size: 21px;
   font-weight: 700;
   line-height: 21px;
 }
@@ -73,7 +73,7 @@
 .training__slider {
   width: 1200px;
   overflow-x: clip;
-  box-shadow:  0 0 30px 0 rgba(28, 51, 116, 0.1);
+  box-shadow: 0 0 30px 0 rgba(28, 51, 116, 0.1);
   margin-bottom: 50px;
 }
 
@@ -178,7 +178,6 @@
     width: 100%;
     padding-left: 45px;
     padding-right: 45px;
-
   }
 
   .training__slider {
@@ -257,8 +256,8 @@
       grid-row: 2 /3;
     }
 
-    :nth-child(3):after,
-    :nth-child(4):after {
+    :nth-child(3)::after,
+    :nth-child(4)::after {
       top: -25px;
     }
   }
@@ -298,13 +297,12 @@
 @media (max-width: $mobile-maxwidth) {
   .training {
     padding-top: 67px;
-    padding-bottom: 20px;
+    padding-bottom: 17px;
   }
 
   .training__wrapper-content {
     padding-left: 15px;
     padding-right: 15px;
-
   }
 
   .training__slider {
@@ -369,6 +367,11 @@
       grid-column: 1 / 2;
       grid-row: auto;
     }
+
+    :nth-child(3)::after,
+    :nth-child(4)::after {
+      top: 50%;
+    }
   }
 
   .training__list::before {
@@ -396,12 +399,8 @@
     width: 13px;
     height: 13px;
     left: 3px;
-    top:  50%;
-    transform: translateY(-50%);
-  }
-  .training__list :nth-child(3):after,
-  .training__list :nth-child(4):after {
     top: 50%;
+    transform: translateY(-50%);
   }
 
   .training__item::before {
@@ -411,5 +410,4 @@
     left: 37px;
     background-repeat: no-repeat;
   }
-
 }
