@@ -68,9 +68,7 @@
   }
 
   .about-us__wrapper {
-    grid-template-columns: 1fr;
     width: 100%;
-    column-gap: 0;
     padding-right: 0;
   }
 
@@ -106,6 +104,7 @@
   }
 
   .about-us__wrapper {
+    grid-template-columns: 1fr;
     width: 100%;
     row-gap: 47px;
     padding-right: 0;
