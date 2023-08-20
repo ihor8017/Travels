@@ -251,6 +251,7 @@
   .tours-card__title {
     font-size: 20px;
     line-height: 24px;
+    margin-bottom: 13px;
   }
 
   .tours-card__button {
@@ -265,6 +266,10 @@
   .tours-card__dificulty,
   .tours-card__dates,
   .tours-card__group {
+    :first-child {
+      margin-bottom: 4px;
+    }
+
     :last-child {
       font-size: 12px;
       padding-bottom: 13px;

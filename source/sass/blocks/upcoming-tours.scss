@@ -15,9 +15,12 @@
 
 .upcoming-tours__bg {
   position: absolute;
-  width: 100%;
-  bottom: -100px;
-  left: 10px;
+  box-sizing: border-box;
+  width: 837;
+  height: 279;
+  bottom: -135px;
+  left: -538px;
+  z-index: -1;
 }
 
 .upcoming-tours__bg-clouds {
@@ -30,8 +33,9 @@
 .upcoming-tours.no-js .upcoming-tours__wrapper {
   position: static;
   display: inline-flex;
-  flex-direction: row;
   flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
 }
 
 .upcoming-tours.no-js .upcoming-tours__slide {
@@ -44,6 +48,7 @@
   margin: 0 auto;
   height: auto;
   overflow: hidden;
+  margin-bottom: 53px;
 }
 
 .upcoming-tours__title {

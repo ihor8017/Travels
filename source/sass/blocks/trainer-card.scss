@@ -1,0 +1,96 @@
+.trainer-card {
+  padding: 20px;
+  box-sizing: border-box;
+  box-shadow:  0 0 30px 0 rgba(28, 51, 116, 0.1);
+  min-height: 377px;
+}
+
+.trainer-card__image {
+  display: flex;
+  width: 238px;
+  height: 212px;
+  margin-bottom: 16px;
+  object-fit: contain;
+}
+
+.trainer-card__name {
+  position: relative;
+  margin: 0;
+  margin-bottom: 15px;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16px;
+
+  span {
+    display: block;
+  }
+}
+
+.trainer-card__link {
+  position: absolute;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  color: $BaseDark;
+  border: 1px solid rgba($color: $BaseDark, $alpha: 0.3);
+}
+
+.trainer-card__info {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+}
+
+@media (max-width: $tablet-maxwidth) {
+  .trainer-card {
+    padding: 15px;
+    min-height: 411px;
+    height: 100%;
+  }
+
+  .trainer-card__image {
+    width: 100%;
+    min-width: 176px;
+    height: auto;
+    margin-bottom: 14px;
+  }
+
+  .trainer-card__name {
+    margin-bottom: 13px;
+  }
+
+  .trainer-card__info {
+    line-height: 18px;
+  }
+}
+
+@media (max-width: $mobile-maxwidth) {
+  .trainer-card {
+    padding: 20px;
+    min-height: 385px;
+    box-shadow: none;
+  }
+
+  .trainer-card__image {
+    width: 100%;
+    min-width: 250px;
+    aspect-ratio: 250 / 212;
+    height: auto;
+    margin-bottom: 14px;
+  }
+
+  .trainer-card__name {
+    margin-bottom: 13px;
+  }
+
+  .trainer-card__link {
+    right: 12px;
+  }
+}

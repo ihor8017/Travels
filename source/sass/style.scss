@@ -4,6 +4,7 @@
 @import "global/fonts";
 
 /* BLOCKS */
+@import "blocks/navigation-slider";
 @import "blocks/header";
 @import "blocks/navigation";
 @import "blocks/link";
@@ -17,6 +18,8 @@
 @import "blocks/button";
 @import "blocks/upcoming-tours";
 @import "blocks/tours-card";
+@import "blocks/training";
+@import "blocks/trainer-card";
 
 /*VENDOR*/
 @import "vendor/swiper";
