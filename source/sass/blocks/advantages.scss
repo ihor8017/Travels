@@ -1,0 +1,147 @@
+.advantages {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-top: 132px;
+  padding-bottom: 100px;
+  color: $BaseDark;
+  overflow-x: clip;
+
+  .advantages__slide {
+    width: 380px;
+    min-height: 329px;
+  }
+}
+
+.advantages.no-js .advantages__slider-wrapper {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  justify-content: center;
+  gap: 30px;
+}
+
+.advantages__wrapper {
+  box-sizing: border-box;
+  position: relative;
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.advantages__title {
+  margin: 0;
+  margin-bottom: 47px;
+  font-size: 35px;
+  font-weight: 800;
+  line-height: 35px;
+  text-align: center;
+}
+
+.advantages__title-shadow {
+  left: 50%;
+  transform: translateX(-50%);
+  top: -72px;
+}
+
+.advantages__slider {
+  width: 1200px;
+}
+
+.advantages__navigation {
+  position: relative;
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.advantages__button-prev,
+.advantages__button-next {
+  top: 50px;
+  right: 50%;
+}
+
+.advantages__button-prev {
+  transform: translateX(-2px);
+}
+
+.advantages__button-next {
+  transform: translateX(38px);
+}
+
+@media (max-width: $tablet-maxwidth) {
+  .advantages {
+    padding-top: 72px;
+  }
+
+  .advantages__wrapper {
+    width: 100%;
+    box-sizing: border-box;
+    padding-left: 45px;
+    padding-right: 45px;
+
+    .advantages__slide {
+      width: 47.6%;
+      min-height: 270px;
+    }
+  }
+
+  .advantages__navigation {
+    display: none;
+  }
+
+  .advantages__slider {
+    box-sizing: border-box;
+    width: 100%;
+  }
+
+  .advantages__slider-wrapper {
+    width: 100%;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    justify-content: center;
+    gap: 30px;
+  }
+
+  .advantages__title {
+    font-size: 25px;
+    line-height: 25px;
+  }
+
+  .advantages__title-shadow {
+    left: 50%;
+    transform: translateX(-50%);
+    top: -52px;
+  }
+}
+
+@media (max-width: $mobile-maxwidth) {
+  .advantages {
+    padding-top: 34px;
+  }
+
+  .advantages__wrapper {
+    padding-left: 15px;
+    padding-right: 15px;
+
+    .advantages__slide {
+      width: 100%;
+      min-height: 244px;
+    }
+  }
+
+  .advantages__title {
+    margin-bottom: 29px;
+    font-size: 22px;
+    line-height: 22px;
+  }
+
+  .advantages__title-shadow {
+    left: 50%;
+    transform: translateX(-50%);
+    top: -29px;
+  }
+
+  .advantages__slider-wrapper {
+    gap: 15px;
+  }
+}

@@ -1,0 +1,106 @@
+.advantages-card {
+  position: relative;
+  box-sizing: border-box;
+  padding: 38px 20px;
+  padding-top: 124px;
+  border: 1px solid rgba(2, 102, 193, 0.1);
+}
+
+.advantages-card::before {
+  position: absolute;
+  box-sizing: border-box;
+  left: 50%;
+  top: 38px;
+  transform: translateX(-50%);
+  width: 54px;
+  height: 54px;
+  border: 1px solid $SecondaryColor;
+  background: url("../../img/advantages/level.svg") no-repeat center;
+  content: "";
+}
+
+.advantages-card--knowledge::before {
+  background: url("../../img/advantages/crown.svg") no-repeat center;
+}
+
+.advantages-card--equipment::before {
+  background: url("../../img/advantages/boots.svg") no-repeat center;
+}
+
+.advantages-card--routes::before {
+  background: url("../../img/advantages/level.svg") no-repeat center;
+}
+
+.advantages-card--nature::before {
+  background: url("../../img/advantages/leaf.svg") no-repeat center;
+}
+
+.advantages-card__title {
+  margin: 0;
+  margin-bottom: 15px;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 18px;
+  text-align: center;
+}
+
+.advantages-card__descrption {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  text-align: center;
+}
+
+@media (max-width: $tablet-maxwidth) {
+  .advantages-card {
+    padding: 103px 20px 28px;
+    display: inline-block;
+  }
+
+  .advantages-card__title {
+    font-size: 16px;
+    line-height: 16px;
+  }
+
+  .advantages-card__descrption {
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  .advantages-card::before {
+    width: 48px;
+    height: 48px;
+    top: 30px;
+  }
+
+  .advantages-card--equipment {
+    padding-bottom: 45px;
+  }
+}
+
+@media (max-width: $mobile-maxwidth) {
+  .advantages-card {
+    padding: 86px 10px 19px;
+  }
+
+  .advantages-card__title {
+    font-size: 14px;
+    line-height: 14px;
+  }
+
+  .advantages-card__descrption {
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  .advantages-card::before {
+    width: 42px;
+    height: 42px;
+    top: 19px;
+  }
+
+  .advantages-card--equipment {
+    padding-bottom: 19px;
+  }
+}

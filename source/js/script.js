@@ -5,10 +5,11 @@ import playVideo from "./video.js";
 import upcomingSlider from "./upcoming-tours-slider.js";
 import trainingSlider from "./training-slider.js";
 import reviewsSlider from "./reviews-slider.js";
-
+import advantagesSlider from  "./advantages-slider.js";
 toggleNavigation();
 swiperHero();
 playVideo();
 upcomingSlider();
 trainingSlider();
 reviewsSlider();
+advantagesSlider();
