@@ -1,0 +1,151 @@
+.gallery {
+  width: 100%;
+  max-width: 1440px;
+  padding-top: 115px;
+  padding-bottom: 50px;
+  margin: 0 auto;
+  color: $BaseDark;
+  overflow: hidden;
+}
+
+.gallery__wrapper {
+  position: relative;
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.gallery__title {
+  margin: 0;
+  margin-bottom: 24px;
+  font-size: 35px;
+  font-weight: 800;
+  line-height: 35px;
+}
+
+.gallery__title-shadow {
+  top: -20px;
+}
+
+.gallery__description {
+  margin: 0;
+  margin-bottom: 45px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+
+  span {
+    display: block;
+  }
+}
+
+.gallery__navigation {
+  position: relative;
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.gallery__button-prev,
+.gallery__button-next {
+  top: -87px;
+}
+
+.gallery__slider {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.gallery__slider-wrapper .swiper-slide {
+  width: 275px;
+}
+
+.gallery__slider-wrapper .swiper-slide:nth-child(2n) {
+  width: 298px;
+}
+
+.gallery.no-js .gallery__slider-wrapper {
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+@media (max-width: $tablet-maxwidth) {
+  .gallery {
+    padding-top: 38px;
+    padding-bottom: 50px;
+  }
+
+  .gallery__wrapper {
+    box-sizing: border-box;
+    width: 100%;
+    padding-left: 45px;
+    padding-right: 45px;
+  }
+
+  .gallery__title {
+    margin-bottom: 22px;
+    font-size: 25px;
+    line-height: 25px;
+  }
+
+  .gallery__title-shadow {
+    top: -52px;
+  }
+
+  .gallery__description {
+    margin-bottom: 15px;
+    padding-right: 335px;
+    font-size: 14px;
+    line-height: 22px;
+
+    span {
+      display: inline;
+    }
+  }
+
+  .gallery__slider {
+    width: 100%;
+  }
+
+  .gallery__navigation {
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%;
+  }
+}
+
+@media (max-width: $mobile-maxwidth) {
+  .gallery {
+    padding-top: 15px;
+    padding-bottom: 50px;
+  }
+
+  .gallery__wrapper {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .gallery__title {
+    margin-bottom: 14px;
+    font-size: 22px;
+    line-height: 22px;
+  }
+
+  .gallery__title-shadow {
+    top: -29px;
+  }
+
+  .gallery__description {
+    margin-bottom: 65px;
+    padding-right: 20px;
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  .gallery__button-prev,
+  .gallery__button-next {
+    top: -50px;
+  }
+
+  .gallery__slider-wrapper .swiper-slide {
+    width: 100%;
+  }
+}

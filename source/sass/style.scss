@@ -3,6 +3,10 @@
 @import "global/global";
 @import "global/fonts";
 
+/*VENDOR*/
+@import "vendor/swiper";
+@import "vendor/swiper-vars";
+
 /* BLOCKS */
 @import "blocks/navigation-slider";
 @import "blocks/header";
@@ -26,7 +30,5 @@
 @import "blocks/review-card";
 @import "blocks/advantages";
 @import "blocks/advantages-card";
-
-/*VENDOR*/
-@import "vendor/swiper";
-@import "vendor/swiper-vars";
+@import "blocks/gallery";
+@import "blocks/photo-card";

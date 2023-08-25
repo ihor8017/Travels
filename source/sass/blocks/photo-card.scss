@@ -1,0 +1,42 @@
+.photo-card {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.photo-card__image {
+  width: 275px;
+  height: 449px;
+  display: block;
+}
+
+.photo-card__image-one {
+  width: 298px;
+  height: 179px;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.photo-card__image-two {
+  width: 298px;
+  height: 265px;
+  display: block;
+}
+
+@media (max-width: $mobile-maxwidth) {
+  .photo-card__image {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .photo-card__image-one {
+    width: 100%;
+    height: auto;
+  }
+
+  .photo-card__image-two {
+    width: 100%;
+    height: auto;
+  }
+}
