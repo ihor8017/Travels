@@ -8,6 +8,7 @@
 @import "vendor/swiper-vars";
 
 /* BLOCKS */
+@import "blocks/main-content";
 @import "blocks/navigation-slider";
 @import "blocks/header";
 @import "blocks/navigation";
@@ -32,3 +33,5 @@
 @import "blocks/advantages-card";
 @import "blocks/gallery";
 @import "blocks/photo-card";
+@import "blocks/questions";
+@import "blocks/form-questions";

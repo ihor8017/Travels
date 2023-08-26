@@ -15,6 +15,7 @@ const gallerySlider = () => {
 const slider = new Swiper('.gallery__slider', {
   // Default parameters
   slidesPerView: "auto",
+  updateOnWindowResize: true,
   spaceBetween: 5,
   initialSlide: 2,
   centeredSlides: true,
@@ -25,13 +26,14 @@ const slider = new Swiper('.gallery__slider', {
   },
   breakpoints: {
     320: {
-      slidesPerView: 2,
+      slidesPerView: "auto",
       spaceBetween: 5,
       autoHeight: true,
       initialSlide: 0,
       centeredSlides: false,
     },
     768: {
+      updateOnWindowResize: true,
       initialSlide: 0,
       centeredSlides: false,
     },

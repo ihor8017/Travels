@@ -718,6 +718,31 @@
           </div>
         </div>
       </section>
+      <section class="questions">
+          <picture>
+            <source type="image/webp" media="(min-width: 1200px)" srcset="img/questions/desktop-bg@1x.webp 1x, img/questions/desktop-bg@2x.webp 2x">
+            <source media="(min-width: 1200px)" srcset="img/questions/desktop-bg@1x.jpg 1x, img/questions/desktop-bg@2x.jpg 2x">
+            <source media="(min-width: 768px)" type="image/webp" srcset="cimg/questions/tablet-bg@1x.webp 1x, img/questions/tablet-bg@2x.webp 2x">
+            <source media="(min-width: 768px)" srcset="img/questions/tablet-bg@1x.jpg 1x, img/questions/tablet-bg@2x.jpg 2x">
+            <source type="image/webp" srcset="img/questions/mobile-bg@1x.webp 1x, img/questions/mobile-bg@2x.webp 2x">
+            <img class="questions__image-bg" src="img/questions/mobile-bg@1x.jpg" width="320" height="621" srcset="img/questions/mobile-bg@2x.jpg 2x" alt="">
+          </picture>
+        <div class="questions__content">
+          <h2 class="questions__title">Остались вопросы?</h2>
+          <p class="questions__descriptions">Заполните форму и&nbsp;наш оператор свяжется с&nbsp;вами для консультации.</p>
+          <div class="questions__form-wrapper" data-form-validate data-callback="base">
+            <form class="questios__form form-questions" method="post" action="https://echo.htmlacademy.ru/" data-on-input-validate>
+              <div class="form-questions__input-wrapper" data-validate-type="text" minlength="20"  data-limitation="name" data-message-base="Поле обязательно к заполнению" data-message-extra="Максимальная длина  20 символов" data-required >
+                <input class="form-questions__text form-questions__input" type="text" name="question" placeholder="Как к вам обращаться?">
+              </div>
+              <div class="form-questions__input-wrapper" data-validate-type="phone" data-on-input-validate data-message-base="Поле обязательно к заполнению"data-message-extra="Проверьте корректность заполнения поля" data-required>
+                <input class="form-questions__phone form-questions__input" type="" name="phone" placeholder="Телефон">
+              </div>
+              <button class="form-questions__button button" type="submit">Отправить</button>
+            </form>
+          </div>
+        </div>
+      </section>
     </main>
     <footer class="footer">
       <div class="footer__navigation">

@@ -23,20 +23,44 @@
   display: block;
 }
 
-@media (max-width: $mobile-maxwidth) {
+@media (max-width: $tablet-maxwidth) {
   .photo-card__image {
-    width: 100%;
+    width: 275px;
     height: auto;
-    display: block;
+    aspect-ratio: 275 / 449;
   }
 
   .photo-card__image-one {
-    width: 100%;
+    width: 298px;
     height: auto;
+    margin-bottom: 5px;
+    aspect-ratio: 298 / 179;
   }
 
   .photo-card__image-two {
-    width: 100%;
+    width: 298px;
     height: auto;
+    aspect-ratio: 298 / 265;
+  }
+}
+
+@media (max-width: $mobile-maxwidth) {
+  .photo-card__image {
+    width: 159px;
+    height: auto;
+    display: block;
+    aspect-ratio: 159 / 260;
+  }
+
+  .photo-card__image-one {
+    width: 159px;
+    height: auto;
+    aspect-ratio: 159 / 103;
+  }
+
+  .photo-card__image-two {
+    width: 159px;
+    height: auto;
+    aspect-ratio: 159 / 153;
   }
 }

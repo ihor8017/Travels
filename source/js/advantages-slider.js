@@ -25,7 +25,7 @@ const advantagesSlider = () => {
 
             slider = new Swiper('.advantages__slider', {
               // Default parameters
-
+              loop: true,
               navigation: {
                 nextEl: '.advantages__button-next',
                 prevEl: '.advantages__button-prev',
