@@ -23,23 +23,26 @@ const advantagesSlider = () => {
             if (!init) {
                 init = true;
 
-            slider = new Swiper('.advantages__slider', {
-              // Default parameters
-              loop: true,
-              navigation: {
-                nextEl: '.advantages__button-next',
-                prevEl: '.advantages__button-prev',
-              },
-              breakpoints: {
-                1200: {
-                  slidesPerView: 3,
-                  spaceBetween: 30,
-                  loop: false,
-                  initialSlide: 1
-                  }
-              }
+              slider = new Swiper('.advantages__slider', {
+                // Default parameters
+                loop: true,
+                navigation: {
+                  nextEl: '.advantages__button-next',
+                  prevEl: '.advantages__button-prev',
+                  },
+
+                spaceBetween: 30,
+                initialSlide: 1,
+
+                breakpoints: {
+                  1200: {
+                    slidesPerView: 3,
+                    spaceBetween: 30,
+                    initialSlide: 1,
+                    }
+                }
               });
-              }
+            }
           }
 
           else if(tablet.matches && slider !== undefined) {

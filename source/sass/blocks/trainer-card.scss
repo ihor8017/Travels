@@ -43,6 +43,24 @@
   border: 1px solid rgba($color: $BaseDark, $alpha: 0.3);
 }
 
+.trainer-card__link:hover,
+.trainer-card__link:focus {
+  border: 1px solid rgba($color: $BaseDark, $alpha: 1);
+}
+
+.trainer-card__link svg {
+  color: $BaseDark;
+}
+
+.trainer-card__link:active {
+  border: 1px solid rgba($color: $SecondaryColor, $alpha: 1);
+  background-color: $SecondaryColor;
+
+  svg {
+    color: $BaseWhite;
+  }
+}
+
 .trainer-card__info {
   margin: 0;
   font-size: 12px;

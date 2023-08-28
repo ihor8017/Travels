@@ -96,7 +96,7 @@
   display: block;
   width: 340px;
   height: 220px;
-  background-color: $BaseWhite;
+  background-color: #c0dbf7;
 }
 
 
@@ -190,6 +190,7 @@
   .tour-card {
     flex-direction: column;
     flex-wrap: wrap;
+    margin-bottom: -8px;
     padding-top: 215px;
     padding-bottom: 201px;
     width: 100%;
@@ -304,7 +305,7 @@
   }
 
   .tour-card--kamchatka {
-    padding-bottom: 102px;
+    padding-bottom: 110px;
   }
 
   .tour-card__title {

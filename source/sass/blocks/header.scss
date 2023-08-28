@@ -3,6 +3,7 @@
   padding-bottom: 80px;
   font-size: 16px;
   font-weight: 400;
+  z-index: 1;
 }
 
 .header__wrapper {
@@ -66,7 +67,7 @@
 @media (max-width: $tablet-maxwidth) {
   .header {
     padding-top: 0;
-    padding-bottom: 36px;
+    padding-bottom: 44px;
     align-items: center;
   }
 

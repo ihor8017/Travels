@@ -26,7 +26,7 @@
   height: auto;
   background: $SecondaryColor;
   object-fit: cover;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .hero__image {
@@ -34,6 +34,7 @@
   width: 1440px;
   height: 800px;
   left: 50%;
+  z-index: 0;
   transform: translateX(-50%);
 }
 
@@ -78,6 +79,7 @@
 
 @media (max-width: $tablet-maxwidth) {
   .hero__swiper .swiper-slide {
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -86,7 +88,9 @@
   .hero__image {
     display: flex;
     width: 100%;
-    height: 100%;
+    height: auto;
+    top: 41px;
+    aspect-ratio: 768 / 1024;
   }
 
   .hero__pagination-wrapper {
@@ -97,7 +101,7 @@
   .hero__pagination {
     position: absolute;
     z-index: 6;
-    bottom: 94px;
+    bottom: 86px;
     right: 50%;
     transform: translateX(50%);
   }
@@ -125,6 +129,12 @@
     :last-child {
       margin-right: 0;
     }
+  }
+
+  .hero__image {
+    top: 40px;
+    height: auto;
+    aspect-ratio: 320 / 568;
   }
 
   .hero__no-js {

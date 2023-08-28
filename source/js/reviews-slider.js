@@ -27,7 +27,8 @@ const slider = new Swiper('.reviews__slider', {
     },
     768: {
       slidesPerView: 2,
-      spaceBetween: 30
+      spaceBetween: 30,
+      autoHeight: true,
     },
     1200: {
       slidesPerView: 2,

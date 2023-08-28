@@ -4,6 +4,16 @@
     <meta charset="UTF-8">
     <title>Путешествия</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="preload" href="fonts/Montserrat-ExtraBold.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/Montserrat-Bold.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/Montserrat-SemiBold.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/Montserrat-Medium.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/Montserrat-Regular.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/Montserrat-Light.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="img/hero/desktop1@2x.webp" as="image">
+    <link rel="preload" href="img/hero/desktop2@2x.webp" as="image">
+    <link rel="preload" href="img/hero/desktop3@2x.webp" as="image">
+    <link rel="preload" href="img/hero/desktop4@2x.webp" as="image">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
@@ -164,10 +174,10 @@
                 <a class="tour-card__button button">Смотреть тур</a>
                 <div class="tour-card__audio">
                   <div class="tour-card__audio-frame">
+                    <a class="tour-card__play-button" href="https://www.youtube.com/embed/9TZXsZItgdw?&autoplay=1">
+                      <span class="visually-hidden">Нажмите, чтобы прослушать</span>
+                    </a>
                   </div>
-                  <a class="tour-card__play-buttoт" href="https://www.youtube.com/embed/9TZXsZItgdw?&autoplay=1">
-                    <span class="visually-hidden">Нажмите, чтобы прослушать</span>
-                  </a>
                 </div>
                 <div class="tour-card__info">
                   <p class="tour-card__duration">8 дней/7 ночей</p>
@@ -202,9 +212,9 @@
             <img class="upcoming-tours__bg-clouds" src="img/tours/bg/bgtours-mobile@1x.jpg" width="602" height="1364" srcset="img/tours/bg/bgtours-mobile@2x.jpg 2x" alt="облака">
           </picture>
           <!-- Slider main container -->
-          <div class="upcoming-tours__navigation">
-            <div class="upcoming-tours__button-prev"></div>
-            <div class="upcoming-tours__button-next"></div>
+          <div class="upcoming-tours__navigation navigation-slider">
+            <div class="upcoming-tours__button-prev navigation-slider__button-prev"></div>
+            <div class="upcoming-tours__button-next navigation-slider__button-next"></div>
           </div>
           <div class="upcoming-tours__slider">
             <!-- Additional required wrapper -->
@@ -722,7 +732,7 @@
           <picture>
             <source type="image/webp" media="(min-width: 1200px)" srcset="img/questions/desktop-bg@1x.webp 1x, img/questions/desktop-bg@2x.webp 2x">
             <source media="(min-width: 1200px)" srcset="img/questions/desktop-bg@1x.jpg 1x, img/questions/desktop-bg@2x.jpg 2x">
-            <source media="(min-width: 768px)" type="image/webp" srcset="cimg/questions/tablet-bg@1x.webp 1x, img/questions/tablet-bg@2x.webp 2x">
+            <source media="(min-width: 768px)" type="image/webp" srcset="img/questions/tablet-bg@1x.webp 1x, img/questions/tablet-bg@2x.webp 2x">
             <source media="(min-width: 768px)" srcset="img/questions/tablet-bg@1x.jpg 1x, img/questions/tablet-bg@2x.jpg 2x">
             <source type="image/webp" srcset="img/questions/mobile-bg@1x.webp 1x, img/questions/mobile-bg@2x.webp 2x">
             <img class="questions__image-bg" src="img/questions/mobile-bg@1x.jpg" width="320" height="621" srcset="img/questions/mobile-bg@2x.jpg 2x" alt="">
@@ -731,15 +741,55 @@
           <h2 class="questions__title">Остались вопросы?</h2>
           <p class="questions__descriptions">Заполните форму и&nbsp;наш оператор свяжется с&nbsp;вами для консультации.</p>
           <div class="questions__form-wrapper" data-form-validate data-callback="base">
-            <form class="questios__form form-questions" method="post" action="https://echo.htmlacademy.ru/" data-on-input-validate>
-              <div class="form-questions__input-wrapper" data-validate-type="text" minlength="20"  data-limitation="name" data-message-base="Поле обязательно к заполнению" data-message-extra="Максимальная длина  20 символов" data-required >
+            <form class="questions__form form-questions" method="post" action="https://echo.htmlacademy.ru/" data-on-input-validate>
+              <div class="form-questions__input-wrapper" data-validate-type="text" data-limitation="name" data-message-base="Поле обязательно к заполнению" data-message-extra="Максимальная длина  20 символов" data-required >
                 <input class="form-questions__text form-questions__input" type="text" name="question" placeholder="Как к вам обращаться?">
               </div>
-              <div class="form-questions__input-wrapper" data-validate-type="phone" data-on-input-validate data-message-base="Поле обязательно к заполнению"data-message-extra="Проверьте корректность заполнения поля" data-required>
-                <input class="form-questions__phone form-questions__input" type="" name="phone" placeholder="Телефон">
+              <div class="form-questions__input-wrapper" data-validate-type="phone" data-on-input-validate data-message-base="Поле обязательно к заполнению" data-message-extra="Проверьте корректность заполнения поля" data-required>
+                <input class="form-questions__phone form-questions__input" type="tel" name="phone" placeholder="Телефон">
               </div>
               <button class="form-questions__button button" type="submit">Отправить</button>
             </form>
+          </div>
+        </div>
+      </section>
+      <section class="contacts">
+        <div class="contacts__container">
+          <div class="contacts__text-wrapper">
+            <h2 class="contacts__title">Контакты</h2>
+            <p class="contacts__title-shadow title-shadow">Контакты</p>
+            <p class="contacts__descriptions">
+              Свяжитесь с нами любым удобным для вас способом или приходите к нам в гости.
+              Мы будем рады поделиться увлекательными историями и подобрать для вас тур.
+              </p>
+            <ul class="contacts__list contacts-list">
+              <li class="contacts-list__item">
+                <p class="contacts-list__item-title">Телефон</p>
+                <p class="contacts-list__item-info">
+                  <a class="contacts-list__link link" href="tel:89837454545">8 983 745 45 45</a>
+                </p>
+              </li>
+              <li class="contacts-list__item">
+                <p class="contacts-list__item-title">E-mail</p>
+                <p class="contacts-list__item-info">
+                  <a class="contacts-list__link link" href="mailto:info@lifetour.com">info@lifetour.com</a>
+                </p>
+              </li>
+              <li class="contacts-list__item">
+                <p class="contacts-list__item-title">Адрес</p>
+                <p class="contacts-list__item-info">г. Москва, пр-т Мира, д. 14, офис 101</p>
+              </li>
+            </ul>
+          </div>
+          <div class="contacts__map-container" id="map">
+            <picture>
+              <source type="image/webp" media="(min-width: 1200px)" srcset="img/map/map-desktop@1x.webp 1x, img/map/map-desktop@2x.webp 2x">
+              <source media="(min-width: 1200px)" srcset="img/map/map-desktop@1x.jpg 1x, img/map/map-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" type="image/webp" srcset="img/map/map-tablet@1x.webp 1x, img/map/map-tablet@2x.webp 2x">
+              <source media="(min-width: 768px)" srcset="img/map/map-tablet@1x.jpg 1x, img/map/map-tablet@2x.jpg 2x">
+              <source type="image/webp" srcset="img/map/map@1x.webp 1x, img/map/map@2x.webp 2x">
+              <img class="contacts__map-image" src="img/map/map@1x.jpg" width="290" height="320" srcset="img/map/map@2x.jpg 2x" alt="">
+            </picture>
           </div>
         </div>
       </section>
@@ -835,5 +885,6 @@
       <p class="footer__info">Политика конфиденциальности</p>
     </footer>
     <script src="./js/script.js" type="module"></script>
+    <script src="./js/vendor/leaflet.js"></script>
   </body>
 </html>

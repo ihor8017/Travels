@@ -21,8 +21,22 @@
   border: 1px solid rgba($color: $BaseDark, $alpha: 0.3);
 }
 
+.social__link:hover,
+.social__link:focus {
+  border: 1px solid rgba($color: $BaseDark, $alpha: 1);
+}
+
 .social__link svg {
   color: $BaseDark;
+}
+
+.social__link:active {
+  border: 1px solid rgba($color: $SecondaryColor, $alpha: 1);
+  background-color: $SecondaryColor;
+
+  svg {
+    color: $BaseWhite;
+  }
 }
 
 @media (max-width: $mobile-maxwidth) {

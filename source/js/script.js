@@ -8,6 +8,7 @@ import reviewsSlider from "./reviews-slider.js";
 import advantagesSlider from  "./advantages-slider.js";
 import gallerySlider from "./gallery-slider.js";
 import {Form} from './vendor/form-validate/form.js';
+import displayMap from './map.js';
 
 window.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('load', () => {
@@ -17,6 +18,7 @@ window.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+displayMap();
 toggleNavigation();
 swiperHero();
 playVideo();

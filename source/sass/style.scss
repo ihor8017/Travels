@@ -6,6 +6,7 @@
 /*VENDOR*/
 @import "vendor/swiper";
 @import "vendor/swiper-vars";
+@import "vendor/leaflet";
 
 /* BLOCKS */
 @import "blocks/main-content";
@@ -35,3 +36,5 @@
 @import "blocks/photo-card";
 @import "blocks/questions";
 @import "blocks/form-questions";
+@import "blocks/contacts";
+@import "blocks/contacts-list";

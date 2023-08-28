@@ -1,0 +1,137 @@
+.contacts-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.contacts-list__item {
+  position: relative;
+  margin: 0;
+  margin-bottom: 35px;
+  padding-left: 56px;
+}
+
+.contacts-list__item::before {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 26px;
+  height: 26px;
+  background-image: url("../../img/map/phone.svg");
+
+  content: "";
+}
+
+.contacts-list__item:nth-child(2).contacts-list__item::before {
+  background-image: url("../../img/map/mail.svg");
+}
+
+.contacts-list__item:nth-child(3).contacts-list__item::before {
+  background-image: url("../../img/map/pin_stroke.svg");
+}
+
+.contacts-list__item-title {
+  margin: 0;
+  margin-bottom: 8px;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 18px;
+}
+
+.contacts-list__item-info {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: -0.7px;
+}
+
+.contacts-list__link {
+  color: $BaseDark;
+}
+
+@media (max-width: $tablet-maxwidth) {
+  .contacts-list {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 48px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .contacts-list__item-title {
+    margin-bottom: 7px;
+    font-size: 16px;
+    line-height: 16px;
+  }
+
+  .contacts-list__item-info {
+    font-size: 14px;
+    line-height: 22px;
+    letter-spacing: -0.3px;
+  }
+
+  .contacts-list__item {
+    position: relative;
+    margin: 0;
+    margin-bottom: 9px;
+    padding-left: 35px;
+  }
+
+  .contacts-list__item::before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translateY(0);
+    width: 24px;
+    height: 24px;
+    content: "";
+  }
+}
+
+@media (max-width: $mobile-maxwidth) {
+  .contacts-list {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 23px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .contacts-list__item-title {
+    margin-bottom: 8px;
+    font-size: 14px;
+    line-height: 14px;
+  }
+
+  .contacts-list__item-info {
+    font-size: 14px;
+    line-height: 20px;
+    padding-right: 100px;
+    letter-spacing: -0.3px;
+  }
+
+  .contacts-list__item {
+    position: relative;
+    margin: 0;
+    margin-bottom: 7px;
+    padding-left: 32px;
+  }
+
+  .contacts-list__item::before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translateY(0);
+    width: 24px;
+    height: 24px;
+    content: "";
+  }
+}
