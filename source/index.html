@@ -4,16 +4,17 @@
     <meta charset="UTF-8">
     <title>Путешествия</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="preload" href="fonts/Montserrat-ExtraBold.woff2" as="font" crossorigin="anonymous">
-    <link rel="preload" href="fonts/Montserrat-Bold.woff2" as="font" crossorigin="anonymous">
-    <link rel="preload" href="fonts/Montserrat-SemiBold.woff2" as="font" crossorigin="anonymous">
-    <link rel="preload" href="fonts/Montserrat-Medium.woff2" as="font" crossorigin="anonymous">
-    <link rel="preload" href="fonts/Montserrat-Regular.woff2" as="font" crossorigin="anonymous">
-    <link rel="preload" href="fonts/Montserrat-Light.woff2" as="font" crossorigin="anonymous">
-    <link rel="preload" href="img/hero/desktop1@2x.webp" as="image">
-    <link rel="preload" href="img/hero/desktop2@2x.webp" as="image">
-    <link rel="preload" href="img/hero/desktop3@2x.webp" as="image">
-    <link rel="preload" href="img/hero/desktop4@2x.webp" as="image">
+    <link rel="preload" href="./fonts/Montserrat-ExtraBold.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/Montserrat-Bold.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/Montserrat-SemiBold.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/Montserrat-Medium.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/Montserrat-Regular.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/Montserrat-Light.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="./img/hero/desktop1@2x.webp" as="image">
+    <link rel="preload" href="./img/tours/desktop2@2x.webp" as="image">
+    <link rel="preload" href="./img/tours/desktop1@2x.webp" as="image">
+    <link rel="preload" href="./img/tours/desktop3@2x.webp" as="image">
+    <link rel="preload" href="./img/about/desktop@2x.webp" as="image">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
@@ -133,7 +134,7 @@
                 <source media="(min-width: 768px)" type="image/webp" srcset="img/hero/tablet2@1x.webp 1x, img/hero/tablet2@2x.webp 2x">
                 <source media="(min-width: 768px)" srcset="img/hero/tablet2@1x.jpg 1x, img/hero/tablet2@2x.jpg 2x">
                 <source type="image/webp" srcset="img/hero/mobile2@1x.webp 1x, img/hero/mobile2@2x.webp 2x">
-                <img class="hero__image" src="img/hero/mobile2@1x.jpg" srcset="img/hero/mobile2@2x.jpg 2x" width="1440" height="800" alt="вершины Кавказа">
+                <img class="hero__image" src="img/hero/mobile2@1x.jpg" srcset="img/hero/mobile2@2x.jpg 2x" width="1440" height="800" alt="вершины Кавказа" loading="lazy">
               </picture>
               <div class="hero__tour tour-card tour-card--kamchatka">
                 <h3 class="tour-card__title tour-card__title--kamchatka">Невероятная <span>природа Камчатки</span></h3>
@@ -166,7 +167,7 @@
                 <source media="(min-width: 768px)" type="image/webp" srcset="img/hero/tablet3@1x.webp 1x, img/hero/tablet3@2x.webp 2x">
                 <source media="(min-width: 768px)" srcset="img/hero/tablet3@1x.jpg 1x, img/hero/tablet3@2x.jpg 2x">
                 <source type="image/webp" srcset="img/hero/mobile3@1x.webp 1x, img/hero/mobile3@2x.webp 2x">
-                <img class="hero__image" src="img/hero/mobile3@1x.jpg" srcset="img/hero/mobile3@2x.jpg 2x" width="1440" height="800" alt="вершины Кавказа">
+                <img class="hero__image" src="img/hero/mobile3@1x.jpg" srcset="img/hero/mobile3@2x.jpg 2x" width="1440" height="800" alt="вершины Кавказа" loading="lazy">
               </picture>
               <div class="hero__tour tour-card tour-card--audio">
                 <h3 class="tour-card__title tour-card__title--audio">Магические пейзажи Алтайского Края</h3>
@@ -174,7 +175,7 @@
                 <a class="tour-card__button button">Смотреть тур</a>
                 <div class="tour-card__audio">
                   <div class="tour-card__audio-frame">
-                    <a class="tour-card__play-button" href="https://www.youtube.com/embed/9TZXsZItgdw?&autoplay=1">
+                    <a class="tour-card__play-button" href="https://music.yandex.ru/album/25474374/track/112912322?activeTab=track-list&dir=desc">
                       <span class="visually-hidden">Нажмите, чтобы прослушать</span>
                     </a>
                   </div>
@@ -195,7 +196,6 @@
     </header>
     <main class="main-content">
       <section class="upcoming-tours no-js">
-
         <div class="upcoming-tours__wrapper-content">
           <h2 class="upcoming-tours__title">Ближайшие туры</h2>
           <p class="upcoming-tours__title-shadow">Ближайшие туры</p>
@@ -209,7 +209,7 @@
             <source media="(min-width: 768px)" type="image/webp" srcset="img/tours/bg/bgtours-tablet@1x.webp 1x, img/tours/bg/bgtours-tablet@2x.webp 2x">
             <source media="(min-width: 768px)" srcset="img/tours/bg/bgtours-tablet@1x.jpg 1x, img/tours/bg/bgtours-tablet@2x.jpg 2x">
             <source type="image/webp" srcset="img/tours/bg/bgtours-mobile@1x.webp 1x, img/tours/bg/bgtours-mobile@2x.webp 2x">
-            <img class="upcoming-tours__bg-clouds" src="img/tours/bg/bgtours-mobile@1x.jpg" width="602" height="1364" srcset="img/tours/bg/bgtours-mobile@2x.jpg 2x" alt="облака">
+            <img class="upcoming-tours__bg-clouds" src="img/tours/bg/bgtours-mobile@1x.jpg" width="602" height="1364" srcset="img/tours/bg/bgtours-mobile@2x.jpg 2x" alt="облака" loading="lazy">
           </picture>
           <!-- Slider main container -->
           <div class="upcoming-tours__navigation navigation-slider">
@@ -227,7 +227,7 @@
                   <source media="(min-width: 768px)" type="image/webp" srcset="img/tours/tablet1@1x.webp 1x, img/tours/tablet1@2x.webp 2x">
                   <source media="(min-width: 768px)" srcset="img/tours/tablet1@1x.jpg 1x, img/tours/tablet1@2x.jpg 2x">
                   <source type="image/webp" srcset="img/tours/mobile1@1x.webp 1x, img/tours/mobile1@2x.webp 2x">
-                  <img class="tours-card__image" src="img/tours/mobile1@1x.jpg" width="380" height="412" srcset="img/tours/mobile1@2x.jpg 2x" alt="вид на горное ущелье">
+                  <img class="tours-card__image" src="img/tours/mobile1@1x.jpg" width="380" height="412" srcset="img/tours/mobile1@2x.jpg 2x" alt="вид на горное ущелье" loading="lazy">
                 </picture>
                 <div class="tours-card__info">
                   <a class="tours-card__button button" href="#">Кавказ</a>
@@ -246,7 +246,7 @@
                   <source media="(min-width: 768px)" type="image/webp" srcset="img/tours/tablet2@1x.webp 1x, img/tours/tablet2@2x.webp 2x">
                   <source media="(min-width: 768px)" srcset="img/tours/tablet2@1x.jpg 1x, img/tours/tablet2@2x.jpg 2x">
                   <source type="image/webp" srcset="img/tours/mobile2@1x.webp 1x, img/tours/mobile2@2x.webp 2x">
-                  <img class="tours-card__image" src="img/tours/mobile2@1x.jpg" width="380" height="412" srcset="img/tours/mobile2@2x.jpg 2x" alt="вид на горное ущелье">
+                  <img class="tours-card__image" src="img/tours/mobile2@1x.jpg" width="380" height="412" srcset="img/tours/mobile2@2x.jpg 2x" alt="вид на горное ущелье" loading="lazy">
                 </picture>
                 <div class="tours-card__info">
                   <a class="tours-card__button button" href="#">Алтай</a>
@@ -265,7 +265,7 @@
                   <source media="(min-width: 768px)" type="image/webp" srcset="img/tours/tablet3@1x.webp 1x, img/tours/tablet3@2x.webp 2x">
                   <source media="(min-width: 768px)" srcset="img/tours/tablet3@1x.jpg 1x, img/tours/tablet3@2x.jpg 2x">
                   <source type="image/webp" srcset="img/tours/mobile3@1x.webp 1x, img/tours/mobile3@2x.webp 2x">
-                  <img class="tours-card__image" src="img/tours/mobile3@1x.jpg" width="380" height="412" srcset="img/tours/mobile3@2x.jpg 2x" alt="вид на горное ущелье">
+                  <img class="tours-card__image" src="img/tours/mobile3@1x.jpg" width="380" height="412" srcset="img/tours/mobile3@2x.jpg 2x" alt="вид на горное ущелье" loading="lazy">
                 </picture>
                 <div class="tours-card__info">
                   <a class="tours-card__button button" href="#">Адыгея</a>
@@ -284,7 +284,7 @@
                   <source media="(min-width: 768px)" type="image/webp" srcset="img/tours/tablet2@1x.webp 1x, img/tours/tablet2@2x.webp 2x">
                   <source media="(min-width: 768px)" srcset="img/tours/tablet2@1x.jpg 1x, img/tours/tablet2@2x.jpg 2x">
                   <source type="image/webp" srcset="img/tours/mobile2@1x.webp 1x, img/tours/mobile2@2x.webp 2x">
-                  <img class="tours-card__image" src="img/tours/mobile2@1x.jpg" width="380" height="412" srcset="img/tours/mobile2@2x.jpg 2x" alt="вид на горное ущелье">
+                  <img class="tours-card__image" src="img/tours/mobile2@1x.jpg" width="380" height="412" srcset="img/tours/mobile2@2x.jpg 2x" alt="вид на горное ущелье" loading="lazy">
                 </picture>
                 <div class="tours-card__info">
                   <a class="tours-card__button button" href="#">Алтай</a>
@@ -323,7 +323,7 @@
                     <source media="(min-width: 768px)" type="image/webp" srcset="img/trainers/tablet1@1x.webp 1x, img/trainers/tablet1@2x.webp 2x">
                     <source media="(min-width: 768px)" srcset="img/trainers/tablet1@1x.jpg 1x, img/trainers/tablet1@2x.jpg 2x">
                     <source type="image/webp" srcset="img/trainers/mobile1@1x.webp 1x, img/trainers/mobile1@2x.webp 2x">
-                    <img class="trainer-card__image" src="img/trainers/mobile1@1x.jpg" width="250" height="212" srcset="img/trainers/mobile1@2x.jpg 2x" alt="">
+                    <img class="trainer-card__image" src="img/trainers/mobile1@1x.jpg" width="250" height="212" srcset="img/trainers/mobile1@2x.jpg 2x" alt="" loading="lazy">
                   </picture>
                   <p class="trainer-card__name">
                     Александр<span>Прокофьев</span>
@@ -344,7 +344,7 @@
                   <source media="(min-width: 768px)" type="image/webp" srcset="img/trainers/tablet2@1x.webp 1x, img/trainers/tablet2@2x.webp 2x">
                   <source media="(min-width: 768px)" srcset="img/trainers/tablet2@1x.jpg 1x, img/trainers/tablet2@2x.jpg 2x">
                   <source type="image/webp" srcset="img/trainers/mobile2@1x.webp 1x, img/trainers/mobile2@2x.webp 2x">
-                  <img class="trainer-card__image" src="img/trainers/mobile2@1x.jpg" width="250" height="212" srcset="img/trainers/mobile2@2x.jpg 2x" alt="">
+                  <img class="trainer-card__image" src="img/trainers/mobile2@1x.jpg" width="250" height="212" srcset="img/trainers/mobile2@2x.jpg 2x" alt="" loading="lazy">
                 </picture>
                 <p class="trainer-card__name">
                   Светлана<span>Афиногенова</span>
@@ -365,7 +365,7 @@
                   <source media="(min-width: 768px)" type="image/webp" srcset="img/trainers/tablet3@1x.webp 1x, img/trainers/tablet3@2x.webp 2x">
                   <source media="(min-width: 768px)" srcset="img/trainers/tablet3@1x.jpg 1x, img/trainers/tablet3@2x.jpg 2x">
                   <source type="image/webp" srcset="img/trainers/mobile3@1x.webp 1x, img/trainers/mobile3@2x.webp 2x">
-                  <img class="trainer-card__image" src="img/trainers/mobile3@1x.jpg" width="250" height="212" srcset="img/trainers/mobile3@2x.jpg 2x" alt="вид на горное ущелье">
+                  <img class="trainer-card__image" src="img/trainers/mobile3@1x.jpg" width="250" height="212" srcset="img/trainers/mobile3@2x.jpg 2x" alt="вид на горное ущелье" loading="lazy">
                 </picture>
                 <p class="trainer-card__name">
                   Надежда<span>Колесниченко</span>
@@ -386,7 +386,7 @@
                   <source media="(min-width: 768px)" type="image/webp" srcset="img/trainers/tablet4@1x.webp 1x, img/trainers/tablet4@2x.webp 2x">
                   <source media="(min-width: 768px)" srcset="img/trainers/tablet4@1x.jpg 1x, img/trainers/tablet4@2x.jpg 2x">
                   <source type="image/webp" srcset="img/trainers/mobile4@1x.webp 1x, img/trainers/mobile4@2x.webp 2x">
-                  <img class="trainer-card__image" src="img/trainers/mobile4@1x.jpg" width="250" height="212" srcset="img/trainers/mobile4@2x.jpg 2x" alt="вид на горное ущелье">
+                  <img class="trainer-card__image" src="img/trainers/mobile4@1x.jpg" width="250" height="212" srcset="img/trainers/mobile4@2x.jpg 2x" alt="вид на горное ущелье" loading="lazy">
                 </picture>
                 <p class="trainer-card__name">
                   Федор<span>Кайгородов</span>
@@ -407,7 +407,7 @@
                   <source media="(min-width: 768px)" type="image/webp" srcset="img/trainers/tablet1@1x.webp 1x, img/trainers/tablet1@2x.webp 2x">
                   <source media="(min-width: 768px)" srcset="img/trainers/tablet1@1x.jpg 1x, img/trainers/tablet1@2x.jpg 2x">
                   <source type="image/webp" srcset="img/trainers/mobile1@1x.webp 1x, img/trainers/mobile1@2x.webp 2x">
-                  <img class="trainer-card__image" src="img/trainers/mobile1@1x.jpg" width="250" height="212" srcset="img/trainers/mobile1@2x.jpg 2x" alt="вид на горное ущелье">
+                  <img class="trainer-card__image" src="img/trainers/mobile1@1x.jpg" width="250" height="212" srcset="img/trainers/mobile1@2x.jpg 2x" alt="вид на горное ущелье" loading="lazy">
                 </picture>
                 <p class="trainer-card__name">
                   Александр<span>Прокофьев</span>
@@ -441,7 +441,7 @@
             <source media="(min-width: 768px)" type="image/webp" srcset="img/about/tablet@1x.webp 1x, img/about/tablet@2x.webp 2x">
             <source media="(min-width: 768px)" srcset="img/about/tablet@1x.jpg 1x, img/about/tablet@2x.jpg 2x">
             <source type="image/webp" srcset="img/about/mobile@1x.webp 1x, img/about/mobile@2x.webp 2x">
-            <img class="about-us__image" src="img/about/mobile@1x.jpg" width="320" height="402" srcset="img/about/mobile@2x.jpg 2x" alt="Группа людей идёт по тропинке в горах">
+            <img class="about-us__image" src="img/about/mobile@1x.jpg" width="320" height="402" srcset="img/about/mobile@2x.jpg 2x" alt="Группа людей идёт по тропинке в горах" loading="lazy">
           </picture>
           <div class="about-us__wrapper-text">
             <h2 class="about-us__title">О нас</h2>
@@ -788,7 +788,7 @@
               <source media="(min-width: 768px)" type="image/webp" srcset="img/map/map-tablet@1x.webp 1x, img/map/map-tablet@2x.webp 2x">
               <source media="(min-width: 768px)" srcset="img/map/map-tablet@1x.jpg 1x, img/map/map-tablet@2x.jpg 2x">
               <source type="image/webp" srcset="img/map/map@1x.webp 1x, img/map/map@2x.webp 2x">
-              <img class="contacts__map-image" src="img/map/map@1x.jpg" width="290" height="320" srcset="img/map/map@2x.jpg 2x" alt="">
+              <img class="contacts__map-image" src="img/map/map@1x.jpg" width="290" height="320" srcset="img/map/map@2x.jpg 2x" alt="" loading="lazy">
             </picture>
           </div>
         </div>
