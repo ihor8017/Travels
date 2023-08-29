@@ -15,49 +15,52 @@ var desktopIcon = L.icon({
   iconSize:     [48, 48], // size of the icon
   iconAnchor:   [25, 45], // point of the icon which will correspond to marker's location
 });
-L.marker([55.816826, 37.637276], {icon: desktopIcon}).addTo(map);
-// var tabletIcon = L.icon({
-//   iconUrl: '../img/map/pin_filled.svg',
-//   iconSize:     [42, 42], // size of the icon
-//   iconAnchor:   [25, 45], // point of the icon which will correspond to marker's location
-// });
+var layer = L.marker([55.816826, 37.637276], {icon: desktopIcon}).addTo(map);
 
-// var mobileIcon = L.icon({
-//   iconUrl: '../img/map/pin_filled.svg',
-//   iconSize:     [42, 42], // size of the icon
-//   iconAnchor:   [25, 45], // point of the icon which will correspond to marker's location
-// });
+var tabletIcon = L.icon({
+  iconUrl: '../img/map/pin_filled.svg',
+  iconSize:     [42, 42], // size of the icon
+  iconAnchor:   [21, 37], // point of the icon which will correspond to marker's location
+});
+
+var mobileIcon = L.icon({
+  iconUrl: '../img/map/pin_filled.svg',
+  iconSize:     [28, 28], // size of the icon
+  iconAnchor:   [16, 25], // point of the icon which will correspond to marker's location
+});
 
 
 
-// function iconMode() {
-//   let mobile = window.matchMedia('(min-width: 0px) and (max-width: 769px)');
-//   let tablet = window.matchMedia('(min-width: 768px) and (max-width: 1199px)');
-//   let desktop = window.matchMedia('(min-width: 1200px)');
-//   var marker = desktopIcon;
-//   L.marker([55.816826, 37.637276], {icon: marker}).addTo(map);
+function iconMode() {
+  let mobile = window.matchMedia('(min-width: 0px) and (max-width: 769px)');
+  let tablet = window.matchMedia('(min-width: 768px) and (max-width: 1199px)');
+  let desktop = window.matchMedia('(min-width: 1200px)');
 
-//       if(desktop.matches) {
-//         marker.setIcon(desktopIcon);
-//       }
 
-//       else if(tablet.matches) {
-//         marker.setIcon(tabletIcon);
-//     }
+      if(desktop.matches) {
+        layer.remove();
+        layer = L.marker([55.816826, 37.637276], {icon: desktopIcon}).addTo(map);
+      }
 
-//     // Disable (for desktop)
-//     else if(mobile.matches ) {
-//       marker.setIcon(mobileIcon);
-//     }
-// }
+      else if(tablet.matches) {
+        layer.remove();
+        layer = L.marker([55.816826, 37.637276], {icon: tabletIcon}).addTo(map);
+    }
 
-// window.addEventListener('load', () => {
-//   iconMode();
-// });
+    // Disable (for desktop)
+    else if(mobile.matches ) {
+      layer.remove();
+      layer = L.marker([55.816826, 37.637276], {icon: mobileIcon}).addTo(map);
+    }
+}
 
-// window.addEventListener('resize', () => {
-//     iconMode();
-// });
+window.addEventListener('load', () => {
+  iconMode();
+});
+
+window.addEventListener('resize', () => {
+    iconMode();
+});
 
 };
 
