@@ -1,12 +1,13 @@
 .training {
+  position: relative;
   padding-top: 124px;
   padding-bottom: 20px;
-  position: relative;
   width: 100%;
   max-width: 1440px;
   margin: 0 auto;
   overflow-x: clip;
   color: $BaseDark;
+  z-index: 1;
 }
 
 .training.no-js .training__wrapper {

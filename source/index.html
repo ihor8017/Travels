@@ -106,6 +106,7 @@
                 <source type="image/webp" srcset="img/hero/mobile1@1x.webp 1x, img/hero/mobile1@2x.webp 2x">
                 <img class="hero__image" src="img/hero/mobile1@1x.jpg" srcset="img/hero/mobile1@2x.jpg 2x" width="1440" height="800" alt="вершины Кавказа">
               </picture>
+              <div class="hero__overlay"></div>
               <div class="hero__tour tour-card">
                 <h3 class="tour-card__title">Захватывающие вершины Кавказа</h3>
                 <p class="tour-card__description">В&nbsp;сопровождении опытных гидов вы&nbsp;пройдете через потрясающие ландшафты и&nbsp;совершите восход на&nbsp;вершину горы Чегет.</p>
@@ -229,6 +230,7 @@
                   <source type="image/webp" srcset="img/tours/mobile1@1x.webp 1x, img/tours/mobile1@2x.webp 2x">
                   <img class="tours-card__image" src="img/tours/mobile1@1x.jpg" width="380" height="412" srcset="img/tours/mobile1@2x.jpg 2x" alt="вид на горное ущелье" loading="lazy">
                 </picture>
+                <div class="tours-card__overlay"></div>
                 <div class="tours-card__info">
                   <a class="tours-card__button button" href="#">Кавказ</a>
                   <p class="tours-card__days"><span>4 дня</span></p>
@@ -248,6 +250,7 @@
                   <source type="image/webp" srcset="img/tours/mobile2@1x.webp 1x, img/tours/mobile2@2x.webp 2x">
                   <img class="tours-card__image" src="img/tours/mobile2@1x.jpg" width="380" height="412" srcset="img/tours/mobile2@2x.jpg 2x" alt="вид на горное ущелье" loading="lazy">
                 </picture>
+                <div class="tours-card__overlay"></div>
                 <div class="tours-card__info">
                   <a class="tours-card__button button" href="#">Алтай</a>
                   <p class="tours-card__days"><span>14 дней</span></p>
@@ -267,6 +270,7 @@
                   <source type="image/webp" srcset="img/tours/mobile3@1x.webp 1x, img/tours/mobile3@2x.webp 2x">
                   <img class="tours-card__image" src="img/tours/mobile3@1x.jpg" width="380" height="412" srcset="img/tours/mobile3@2x.jpg 2x" alt="вид на горное ущелье" loading="lazy">
                 </picture>
+                <div class="tours-card__overlay"></div>
                 <div class="tours-card__info">
                   <a class="tours-card__button button" href="#">Адыгея</a>
                   <p class="tours-card__days"><span>7 дней</span></p>
@@ -286,6 +290,7 @@
                   <source type="image/webp" srcset="img/tours/mobile2@1x.webp 1x, img/tours/mobile2@2x.webp 2x">
                   <img class="tours-card__image" src="img/tours/mobile2@1x.jpg" width="380" height="412" srcset="img/tours/mobile2@2x.jpg 2x" alt="вид на горное ущелье" loading="lazy">
                 </picture>
+                <div class="tours-card__overlay"></div>
                 <div class="tours-card__info">
                   <a class="tours-card__button button" href="#">Алтай</a>
                   <p class="tours-card__days"><span>14 дней</span></p>
@@ -443,6 +448,10 @@
             <source type="image/webp" srcset="img/about/mobile@1x.webp 1x, img/about/mobile@2x.webp 2x">
             <img class="about-us__image" src="img/about/mobile@1x.jpg" width="320" height="402" srcset="img/about/mobile@2x.jpg 2x" alt="Группа людей идёт по тропинке в горах" loading="lazy">
           </picture>
+          <picture>
+            <source type="image/webp" srcset="img/about/clouds@1x.webp 1x, img/about/clouds@2x.webp 2x">
+            <img class="about-us__clouds" src="img/about/clouds@1x.jpg" width="618" height="280" srcset="img/about/clouds@2x.jpg 2x" alt="Группа людей идёт по тропинке в горах" loading="lazy">
+          </picture>
           <div class="about-us__wrapper-text">
             <h2 class="about-us__title">О нас</h2>
             <p class="about-us__title-shadow title-shadow">О нас</p>
@@ -589,12 +598,20 @@
       </section>
       <section class="advantages no-js">
         <div class="advantages__wrapper">
+          <picture>
+            <source type="image/webp" srcset="img/advantages/cloudsdesktop1@1x.webp 1x, img/advantages/cloudsdesktop1@2x.webp 2x">
+            <img class="advantages__clouds1" src="img/advantages/cloudsdesktop1@1x.jpg" width="705" height="391" srcset="img/advantages/cloudsdesktop2@2x.jpg 2x" alt="" loading="lazy">
+          </picture>
+          <picture>
+            <source type="image/webp" srcset="img/advantages/cloudsdesktop2@1x.webp 1x, img/advantages/cloudsdesktop2@2x.webp 2x">
+            <img class="advantages__clouds2" src="img/advantages/cloudsdesktop2@1x.jpg" width="602" height="263" srcset="img/advantages/cloudsdesktop2@2x.jpg 2x" alt="" loading="lazy">
+          </picture>
           <h2 class="advantages__title">Преимущества</h2>
           <p class="advantages__title-shadow title-shadow">Преимущества</p>
           <div class="advantages__slider">
             <div class="advantages__slider-wrapper">
               <!-- Slides -->
-              <div class="swiper-slide advantages__slide advantages-card advantages-card--secutity">
+              <div class=" advantages__slide advantages-card advantages-card--secutity">
                 <h3 class="advantages-card__title">Безопасность и охрана</h3>
                 <p class="advantages-card__descrption">
                   Уделяем внимание безопасности клиентов, внедряя строгие процедуры и&nbsp;протоколы безопасности.
@@ -602,7 +619,7 @@
                   и&nbsp;даем гарантию полной безопасности во&nbsp;время всего тура.
                 </p>
               </div>
-              <div class="swiper-slide advantages__slide advantages-card advantages-card--knowledge">
+              <div class="advantages__slide advantages-card advantages-card--knowledge">
                 <h3 class="advantages-card__title">Экспертиза и знания</h3>
                 <p class="advantages-card__descrption">
                   Наша команда опытных гидов имеет обширные знания о&nbsp;местности, погодных условиях
@@ -610,7 +627,7 @@
                   руках и&nbsp;могут в&nbsp;полной мере насладиться опытом без опасений.
                 </p>
               </div>
-              <div class="swiper-slide advantages__slide advantages-card advantages-card--equipment">
+              <div class="advantages__slide advantages-card advantages-card--equipment">
                 <h3 class="advantages-card__title">Оборудование и снаряжение</h3>
                 <p class="advantages-card__descrption">
                   Мы&nbsp;предоставляем клиентам все необходимое оборудование, необходимое для путешествия.
@@ -618,7 +635,7 @@
                   что делает путешествие более удобным и&nbsp;экономически выгодным.
                 </p>
               </div>
-              <div class="swiper-slide advantages__slide advantages-card advantages-card--routes">
+              <div class="advantages__slide advantages-card advantages-card--routes">
                 <h3 class="advantages-card__title">Индивидуальные маршруты</h3>
                 <p class="advantages-card__descrption">
                   Предлагает широкий выбор туров, отвечающих различным уровням мастерства и&nbsp;интересам.
@@ -626,7 +643,7 @@
                   чтобы вы&nbsp;получили индивидуальный опыт.
                 </p>
               </div>
-              <div class="swiper-slide advantages__slide advantages-card advantages-card--nature">
+              <div class="advantages__slide advantages-card advantages-card--nature">
                 <h3 class="advantages-card__title">Бережное отношение к&nbsp;природе</h3>
                 <p class="advantages-card__descrption">
                   Уделяем первостепенное внимание охране окружающей среды и&nbsp;гарантируем,

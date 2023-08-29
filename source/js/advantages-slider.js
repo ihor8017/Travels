@@ -8,51 +8,35 @@ const advantagesSlider = () => {
   advantages.classList.remove('no-js');
   advantagesNavigation.classList.add('swiper-navigation')
   advantagesWrapper.classList.add('swiper-wrapper');
+
   advantagesSlides.forEach(element => {
     element.classList.add('swiper-slide');
   });
-  let slider;
+  let swiper;
   let init;
 
   function swiperMode() {
-      let mobile = window.matchMedia('(min-width: 0px) and (max-width: 769px)');
-      let tablet = window.matchMedia('(min-width: 768px) and (max-width: 1199px)');
+      let tablet = window.matchMedia('(min-width: 0px) and (max-width: 1199px)');
       let desktop = window.matchMedia('(min-width: 1200px)');
 
-          if(desktop.matches) {
-            if (!init) {
-                init = true;
-
-              slider = new Swiper('.advantages__slider', {
-                // Default parameters
-                loop: true,
-                navigation: {
-                  nextEl: '.advantages__button-next',
-                  prevEl: '.advantages__button-prev',
-                  },
-
-                spaceBetween: 30,
-                initialSlide: 1,
-
-                breakpoints: {
-                  1200: {
-                    slidesPerView: 3,
-                    spaceBetween: 30,
-                    initialSlide: 1,
-                    }
-                }
-              });
-            }
+        if(desktop.matches) {
+          if (!init) {
+            init = true;
+            swiper = new Swiper('.advantages__slider', {
+              loop: true,
+              slidesPerView: 3,
+              spaceBetween: 30,
+              initialSlide: 1,
+              navigation: {
+                nextEl: '.advantages__button-next',
+                prevEl: '.advantages__button-prev',
+              },
+            });
           }
-
-          else if(tablet.matches && slider !== undefined) {
-            slider.destroy();
-            init = false;
         }
 
-        // Disable (for desktop)
-        else if(mobile.matches && slider !== undefined) {
-            slider.destroy();
+        else if(tablet.matches && swiper !== undefined) {
+            swiper.destroy();
             init = false;
         }
   }

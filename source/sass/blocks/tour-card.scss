@@ -8,6 +8,7 @@
   width: $desktop-width;
   padding-top: 182px;
   padding-bottom: 79px;
+  overflow: visible;
 }
 
 .tour-card__title {
@@ -55,7 +56,6 @@
   display: grid;
   grid-template-columns: 1fr;
   width: 410px;
-  // height: 459px;
   top: 296px;
   right: 0;
 

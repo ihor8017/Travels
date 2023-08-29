@@ -23,10 +23,34 @@
 }
 
 .advantages__wrapper {
-  box-sizing: border-box;
   position: relative;
+  box-sizing: border-box;
   width: 1200px;
   margin: 0 auto;
+
+  picture:nth-child(1) {
+    position: absolute;
+    left: -120px;
+    top: -235px;
+    z-index: -1;
+  }
+
+  picture:nth-child(2) {
+    position: absolute;
+    right: -120px;
+    top: -56px;
+    z-index: -1;
+  }
+}
+
+.advantages__clouds1 {
+  width: 705px;
+  height: 391px;
+}
+
+.advantages__clouds2 {
+  width: 602px;
+  height: 263px;
 }
 
 .advantages__title {
@@ -79,6 +103,10 @@
     box-sizing: border-box;
     padding-left: 45px;
     padding-right: 45px;
+
+    picture {
+      display: none;
+    }
 
     .advantages__slide {
       width: 47.6%;
