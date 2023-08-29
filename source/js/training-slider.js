@@ -27,7 +27,8 @@ const slider = new Swiper('.training__slider', {
     },
     768: {
       slidesPerView: 3,
-      spaceBetween: 30
+      spaceBetween: 30,
+      autoHeight: true,
     },
     1200: {
       slidesPerView: 4,

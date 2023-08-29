@@ -9,6 +9,7 @@ import advantagesSlider from  "./advantages-slider.js";
 import gallerySlider from "./gallery-slider.js";
 import {Form} from './vendor/form-validate/form.js';
 import displayMap from './map.js';
+import playAudio from "./audio.js";
 
 window.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('load', () => {
@@ -17,7 +18,7 @@ window.addEventListener('DOMContentLoaded', () => {
     form.init();
   });
 });
-
+playAudio();
 displayMap();
 toggleNavigation();
 swiperHero();

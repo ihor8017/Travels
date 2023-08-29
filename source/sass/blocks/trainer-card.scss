@@ -70,9 +70,10 @@
 
 @media (max-width: $tablet-maxwidth) {
   .trainer-card {
+    box-sizing: border-box;
     padding: 15px;
     min-height: 411px;
-    height: 100%;
+    aspect-ratio: 206 / 411;
   }
 
   .trainer-card__image {
@@ -96,6 +97,7 @@
     padding: 20px;
     min-height: 385px;
     box-shadow: none;
+    aspect-ratio: 290 / 385;
   }
 
   .trainer-card__image {

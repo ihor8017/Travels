@@ -184,6 +184,17 @@
   .training__slider {
     width: 100%;
     margin-bottom: 42px;
+    aspect-ratio: 678 / 411;
+
+    .swiper-slide {
+      height: auto;
+      aspect-ratio: 206 / 411;
+    }
+  }
+
+  .training__wrapper {
+    width: 100%;
+    height: auto;
   }
 
   .training__title {
@@ -308,7 +319,13 @@
 
   .training__slider {
     width: 100%;
+    height: auto;
     margin-bottom: 37px;
+    aspect-ratio: 290 / 385;
+
+    .swiper-slide {
+      aspect-ratio: 290 / 385;
+    }
   }
 
   .training__trainers {

@@ -45,6 +45,15 @@
   cursor: pointer;
 }
 
+.footer__phone:hover,
+.footer__phone:focus {
+  color: #1c3374;
+}
+
+.footer__phone:active {
+  color: #0266c1;
+}
+
 .footer .footer__social-link {
   margin-bottom: 20px;
 }
