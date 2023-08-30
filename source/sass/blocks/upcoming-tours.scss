@@ -1,13 +1,12 @@
 .upcoming-tours {
   position: relative;
   width: 100%;
-  max-width: 1440px;
+  max-width: 100%;
   margin: 0 auto;
   overflow-x: clip;
 }
 
 .upcoming-tours__wrapper-content {
-  position: relative;
   width: 1200px;
   margin: 0 auto;
   padding-top: 4px;
@@ -16,8 +15,8 @@
 .upcoming-tours__bg {
   position: absolute;
   box-sizing: border-box;
-  width: 837;
-  height: 279;
+  width: 837px;
+  height: 279px;
   bottom: -135px;
   left: -538px;
   z-index: -1;
@@ -25,8 +24,11 @@
 
 .upcoming-tours__bg-clouds {
   position: absolute;
+  width: 42%;
+  height: auto;
   bottom: -653px;
-  right: -120px;
+  right: 0;
+  object-fit: cover;
   z-index: -1;
 }
 
@@ -48,7 +50,7 @@
   margin: 0 auto;
   height: auto;
   overflow: hidden;
-  margin-bottom: 53px;
+  margin-bottom: 51px;
 }
 
 .upcoming-tours__title {
@@ -83,8 +85,12 @@
   top: -90px;
 }
 
+.upcoming-tours__link-wrapper {
+  text-align: center;
+}
+
 .upcoming-tours__all {
-  display: block;
+  margin: 0 auto;
   font-size: 16px;
   font-style: normal;
   font-weight: 700;
@@ -92,7 +98,6 @@
   letter-spacing: 0.64px;
   text-transform: uppercase;
   color: #2d383f;
-  text-align: center;
 }
 
 .tours-card__dificulty-rate {
@@ -117,6 +122,18 @@
   width: 30px;
 }
 
+@media (max-width: 1439px) {
+  .upcoming-tours__bg-clouds {
+    display: grid;
+    position: absolute;
+    width: 602px;
+    height: 1364px;
+    bottom: -653px;
+    right: auto;
+    transform: translateX(717px);
+  }
+}
+
 @media (max-width: $tablet-maxwidth) {
   .upcoming-tours__wrapper-content {
     width: 100%;
@@ -132,11 +149,12 @@
 
   .upcoming-tours__bg-clouds {
     position: absolute;
-    bottom: -636px;
-    height: 1364px;
-    width: 602px;
+    bottom: -638px;
+    height: auto;
+    width: 39%;
+    right: 0;
     object-fit: contain;
-    transform: translateX(6%);
+    transform: none;
   }
 
   .upcoming-tours__title {
@@ -185,16 +203,15 @@
   }
 
   .upcoming-tours__slider {
-    margin-bottom: 29px;
+    margin-bottom: 25px;
   }
 
   .upcoming-tours__bg-clouds {
-    position: absolute;
     bottom: -236px;
-    height: 595px;
-    width: 346px;
+    height: auto;
+    width: 56%;
+    right: 0;
     object-fit: contain;
-    transform: translateX(-3%);
   }
 
   .upcoming-tours__title {

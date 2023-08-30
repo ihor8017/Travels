@@ -4,7 +4,10 @@ const picture = document.querySelector('.contacts__map-container picture');
 picture.style.display = 'none';
 
 const displayMap = () => {
-  var map = L.map('map').setView([55.824475, 37.615238], 13);
+  var map = L.map('map').setView(
+    [55.824475, 37.615238],
+    13);
+    map.scrollWheelZoom.disable();
   L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'

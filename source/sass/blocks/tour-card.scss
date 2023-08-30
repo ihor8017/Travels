@@ -213,10 +213,12 @@
 
   .tour-card__audio {
     position: relative;
-    width: fit-content;
+    width: 44%;
+    height: auto;
     top: 20px;
     right: auto;
     margin: 0 auto;
+    aspect-ratio: 340 / 220;
   }
 
   .tour-card__card1 {

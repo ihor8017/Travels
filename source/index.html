@@ -66,22 +66,22 @@
             </button>
             <ul class="header__navigation-list navigation">
               <li class="navigation__item">
-                <a class="navigation__link link" href="">Туры</a>
+                <a class="navigation__link link" href="#">Туры</a>
               </li>
               <li class="navigation__item">
-                <a class="navigation__link link" href="">Обучение</a>
+                <a class="navigation__link link" href="#">Обучение</a>
               </li>
               <li class="navigation__item">
-                <a class="navigation__link link" href="">О нас</a>
+                <a class="navigation__link link" href="#">О нас</a>
               </li>
               <li class="navigation__item">
-                <a class="navigation__link link" href="">Отзывы</a>
+                <a class="navigation__link link" href="#">Отзывы</a>
               </li>
               <li class="navigation__item">
-                <a class="navigation__link link" href="">Фотографии</a>
+                <a class="navigation__link link" href="#">Фотографии</a>
               </li>
               <li class="navigation__item">
-                <a class="navigation__link link" href="">Контакты</a>
+                <a class="navigation__link link" href="#">Контакты</a>
               </li>
             </ul>
           </div>
@@ -146,13 +146,13 @@
                     <source type="image/webp" media="(min-width: 1200px)" srcset="img/hero/card/card-desktop1@1x.webp 1x, img/hero/card/card-desktop1@2x.webp 2x">
                     <source media="(min-width: 1200px)" srcset="img/hero/card/card-desktop1@1x.png 1x, img/hero/card/card-desktop1@2x.png 2x">
                     <source type="image/webp" srcset="img/hero/card/card-tablet1@1x.webp 1x, img/hero/card/card-tablet1@2x.webp 2x">
-                    <img class="tour-card__card1" src="img/hero/card/card-tablet1@1x.png" srcset="img/hero/card/card-tablet1@2x.png 2x" width="266" height="351" alt="Человек на вершине горы, смотрящий вдаль">
+                    <img class="tour-card__card1" src="img/hero/card/card-tablet1@1x.png" srcset="img/hero/card/card-tablet1@2x.png 2x" width="266" height="351" alt="ущелье с озером">
                   </picture>
                   <picture>
                     <source type="image/webp" media="(min-width: 1200px)" srcset="img/hero/card/card-desktop2@1x.webp 1x, img/hero/card/card-desktop2@2x.webp 2x">
                     <source media="(min-width: 1200px)" srcset="img/hero/card/card-desktop2@1x.png 1x, img/hero/card/card-desktop2@2x.png 2x">
                     <source type="image/webp" srcset="img/hero/card/card-tablet2@1x.webp 1x, img/hero/card/card-tablet2@2x.webp 2x">
-                    <img class="tour-card__card2" src="img/hero/card/card-tablet2@1x.png" srcset="img/hero/card/card-tablet1@2x.png 2x" width="236" height="312" alt="Человек на вершине горы, смотрящий вдаль">
+                    <img class="tour-card__card2" src="img/hero/card/card-tablet2@1x.png" srcset="img/hero/card/card-tablet1@2x.png 2x" width="236" height="312" alt="у ходящая женщина на горной тропе">
                   </picture>
                 </div>
                 <div class="tour-card__info">
@@ -188,7 +188,7 @@
           </div>
           <!-- If we need pagination -->
           <div class="hero__pagination-wrapper">
-            <div class="hero__pagination"></div>
+            <div class="hero__pagination"><span class="visually-hidden">пагинация, переход по слайдам</span></div>
           </div>
         </div>
       </section>
@@ -212,8 +212,8 @@
           </picture>
           <!-- Slider main container -->
           <div class="upcoming-tours__navigation navigation-slider">
-            <div class="upcoming-tours__button-prev navigation-slider__button-prev"></div>
-            <div class="upcoming-tours__button-next navigation-slider__button-next"></div>
+            <div class="upcoming-tours__button-prev navigation-slider__button-prev"><span class="visually-hidden">предыдущий слайд</span></div>
+            <div class="upcoming-tours__button-next navigation-slider__button-next"><span class="visually-hidden">следующий слайд</span></div>
           </div>
           <div class="upcoming-tours__slider">
             <!-- Additional required wrapper -->
@@ -301,7 +301,9 @@
               </div>
             </div>
           </div>
-          <a class="upcoming-tours__all" href="#">Показать все туры ></a>
+          <div class="upcoming-tours__link-wrapper">
+            <a class="upcoming-tours__all" href="#">Показать все туры ></a>
+          </div>
         </div>
       </section>
       <section class="training no-js">
@@ -311,8 +313,8 @@
           <p class="training__description">Обучение проводится квалифицированными специалистами, за&nbsp;плечами которых десятки пройденных маршрутов Кавказа, Крыма, Гималаев, Эльбруса, Алтая, Карелии, Адыгеи и&nbsp;других.</p>
           <h3 class="training__trainers">Наши инструкторы</h3>
           <div class="training__navigation navigation-slider">
-            <div class="training__button-prev navigation-slider__button-prev"></div>
-            <div class="training__button-next navigation-slider__button-next"></div>
+            <div class="training__button-prev navigation-slider__button-prev"><span class="visually-hidden">предыдущий слайд</span></div>
+            <div class="training__button-next navigation-slider__button-next"><span class="visually-hidden">следующий слайд</span></div>
           </div>
           <div class="training__slider">
             <!-- Additional required wrapper -->
@@ -326,7 +328,7 @@
                     <source media="(min-width: 768px)" type="image/webp" srcset="img/trainers/tablet1@1x.webp 1x, img/trainers/tablet1@2x.webp 2x">
                     <source media="(min-width: 768px)" srcset="img/trainers/tablet1@1x.jpg 1x, img/trainers/tablet1@2x.jpg 2x">
                     <source type="image/webp" srcset="img/trainers/mobile1@1x.webp 1x, img/trainers/mobile1@2x.webp 2x">
-                    <img class="trainer-card__image" src="img/trainers/mobile1@1x.jpg" width="250" height="212" srcset="img/trainers/mobile1@2x.jpg 2x" alt="" loading="lazy">
+                    <img class="trainer-card__image" src="img/trainers/mobile1@1x.jpg" width="250" height="212" srcset="img/trainers/mobile1@2x.jpg 2x" alt="фото тренера" loading="lazy">
                   </picture>
                   <p class="trainer-card__name">
                     Александр<span>Прокофьев</span>
@@ -334,6 +336,7 @@
                       <svg width="16" height="9">
                         <use xlink:href="./img/icons/stack.svg#vk"></use>
                       </svg>
+                      <span class="visually-hidden">перейти на профиль вконтакте</span>
                     </a>
                   </p>
                   <p class="trainer-card__info">Строгий и&nbsp;внимательный инструктор, веселый и&nbsp;общительный человек. Любит природу.</p>
@@ -347,7 +350,7 @@
                   <source media="(min-width: 768px)" type="image/webp" srcset="img/trainers/tablet2@1x.webp 1x, img/trainers/tablet2@2x.webp 2x">
                   <source media="(min-width: 768px)" srcset="img/trainers/tablet2@1x.jpg 1x, img/trainers/tablet2@2x.jpg 2x">
                   <source type="image/webp" srcset="img/trainers/mobile2@1x.webp 1x, img/trainers/mobile2@2x.webp 2x">
-                  <img class="trainer-card__image" src="img/trainers/mobile2@1x.jpg" width="250" height="212" srcset="img/trainers/mobile2@2x.jpg 2x" alt="" loading="lazy">
+                  <img class="trainer-card__image" src="img/trainers/mobile2@1x.jpg" width="250" height="212" srcset="img/trainers/mobile2@2x.jpg 2x" alt="фото тренера" loading="lazy">
                 </picture>
                 <p class="trainer-card__name">
                   Светлана<span>Афиногенова</span>
@@ -355,6 +358,7 @@
                     <svg width="16" height="9">
                       <use xlink:href="./img/icons/stack.svg#vk"></use>
                     </svg>
+                    <span class="visually-hidden">перейти на профиль вконтакте</span>
                   </a>
                 </p>
                 <p class="trainer-card__info">Видеть мир вокруг, познавать его опасности, находить друг друга, становиться ближе, чувствовать&nbsp;&mdash; в&nbsp;этом назначение жизни.</p>
@@ -368,7 +372,7 @@
                   <source media="(min-width: 768px)" type="image/webp" srcset="img/trainers/tablet3@1x.webp 1x, img/trainers/tablet3@2x.webp 2x">
                   <source media="(min-width: 768px)" srcset="img/trainers/tablet3@1x.jpg 1x, img/trainers/tablet3@2x.jpg 2x">
                   <source type="image/webp" srcset="img/trainers/mobile3@1x.webp 1x, img/trainers/mobile3@2x.webp 2x">
-                  <img class="trainer-card__image" src="img/trainers/mobile3@1x.jpg" width="250" height="212" srcset="img/trainers/mobile3@2x.jpg 2x" alt="вид на горное ущелье" loading="lazy">
+                  <img class="trainer-card__image" src="img/trainers/mobile3@1x.jpg" width="250" height="212" srcset="img/trainers/mobile3@2x.jpg 2x" alt="фото тренера" loading="lazy">
                 </picture>
                 <p class="trainer-card__name">
                   Надежда<span>Колесниченко</span>
@@ -376,6 +380,7 @@
                     <svg width="16" height="9">
                       <use xlink:href="./img/icons/stack.svg#vk"></use>
                     </svg>
+                    <span class="visually-hidden">перейти на профиль вконтакте</span>
                   </a>
                 </p>
                 <p class="trainer-card__info">Участники говорят, что Надежда ответственная, приятная в&nbsp;общении, и&nbsp;в&nbsp;поездках с&nbsp;ней чувствуешь себя спокойно и&nbsp;уверенно.</p>
@@ -389,7 +394,7 @@
                   <source media="(min-width: 768px)" type="image/webp" srcset="img/trainers/tablet4@1x.webp 1x, img/trainers/tablet4@2x.webp 2x">
                   <source media="(min-width: 768px)" srcset="img/trainers/tablet4@1x.jpg 1x, img/trainers/tablet4@2x.jpg 2x">
                   <source type="image/webp" srcset="img/trainers/mobile4@1x.webp 1x, img/trainers/mobile4@2x.webp 2x">
-                  <img class="trainer-card__image" src="img/trainers/mobile4@1x.jpg" width="250" height="212" srcset="img/trainers/mobile4@2x.jpg 2x" alt="вид на горное ущелье" loading="lazy">
+                  <img class="trainer-card__image" src="img/trainers/mobile4@1x.jpg" width="250" height="212" srcset="img/trainers/mobile4@2x.jpg 2x" alt="фото тренера" loading="lazy">
                 </picture>
                 <p class="trainer-card__name">
                   Федор<span>Кайгородов</span>
@@ -397,6 +402,7 @@
                     <svg width="16" height="9">
                       <use xlink:href="./img/icons/stack.svg#vk"></use>
                     </svg>
+                    <span class="visually-hidden">перейти на профиль вконтакте</span>
                   </a>
                 </p>
                 <p class="trainer-card__info">Опыт походов: Ходит в&nbsp;походы с&nbsp;2001&nbsp;года. В&nbsp;России побывал в&nbsp;горных районах Хибины, Архыз, много путешествует по&nbsp;Европе.</p>
@@ -410,7 +416,7 @@
                   <source media="(min-width: 768px)" type="image/webp" srcset="img/trainers/tablet1@1x.webp 1x, img/trainers/tablet1@2x.webp 2x">
                   <source media="(min-width: 768px)" srcset="img/trainers/tablet1@1x.jpg 1x, img/trainers/tablet1@2x.jpg 2x">
                   <source type="image/webp" srcset="img/trainers/mobile1@1x.webp 1x, img/trainers/mobile1@2x.webp 2x">
-                  <img class="trainer-card__image" src="img/trainers/mobile1@1x.jpg" width="250" height="212" srcset="img/trainers/mobile1@2x.jpg 2x" alt="вид на горное ущелье" loading="lazy">
+                  <img class="trainer-card__image" src="img/trainers/mobile1@1x.jpg" width="250" height="212" srcset="img/trainers/mobile1@2x.jpg 2x" alt="фото тренера" loading="lazy">
                 </picture>
                 <p class="trainer-card__name">
                   Александр<span>Прокофьев</span>
@@ -418,6 +424,7 @@
                     <svg width="16" height="9">
                       <use xlink:href="./img/icons/stack.svg#vk"></use>
                     </svg>
+                    <span class="visually-hidden">перейти на профиль вконтакте</span>
                   </a>
                 </p>
                 <p class="trainer-card__info">Строгий и&nbsp;внимательный инструктор, веселый и&nbsp;общительный человек. Любит природу. </p>
@@ -448,19 +455,19 @@
           </picture>
           <picture>
             <source type="image/webp" srcset="img/about/clouds@1x.webp 1x, img/about/clouds@2x.webp 2x">
-            <img class="about-us__clouds" src="img/about/clouds@1x.jpg" width="618" height="280" srcset="img/about/clouds@2x.jpg 2x" alt="Группа людей идёт по тропинке в горах" loading="lazy">
+            <img class="about-us__clouds" src="img/about/clouds@1x.jpg" width="618" height="280" srcset="img/about/clouds@2x.jpg 2x" alt="облака" loading="lazy">
           </picture>
           <div class="about-us__wrapper-text">
             <h2 class="about-us__title">О нас</h2>
             <p class="about-us__title-shadow title-shadow">О нас</p>
-            <h3 class="about-us__company">История компании</h3>
-            <p class="about-us__company-description">
+            <h3 >История компании</h3>
+            <p>
               В&nbsp;далеком 2000 году мы&nbsp;начали заниматься туризмом&nbsp;&mdash;
               походы, поездки, восхождения, нам это настолько понравилось, что мы этим стали жить.
               Спустя 5&nbsp;лет, в&nbsp;2005 году мы&nbsp;основали компанию, чтобы показывать людям удивительные места нашей страны.
             </p>
-            <h3 class="about-us__goal">Наша цель</h3>
-            <p class="about-us__goal-description">Подарить вам незабываемые впечатления от&nbsp;похода в&nbsp;горы.
+            <h3>Наша цель</h3>
+            <p>Подарить вам незабываемые впечатления от&nbsp;похода в&nbsp;горы.
               Мы&nbsp;берем на&nbsp;себя все организационные вопросы. При организации мы обязательно учтем все ваши пожелания.
               Вам останется только наслаждаться незабываемым приключением в&nbsp;приятной компании.
             </p>
@@ -472,8 +479,8 @@
           <h2 class="reviews__title">Отзывы</h2>
           <p class="reviews__title-shadow title-shadow">Отзывы</p>
           <div class="reviews__navigation navigation-slider">
-            <div class="reviews__button-prev navigation-slider__button-prev"></div>
-            <div class="reviews__button-next navigation-slider__button-next"></div>
+            <div class="reviews__button-prev navigation-slider__button-prev"><span class="visually-hidden">предыдущий слайд</span></div>
+            <div class="reviews__button-next navigation-slider__button-next"><span class="visually-hidden">следующий слайд</span></div>
           </div>
           <div class="reviews__slider">
             <!-- Additional required wrapper -->
@@ -487,7 +494,7 @@
                     <source media="(min-width: 768px)" type="image/webp" srcset="img/reviews/tablet1@1x.webp 1x, img/reviews/tablet1@2x.webp 2x">
                     <source media="(min-width: 768px)" srcset="img/reviews/tablet1@1x.jpg 1x, img/reviews/tablet1@2x.jpg 2x">
                     <source type="image/webp" srcset="img/reviews/mobile1@1x.webp 1x, img/reviews/mobile1@2x.webp 2x">
-                    <img class="review-card__image" src="img/reviews/mobile1@1x.jpg" width="250" height="169" srcset="img/reviews/mobile1@2x.jpg 2x" alt="">
+                    <img class="review-card__image" src="img/reviews/mobile1@1x.jpg" width="250" height="169" srcset="img/reviews/mobile1@2x.jpg 2x" alt="фото клиента">
                   </picture>
                   <div class="review-card__text-content">
                     <div class="review-card__review">
@@ -516,7 +523,7 @@
                     <source media="(min-width: 768px)" type="image/webp" srcset="img/reviews/tablet2@1x.webp 1x, img/reviews/tablet2@2x.webp 2x">
                     <source media="(min-width: 768px)" srcset="img/reviews/tablet2@1x.jpg 1x, img/reviews/tablet2@2x.jpg 2x">
                     <source type="image/webp" srcset="img/reviews/mobile2@1x.webp 1x, img/reviews/mobile2@2x.webp 2x">
-                    <img class="review-card__image" src="img/reviews/mobile2@1x.jpg" width="250" height="169" srcset="img/reviews/mobile2@2x.jpg 2x" alt="">
+                    <img class="review-card__image" src="img/reviews/mobile2@1x.jpg" width="250" height="169" srcset="img/reviews/mobile2@2x.jpg 2x" alt="фото клиента">
                   </picture>
                   <div class="review-card__text-content">
                     <div class="review-card__review">
@@ -544,7 +551,7 @@
                     <source media="(min-width: 768px)" type="image/webp" srcset="img/reviews/tablet3@1x.webp 1x, img/reviews/tablet3@2x.webp 2x">
                     <source media="(min-width: 768px)" srcset="img/reviews/tablet3@1x.jpg 1x, img/reviews/tablet3@2x.jpg 2x">
                     <source type="image/webp" srcset="img/reviews/mobile3@1x.webp 1x, img/reviews/mobile3@2x.webp 2x">
-                    <img class="review-card__image" src="img/reviews/mobile3@1x.jpg" width="250" height="169" srcset="img/reviews/mobile3@2x.jpg 2x" alt="">
+                    <img class="review-card__image" src="img/reviews/mobile3@1x.jpg" width="250" height="169" srcset="img/reviews/mobile3@2x.jpg 2x" alt="фото клиента">
                   </picture>
                   <div class="review-card__text-content">
                     <div class="review-card__review">
@@ -570,7 +577,7 @@
                     <source media="(min-width: 768px)" type="image/webp" srcset="img/reviews/tablet4@1x.webp 1x, img/reviews/tablet4@2x.webp 2x">
                     <source media="(min-width: 768px)" srcset="img/reviews/tablet4@1x.jpg 1x, img/reviews/tablet4@2x.jpg 2x">
                     <source type="image/webp" srcset="img/reviews/mobile4@1x.webp 1x, img/reviews/mobile4@2x.webp 2x">
-                    <img class="review-card__image" src="img/reviews/mobile4@1x.jpg" width="250" height="169" srcset="img/reviews/mobile4@2x.jpg 2x" alt="">
+                    <img class="review-card__image" src="img/reviews/mobile4@1x.jpg" width="250" height="169" srcset="img/reviews/mobile4@2x.jpg 2x" alt="фото клиента">
                   </picture>
                   <div class="review-card__text-content">
                     <div class="review-card__review">
@@ -598,11 +605,11 @@
         <div class="advantages__wrapper">
           <picture>
             <source type="image/webp" srcset="img/advantages/cloudsdesktop1@1x.webp 1x, img/advantages/cloudsdesktop1@2x.webp 2x">
-            <img class="advantages__clouds1" src="img/advantages/cloudsdesktop1@1x.jpg" width="705" height="391" srcset="img/advantages/cloudsdesktop2@2x.jpg 2x" alt="" loading="lazy">
+            <img class="advantages__clouds1" src="img/advantages/cloudsdesktop1@1x.jpg" width="705" height="391" srcset="img/advantages/cloudsdesktop2@2x.jpg 2x" alt="облака" loading="lazy">
           </picture>
           <picture>
             <source type="image/webp" srcset="img/advantages/cloudsdesktop2@1x.webp 1x, img/advantages/cloudsdesktop2@2x.webp 2x">
-            <img class="advantages__clouds2" src="img/advantages/cloudsdesktop2@1x.jpg" width="602" height="263" srcset="img/advantages/cloudsdesktop2@2x.jpg 2x" alt="" loading="lazy">
+            <img class="advantages__clouds2" src="img/advantages/cloudsdesktop2@1x.jpg" width="602" height="263" srcset="img/advantages/cloudsdesktop2@2x.jpg 2x" alt="облака" loading="lazy">
           </picture>
           <h2 class="advantages__title">Преимущества</h2>
           <p class="advantages__title-shadow title-shadow">Преимущества</p>
@@ -653,8 +660,8 @@
           </div>
         </div>
         <div class="advantages__navigation navigation-slider">
-          <div class="advantages__button-prev navigation-slider__button-prev"></div>
-          <div class="advantages__button-next navigation-slider__button-next"></div>
+          <div class="advantages__button-prev navigation-slider__button-prev"><span class="visually-hidden">предыдущий слайд</span></div>
+          <div class="advantages__button-next navigation-slider__button-next"><span class="visually-hidden">следующий слайд</span></div>
         </div>
       </section>
       <section class="gallery no-js">
@@ -666,8 +673,8 @@
             <span>Лучшие фотографии украсят этот раздел нашего сайта.</span>
           </p>
           <div class="gallery__navigation navigation-slider">
-            <div class="gallery__button-prev navigation-slider__button-prev"></div>
-            <div class="gallery__button-next navigation-slider__button-next"></div>
+            <div class="gallery__button-prev navigation-slider__button-prev"><span class="visually-hidden">предыдущий слайд</span></div>
+            <div class="gallery__button-next navigation-slider__button-next"><span class="visually-hidden">следующий слайд</span></div>
           </div>
         </div>
         <div class="gallery__slider">
@@ -679,7 +686,7 @@
                 <source media="(min-width: 768px)" type="image/webp" srcset="img/gallery/desktop1@1x.webp 1x, img/gallery/desktop1@2x.webp 2x">
                 <source media="(min-width: 768px)" srcset="img/gallery/desktop1@1x.jpg 1x, img/gallery/desktop1@2x.jpg 2x">
                 <source type="image/webp" srcset="img/gallery/mobile1@1x.webp 1x, img/gallery/mobile1@2x.webp 2x">
-                <img class="photo-card__image" src="img/gallery/mobile1@1x.jpg" width="159" height="259" srcset="img/gallery/mobile1@2x.jpg 2x" alt="">
+                <img class="photo-card__image" src="img/gallery/mobile1@1x.jpg" width="159" height="259" srcset="img/gallery/mobile1@2x.jpg 2x" alt="человек с рюкзаком смотрит на ущелье">
               </picture>
             </div>
             <div class="swiper-slide gallery__slide photo-card photo-card--double">
@@ -687,13 +694,13 @@
                 <source media="(min-width: 768px)" type="image/webp" srcset="img/gallery/desktop2-1@1x.webp 1x, img/gallery/desktop2-1@2x.webp 2x">
                 <source media="(min-width: 768px)" srcset="img/gallery/desktop2-1@1x.jpg 1x, img/gallery/desktop2-1@2x.jpg 2x">
                 <source type="image/webp" srcset="img/gallery/mobile2-1@1x.webp 1x, img/gallery/mobile2-1@2x.webp 2x">
-                <img class="photo-card__image-one" src="img/gallery/mobile2-1@1x.jpg" width="158" height="103" srcset="img/gallery/mobile2-1@2x.jpg 2x" alt="">
+                <img class="photo-card__image-one" src="img/gallery/mobile2-1@1x.jpg" width="158" height="103" srcset="img/gallery/mobile2-1@2x.jpg 2x" alt="люди возле костра">
               </picture>
               <picture>
                 <source media="(min-width: 768px)" type="image/webp" srcset="img/gallery/desktop2-2@1x.webp 1x, img/gallery/desktop2-2@2x.webp 2x">
                 <source media="(min-width: 768px)" srcset="img/gallery/desktop2-2@1x.jpg 1x, img/gallery/desktop2-2@2x.jpg 2x">
                 <source type="image/webp" srcset="img/gallery/mobile2-2@1x.webp 1x, img/gallery/mobile2-2@2x.webp 2x">
-                <img class="photo-card__image-two" src="img/gallery/mobile2-2@1x.jpg" width="158" height="153" srcset="img/gallery/mobile2-2@2x.jpg 2x" alt="">
+                <img class="photo-card__image-two" src="img/gallery/mobile2-2@1x.jpg" width="158" height="153" srcset="img/gallery/mobile2-2@2x.jpg 2x" alt="компас в руке">
               </picture>
             </div>
             <div class="swiper-slide gallery__slide photo-card">
@@ -701,7 +708,7 @@
                 <source media="(min-width: 768px)" type="image/webp" srcset="img/gallery/desktop3@1x.webp 1x, img/gallery/desktop3@2x.webp 2x">
                 <source media="(min-width: 768px)" srcset="img/gallery/desktop3@1x.jpg 1x, img/gallery/desktop3@2x.jpg 2x">
                 <source type="image/webp" srcset="img/gallery/mobile1@1x.webp 1x, img/gallery/mobile1@2x.webp 2x">
-                <img class="photo-card__image" src="img/gallery/mobile1@1x.jpg" width="159" height="259" srcset="img/gallery/mobile1@2x.jpg 2x" alt="">
+                <img class="photo-card__image" src="img/gallery/mobile1@1x.jpg" width="159" height="259" srcset="img/gallery/mobile1@2x.jpg 2x" alt="люди идут и держутся за веревку">
               </picture>
             </div>
             <div class="swiper-slide gallery__slide photo-card photo-card--double">
@@ -709,13 +716,13 @@
                 <source media="(min-width: 768px)" type="image/webp" srcset="img/gallery/desktop4-1@1x.webp 1x, img/gallery/desktop4-1@2x.webp 2x">
                 <source media="(min-width: 768px)" srcset="img/gallery/desktop4-1@1x.jpg 1x, img/gallery/desktop4-1@2x.jpg 2x">
                 <source type="image/webp" srcset="img/gallery/mobile2-1@1x.webp 1x, img/gallery/mobile2-1@2x.webp 2x">
-                <img class="photo-card__image-one" src="img/gallery/mobile2-1@1x.jpg" width="158" height="103" srcset="img/gallery/mobile2-1@2x.jpg 2x" alt="">
+                <img class="photo-card__image-one" src="img/gallery/mobile2-1@1x.jpg" width="158" height="103" srcset="img/gallery/mobile2-1@2x.jpg 2x" alt="люди в связке идут по снегу">
               </picture>
               <picture>
                 <source media="(min-width: 768px)" type="image/webp" srcset="img/gallery/desktop4-2@1x.webp 1x, img/gallery/desktop4-2@2x.webp 2x">
                 <source media="(min-width: 768px)" srcset="img/gallery/desktop4-2@1x.jpg 1x, img/gallery/desktop4-2@2x.jpg 2x">
                 <source type="image/webp" srcset="img/gallery/mobile2-2@1x.webp 1x, img/gallery/mobile2-2@2x.webp 2x">
-                <img class="photo-card__image-two" src="img/gallery/mobile2-2@1x.jpg" width="158" height="153" srcset="img/gallery/mobile2-2@2x.jpg 2x" alt="">
+                <img class="photo-card__image-two" src="img/gallery/mobile2-2@1x.jpg" width="158" height="153" srcset="img/gallery/mobile2-2@2x.jpg 2x" alt="синяя палатка в темноте">
               </picture>
             </div>
             <div class="swiper-slide gallery__slide photo-card">
@@ -723,7 +730,7 @@
                 <source media="(min-width: 768px)" type="image/webp" srcset="img/gallery/desktop5@1x.webp 1x, img/gallery/desktop5@2x.webp 2x">
                 <source media="(min-width: 768px)" srcset="img/gallery/desktop5@1x.jpg 1x, img/gallery/desktop5@2x.jpg 2x">
                 <source type="image/webp" srcset="img/gallery/mobile1@1x.webp 1x, img/gallery/mobile1@2x.webp 2x">
-                <img class="photo-card__image" src="img/gallery/mobile1@1x.jpg" width="159" height="259" srcset="img/gallery/mobile1@2x.jpg 2x" alt="">
+                <img class="photo-card__image" src="img/gallery/mobile1@1x.jpg" width="159" height="259" srcset="img/gallery/mobile1@2x.jpg 2x" alt="двое людей разжигают огонь на берегу ручья">
               </picture>
             </div>
             <div class="swiper-slide gallery__slide photo-card photo-card--double">
@@ -731,13 +738,13 @@
                 <source media="(min-width: 768px)" type="image/webp" srcset="img/gallery/desktop4-1@1x.webp 1x, img/gallery/desktop4-1@2x.webp 2x">
                 <source media="(min-width: 768px)" srcset="img/gallery/desktop4-1@1x.jpg 1x, img/gallery/desktop4-1@2x.jpg 2x">
                 <source type="image/webp" srcset="img/gallery/mobile2-1@1x.webp 1x, img/gallery/mobile2-1@2x.webp 2x">
-                <img class="photo-card__image-one" src="img/gallery/mobile2-1@1x.jpg" width="158" height="103" srcset="img/gallery/mobile2-1@2x.jpg 2x" alt="">
+                <img class="photo-card__image-one" src="img/gallery/mobile2-1@1x.jpg" width="158" height="103" srcset="img/gallery/mobile2-1@2x.jpg 2x" alt="люди в связке идут по снегу">
               </picture>
               <picture>
                 <source media="(min-width: 768px)" type="image/webp" srcset="img/gallery/desktop4-2@1x.webp 1x, img/gallery/desktop4-2@2x.webp 2x">
                 <source media="(min-width: 768px)" srcset="img/gallery/desktop4-2@1x.jpg 1x, img/gallery/desktop4-2@2x.jpg 2x">
                 <source type="image/webp" srcset="img/gallery/mobile2-2@1x.webp 1x, img/gallery/mobile2-2@2x.webp 2x">
-                <img class="photo-card__image-two" src="img/gallery/mobile2-2@1x.jpg" width="158" height="153" srcset="img/gallery/mobile2-2@2x.jpg 2x" alt="">
+                <img class="photo-card__image-two" src="img/gallery/mobile2-2@1x.jpg" width="158" height="153" srcset="img/gallery/mobile2-2@2x.jpg 2x" alt="синяя палатка в темноте">
               </picture>
             </div>
           </div>
@@ -750,7 +757,7 @@
             <source media="(min-width: 768px)" type="image/webp" srcset="img/questions/tablet-bg@1x.webp 1x, img/questions/tablet-bg@2x.webp 2x">
             <source media="(min-width: 768px)" srcset="img/questions/tablet-bg@1x.jpg 1x, img/questions/tablet-bg@2x.jpg 2x">
             <source type="image/webp" srcset="img/questions/mobile-bg@1x.webp 1x, img/questions/mobile-bg@2x.webp 2x">
-            <img class="questions__image-bg" src="img/questions/mobile-bg@1x.jpg" width="320" height="621" srcset="img/questions/mobile-bg@2x.jpg 2x" alt="">
+            <img class="questions__image-bg" src="img/questions/mobile-bg@1x.jpg" width="320" height="621" srcset="img/questions/mobile-bg@2x.jpg 2x" alt="заснеженный лес">
           </picture>
         <div class="questions__content">
           <h2 class="questions__title">Остались вопросы?</h2>
@@ -758,10 +765,10 @@
           <div class="questions__form-wrapper" data-form-validate data-callback="base">
             <form class="questions__form form-questions" method="post" action="https://echo.htmlacademy.ru/" data-on-input-validate>
               <div class="form-questions__input-wrapper" data-validate-type="text" data-limitation="name" data-message-base="Поле обязательно к заполнению" data-message-extra="Максимальная длина  20 символов" data-required >
-                <input class="form-questions__text form-questions__input" type="text" name="question" placeholder="Как к вам обращаться?">
+                <input class="form-questions__text form-questions__input" type="text"  aria-label="Ваше имя" name="question" placeholder="Как к вам обращаться?">
               </div>
               <div class="form-questions__input-wrapper" data-validate-type="phone" data-on-input-validate data-message-base="Поле обязательно к заполнению" data-message-extra="Проверьте корректность заполнения поля" data-required>
-                <input class="form-questions__phone form-questions__input" type="tel" name="phone" placeholder="Телефон">
+                <input class="form-questions__phone form-questions__input" aria-label="Ваш номер телефона" type="tel" name="phone" placeholder="Телефон">
               </div>
               <button class="form-questions__button button" type="submit">Отправить</button>
             </form>
@@ -803,7 +810,7 @@
               <source media="(min-width: 768px)" type="image/webp" srcset="img/map/map-tablet@1x.webp 1x, img/map/map-tablet@2x.webp 2x">
               <source media="(min-width: 768px)" srcset="img/map/map-tablet@1x.jpg 1x, img/map/map-tablet@2x.jpg 2x">
               <source type="image/webp" srcset="img/map/map@1x.webp 1x, img/map/map@2x.webp 2x">
-              <img class="contacts__map-image" src="img/map/map@1x.jpg" width="290" height="320" srcset="img/map/map@2x.jpg 2x" alt="" loading="lazy">
+              <img class="contacts__map-image" src="img/map/map@1x.jpg" width="290" height="320" srcset="img/map/map@2x.jpg 2x" alt="карта" loading="lazy">
             </picture>
           </div>
         </div>
@@ -880,6 +887,7 @@
             <svg width="16" height="9">
               <use xlink:href="./img/icons/stack.svg#vk"></use>
             </svg>
+            <span class="visually-hidden">перейти на страницу вконтакте</span>
           </a>
         </li>
         <li class="social__item">
@@ -887,6 +895,7 @@
             <svg width="9" height="16">
               <use xlink:href="./img/icons/stack.svg#odnoklassniki"></use>
             </svg>
+            <span class="visually-hidden">перейти на страницу одноклассники</span>
           </a>
         </li>
         <li class="social__item">
@@ -894,10 +903,13 @@
             <svg width="14" height="15">
               <use xlink:href="./img/icons/stack.svg#Reddit"></use>
             </svg>
+            <span class="visually-hidden">перейти на страницу реддит</span>
           </a>
         </li>
       </ul>
-      <p class="footer__info">Политика конфиденциальности</p>
+      <p class="footer__info">
+        <a href="#">Политика конфиденциальности</a>
+      </p>
     </footer>
     <script src="./js/script.js" type="module"></script>
     <script src="./js/vendor/leaflet.js"></script>

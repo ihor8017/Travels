@@ -3,7 +3,7 @@
   padding-top: 124px;
   padding-bottom: 20px;
   width: 100%;
-  max-width: 1440px;
+  max-width: 100%;
   margin: 0 auto;
   overflow-x: clip;
   color: $BaseDark;
@@ -81,7 +81,7 @@
 .training__process {
   position: relative;
   width: 100%;
-  max-width: 1440px;
+  max-width: 100%;
 }
 
 .training__process::after {
