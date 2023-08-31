@@ -5,8 +5,11 @@
   margin: 0 auto;
   max-width: 1440px;
   overflow: hidden;
-  background-color: #526b65;
   z-index: -2;
+}
+
+.questions__wrapper-image {
+  background-color: #526b65;
 }
 
 .questions__image-bg {

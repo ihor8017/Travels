@@ -18,6 +18,10 @@
   }
 }
 
+.no-js picture {
+  z-index: 0;
+}
+
 .tours-card__overlay {
   position: absolute;
   width: 380px;
@@ -84,6 +88,10 @@
   font-size: 24px;
   font-weight: 700;
   line-height: 28px;
+}
+
+.no-js .tours-card__info {
+  z-index: 1;
 }
 
 .tours-card__button {
