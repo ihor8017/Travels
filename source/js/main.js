@@ -8,6 +8,22 @@ window.addEventListener('DOMContentLoaded', () => {
 
   // Utils
   // ---------------------------------
+  function setTabindexes(slider) {
+    let sliderElement = slider.wrapperEl;
+    let AllInteractiveElements = sliderElement.querySelectorAll('a, button, iframe');
+    AllInteractiveElements.forEach((element) => {
+      element.setAttribute('tabindex', '-1');
+    });
+    let slides = sliderElement.querySelectorAll('.swiper-slide');
+    slides.forEach((element, index) => {
+      if (index === slider.activeIndex) {
+        let interractivElementInActive = element.querySelectorAll('a, button, iframe');
+        interractivElementInActive.forEach((item) => {
+          item.setAttribute('tabindex', '0');
+        });
+      }
+    });
+  }
 
   iosVhFix();
 
@@ -41,6 +57,8 @@ window.addEventListener('DOMContentLoaded', () => {
         },
       });
       slider;
+      setTabindexes(slider);
+      slider.on('slideChange', setTabindexes);
     } else {
       return;
     }
