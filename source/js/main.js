@@ -332,6 +332,8 @@ window.addEventListener('DOMContentLoaded', () => {
   menu();
 
   const mapViewer = () => {
+    let layer;
+    let map;
     const ICON = {
       desktopIcon: L.icon({
         iconUrl: '../img/map/pin_filled.svg',
@@ -349,8 +351,6 @@ window.addEventListener('DOMContentLoaded', () => {
         iconAnchor: [16, 25], // point of the icon which will correspond to marker's location
       }),
     };
-    let map = L.map('map').setView([55.824475, 37.615238], 13);
-    let layer = L.marker([55.816826, 37.637276], {icon: ICON.desktopIcon}).addTo(map);
     function iconMode() {
       let mobile = window.matchMedia('(min-width: 0px) and (max-width: 769px)');
       let tablet = window.matchMedia('(min-width: 768px) and (max-width: 1199px)');
@@ -368,6 +368,8 @@ window.addEventListener('DOMContentLoaded', () => {
     }
     const mapContainer = document.querySelector('#map');
     if (mapContainer) {
+      map = L.map('map').setView([55.824475, 37.615238], 13);
+      layer = L.marker([55.816826, 37.637276], {icon: ICON.desktopIcon}).addTo(map);
       const picture = document.querySelector('.contacts__map-container picture');
       picture.style.display = 'none';
       const displayMap = () => {

@@ -171,7 +171,7 @@
 }
 
 @media (max-width: $mobile-maxwidth) {
-  .hero .hero__slide {
+  .hero .swiper-slide {
     aspect-ratio: 320 / 568;
   }
 

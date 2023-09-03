@@ -9,7 +9,7 @@
   z-index: 2;
 }
 
-input {
+.form-questions input {
   box-sizing: border-box;
   padding: 22px 30px;
   width: 100%;
@@ -22,18 +22,18 @@ input {
   border: 1px solid rgba($SecondaryColor, $alpha: 0);
 }
 
-input:hover {
+.form-questions input:hover {
   color: rgba($SecondaryColor, $alpha: 1);
   border: 1px solid rgba($SecondaryColor, $alpha: 1);
 }
 
-input:focus,
-input:active {
+.form-questions input:focus,
+.form-questions input:active {
   border: 1px solid rgba(#1c3374, $alpha: 1);
   outline: none;
 }
 
-input:disabled {
+.form-questions input:disabled {
   color: rgba(2, 102, 193, 0.1);
   border: 1px solid rgba($SecondaryColor, $alpha: 0);
 }
@@ -75,7 +75,7 @@ input:disabled {
     width: 100%;
   }
 
-  input {
+  .form-questions input {
     width: 100%;
     padding: 15px 14px;
     font-size: 14px;
@@ -97,7 +97,7 @@ input:disabled {
     width: 100%;
   }
 
-  input {
+  .form-questions input {
     width: 100%;
     padding: 15px 14px;
     font-size: 14px;
