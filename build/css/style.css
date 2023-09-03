@@ -2297,6 +2297,9 @@ button,
 
 .header__phone {
   display: block;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
   margin-right: auto;
   font-weight: 600;
   font-size: 18px;
@@ -2692,6 +2695,9 @@ button,
 
 .footer__phone {
   display: block;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
   margin-right: auto;
   padding-top: 20px;
   font-weight: 600;
@@ -2760,7 +2766,7 @@ button,
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    padding-top: 5px;
+    padding-top: 2px;
     padding-right: 0;
     margin-left: 0;
     font-size: 14px;
@@ -2792,7 +2798,7 @@ button,
     padding-left: 20px;
     padding-right: 20px;
     padding-top: 30px;
-    margin-bottom: 27px;
+    margin-bottom: 26px;
     width: 100%;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
@@ -2805,7 +2811,7 @@ button,
     -webkit-column-gap: 27px;
        -moz-column-gap: 27px;
             column-gap: 27px;
-    row-gap: 4px;
+    row-gap: 6px;
   }
   .footer__navigation-list li {
     margin: 0;
