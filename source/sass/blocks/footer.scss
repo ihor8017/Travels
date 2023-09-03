@@ -23,7 +23,7 @@
 
 .footer__navigation-list {
   padding-top: 21px;
-  margin-left: -61px;
+  padding-right: 61px;
 }
 
 .footer__phones-wrapper {
@@ -90,10 +90,10 @@
   }
 
   .footer__navigation {
-    padding-left: 45px;
+    padding-left: 41px;
     padding-right: 45px;
     padding-top: 45px;
-    margin-bottom: 25px;
+    margin-bottom: 22px;
     width: 100%;
     box-sizing: border-box;
   }
@@ -135,11 +135,11 @@
 
   .footer__navigation {
     flex-direction: column;
-    gap: 10px;
+    gap: 4px;
     padding-left: 20px;
     padding-right: 20px;
     padding-top: 30px;
-    margin-bottom: 29px;
+    margin-bottom: 27px;
     width: 100%;
     box-sizing: border-box;
   }
@@ -148,7 +148,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 27px;
-    row-gap: 11px;
+    row-gap: 4px;
 
     li {
       margin: 0;

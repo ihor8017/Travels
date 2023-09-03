@@ -8,6 +8,10 @@
   overflow-x: clip;
   color: $BaseDark;
   z-index: 1;
+
+  .swiper-wrapper {
+    height: auto;
+  }
 }
 
 .training.no-js .training__wrapper {
@@ -166,7 +170,7 @@
 
 @media (max-width: $tablet-maxwidth) {
   .training {
-    padding-top: 85px;
+    padding-top: 80px;
     padding-bottom: 20px;
   }
 
@@ -308,7 +312,7 @@
 
 @media (max-width: $mobile-maxwidth) {
   .training {
-    padding-top: 67px;
+    padding-top: 62px;
     padding-bottom: 17px;
   }
 

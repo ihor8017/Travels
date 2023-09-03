@@ -124,6 +124,10 @@
 }
 
 @media (max-width: $tablet-maxwidth) {
+  .hero__swiper {
+    aspect-ratio: 768 / 1066;
+  }
+
   .hero__swiper .swiper-slide {
     box-sizing: border-box;
     display: flex;
@@ -171,8 +175,8 @@
 }
 
 @media (max-width: $mobile-maxwidth) {
-  .hero .swiper-slide {
-    aspect-ratio: 320 / 568;
+  .hero__swiper {
+    aspect-ratio: 320 / 609;
   }
 
   .hero__pagination {

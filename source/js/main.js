@@ -142,6 +142,7 @@ window.addEventListener('DOMContentLoaded', () => {
             autoHeight: true,
           },
           1200: {
+            autoHeight: true,
             slidesPerView: 4,
             spaceBetween: 30,
           },
