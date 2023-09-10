@@ -184,6 +184,7 @@ window.addEventListener('DOMContentLoaded', () => {
           768: {
             slidesPerView: 2,
             spaceBetween: 30,
+            autoHeight: false,
           },
           1200: {
             slidesPerView: 2,
@@ -332,6 +333,22 @@ window.addEventListener('DOMContentLoaded', () => {
         });
         window.addEventListener('resize', () => {
           if (desktop.matches) {
+            overlays.forEach((element) => {
+              element.style.background = 'linear-gradient(143deg, rgba(15, 20, 41, 0.33) 0%, rgba(15, 20, 41, 0) 100%)';
+              element.style.zIndex = '0';
+            });
+            button.classList.add('header__toggle--closed');
+            button.classList.remove('header__toggle--open');
+            navigation.classList.remove('header__navigation--open');
+          }
+        });
+        const navigationList = document.querySelector('.header__navigation-list');
+        navigationList.addEventListener('click', (evt) => {
+          const target = evt.target;
+          if (target.closest('.navigation__link')) {
+            button.classList.add('header__toggle--closed');
+            button.classList.remove('header__toggle--open');
+            navigation.classList.remove('header__navigation--open');
             overlays.forEach((element) => {
               element.style.background = 'linear-gradient(143deg, rgba(15, 20, 41, 0.33) 0%, rgba(15, 20, 41, 0) 100%)';
               element.style.zIndex = '0';
