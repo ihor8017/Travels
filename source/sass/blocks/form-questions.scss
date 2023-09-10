@@ -33,6 +33,11 @@
   outline: none;
 }
 
+.form-questions input:focus::placeholder,
+.form-questions input:active::placeholder {
+  color: transparent;
+}
+
 .form-questions input:disabled {
   color: rgba(2, 102, 193, 0.1);
   border: 1px solid rgba($SecondaryColor, $alpha: 0);

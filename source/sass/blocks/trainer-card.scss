@@ -3,6 +3,7 @@
   box-sizing: border-box;
   box-shadow: 0 0 30px 0 rgba(28, 51, 116, 0.1);
   min-height: 377px;
+  height: auto;
   display: flex;
   align-items: stretch;
 }
@@ -73,13 +74,14 @@
     box-sizing: border-box;
     padding: 15px;
     min-height: 411px;
-    aspect-ratio: 206 / 411;
+    // aspect-ratio: 206 / 411;
   }
 
   .trainer-card__image {
     width: 100%;
     min-width: 176px;
     height: auto;
+    aspect-ratio: 176 / 212;
     margin-bottom: 14px;
   }
 
@@ -97,7 +99,7 @@
     padding: 20px;
     min-height: 385px;
     box-shadow: none;
-    aspect-ratio: 290 / 385;
+    flex-grow: 1;
   }
 
   .trainer-card__image {

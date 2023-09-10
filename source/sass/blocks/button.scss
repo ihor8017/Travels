@@ -9,6 +9,7 @@
   background: $SecondaryColor;
   border: 1px solid $SecondaryColor;
   cursor: pointer;
+  user-select: none;
 }
 
 .button:hover,

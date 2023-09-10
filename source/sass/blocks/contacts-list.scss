@@ -6,6 +6,8 @@
 
 .contacts-list__item {
   position: relative;
+  display: flex;
+  flex-direction: column;
   margin: 0;
   margin-bottom: 35px;
   padding-left: 56px;
@@ -14,8 +16,7 @@
 .contacts-list__item::before {
   position: absolute;
   left: 0;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 10px;
   width: 26px;
   height: 26px;
   background-image: url("../../img/map/phone.svg");
@@ -50,6 +51,17 @@
 .contacts-list__link {
   color: $BaseDark;
 }
+
+.contacts-list__link:hover,
+.contacts-list__link:focus {
+  color: #1c3374;
+  outline: none;
+}
+
+.contacts-list__link:active {
+  color: #0266c1;
+}
+
 
 @media (max-width: $tablet-maxwidth) {
   .contacts-list {

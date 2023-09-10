@@ -4,6 +4,8 @@
   max-width: 100%;
   margin: 0 auto;
   overflow-x: clip;
+  scroll-behavior: smooth;
+  z-index: 1;
 }
 
 .upcoming-tours__wrapper-content {
@@ -24,12 +26,12 @@
 
 .upcoming-tours__bg-clouds {
   position: absolute;
-  width: 42%;
+  width: 602px;
   height: auto;
-  bottom: -653px;
+  top: -142px;
   right: 0;
-  object-fit: cover;
-  z-index: -1;
+  object-fit: contain;
+  z-index: -3;
 }
 
 .upcoming-tours.no-js .upcoming-tours__wrapper {
@@ -100,6 +102,17 @@
   color: #2d383f;
 }
 
+.upcoming-tours__all:hover,
+.upcoming-tours__all:focus {
+  color: #1c3374;
+  outline: none;
+}
+
+.upcoming-tours__all:active {
+  color: #0266c1;
+}
+
+
 .tours-card__dificulty-rate {
   position: relative;
   display: block;
@@ -149,7 +162,7 @@
 
   .upcoming-tours__bg-clouds {
     position: absolute;
-    bottom: -638px;
+    top: -197px;
     height: auto;
     width: 39%;
     right: 0;
@@ -204,12 +217,13 @@
 
   .upcoming-tours__slider {
     margin-bottom: 22px;
+    max-height: 540px;
   }
 
   .upcoming-tours__bg-clouds {
-    bottom: -236px;
-    height: auto;
-    width: 56%;
+    top: 74px;
+    height: 595px;
+    width: 176px;
     right: 0;
     object-fit: contain;
   }
@@ -218,7 +232,7 @@
     font-size: 22px;
     line-height: 22px;
     margin-left: 0;
-    margin-bottom: 29px;
+    margin-bottom: 27px;
     padding-right: 75px;
   }
 

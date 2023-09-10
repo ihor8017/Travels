@@ -20,6 +20,14 @@
   gap: 10px;
 }
 
+.training__wrapper {
+  align-items: stretch;
+}
+
+.training__slide {
+  height: auto;
+}
+
 .training.no-js .training__slide {
   width: 278px;
 }
@@ -80,6 +88,7 @@
   overflow-x: clip;
   box-shadow: 0 0 30px 0 rgba(28, 51, 116, 0.1);
   margin-bottom: 50px;
+  z-index: 1;
 }
 
 .training__process {
@@ -137,6 +146,9 @@
   position: relative;
   padding: 0;
   padding-left: 38px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 
   :nth-child(2) {
     display: block;
@@ -148,7 +160,7 @@
   width: 14px;
   height: 14px;
   left: 0;
-  top: 75px;
+  bottom: -40px;
   background: $SecondaryColor;
   border-radius: 50%;
   content: "";
@@ -159,8 +171,7 @@
   width: 25px;
   height: 25px;
   left: 0;
-  top: 50%;
-  transform: translateY(-50%);
+  bottom: 13px;
   background-image: url("../../img/trainers/map.svg");
   background-repeat: no-repeat;
   background-size: contain;
@@ -188,11 +199,9 @@
   .training__slider {
     width: 100%;
     margin-bottom: 42px;
-    aspect-ratio: 678 / 411;
 
     .swiper-slide {
       height: auto;
-      aspect-ratio: 206 / 411;
     }
   }
 
@@ -276,10 +285,16 @@
     :nth-child(4)::after {
       top: -25px;
     }
+
+    :nth-child(3)::before,
+    :nth-child(4)::before {
+      top: 10px;
+      bottom: auto;
+    }
   }
 
   .training__item::after {
-    top: 55px;
+    bottom: -25px;
   }
 
   .training__process::after {
@@ -325,23 +340,23 @@
     width: 100%;
     height: auto;
     margin-bottom: 37px;
-    aspect-ratio: 290 / 385;
+    // aspect-ratio: 290 / 385;
 
     .swiper-slide {
-      aspect-ratio: 290 / 385;
+      // aspect-ratio: 290 / 385;
     }
   }
 
   .training__trainers {
     font-size: 16px;
     line-height: 16px;
-    margin-bottom: 35px;
+    margin-bottom: 34px;
   }
 
   .training__title {
     font-size: 22px;
     line-height: 22px;
-    margin-bottom: 14px;
+    margin-bottom: 17px;
   }
 
   .training__title-shadow {
@@ -392,7 +407,14 @@
 
     :nth-child(3)::after,
     :nth-child(4)::after {
-      top: 50%;
+      top: auto;
+      bottom: 3px;
+    }
+
+    :nth-child(3)::before,
+    :nth-child(4)::before {
+      top: auto;
+      bottom: 8px;
     }
   }
 
@@ -421,7 +443,8 @@
     width: 13px;
     height: 13px;
     left: 3px;
-    top: 50%;
+    top: auto;
+    bottom: 3px;
     transform: translateY(-50%);
   }
 
@@ -430,6 +453,7 @@
     width: 19px;
     height: 21.5px;
     left: 37px;
+    bottom: 8px;
     background-repeat: no-repeat;
   }
 }

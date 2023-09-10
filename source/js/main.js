@@ -46,6 +46,8 @@ window.addEventListener('DOMContentLoaded', () => {
       heroSlider.classList.remove('hero__no-js');
       const slider = new Swiper('.hero__swiper', {
         // Optional parameters
+        preventClicksPropagation: false,
+        passiveListeners: true,
         slidesPerView: 1,
         loop: true,
         speed: 300,
@@ -133,15 +135,12 @@ window.addEventListener('DOMContentLoaded', () => {
           320: {
             slidesPerView: 1,
             spaceBetween: 20,
-            autoHeight: true,
           },
           768: {
             slidesPerView: 3,
             spaceBetween: 30,
-            autoHeight: true,
           },
           1200: {
-            autoHeight: true,
             slidesPerView: 4,
             spaceBetween: 30,
           },
@@ -185,7 +184,6 @@ window.addEventListener('DOMContentLoaded', () => {
           768: {
             slidesPerView: 2,
             spaceBetween: 30,
-            autoHeight: true,
           },
           1200: {
             slidesPerView: 2,
@@ -306,9 +304,10 @@ window.addEventListener('DOMContentLoaded', () => {
 
   const menu = () => {
     const navigation = document.querySelector('.header__navigation');
+    let desktop = window.matchMedia('(min-width: 1200px)');
     if (navigation) {
       const button = document.querySelector('.header__toggle');
-
+      let overlays = document.querySelectorAll('.hero__overlay');
       const toggleNavigation = () => {
         navigation.classList.remove('no-js');
         button.addEventListener('click', (evt) => {
@@ -317,10 +316,26 @@ window.addEventListener('DOMContentLoaded', () => {
             button.classList.add('header__toggle--closed');
             button.classList.remove('header__toggle--open');
             navigation.classList.remove('header__navigation--open');
+            overlays.forEach((element) => {
+              element.style.background = 'linear-gradient(143deg, rgba(15, 20, 41, 0.33) 0%, rgba(15, 20, 41, 0) 100%)';
+              element.style.zIndex = '0';
+            });
           } else {
             button.classList.add('header__toggle--open');
             button.classList.remove('header__toggle--closed');
             navigation.classList.add('header__navigation--open');
+            overlays.forEach((element) => {
+              element.style.background = 'rgba(0, 0, 0, 0.5)';
+              element.style.zIndex = '10';
+            });
+          }
+        });
+        window.addEventListener('resize', () => {
+          if (desktop.matches) {
+            overlays.forEach((element) => {
+              element.style.background = 'linear-gradient(143deg, rgba(15, 20, 41, 0.33) 0%, rgba(15, 20, 41, 0) 100%)';
+              element.style.zIndex = '0';
+            });
           }
         });
       };
@@ -392,6 +407,7 @@ window.addEventListener('DOMContentLoaded', () => {
   };
   mapViewer();
 
+
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана
   window.addEventListener('load', () => {
@@ -400,58 +416,63 @@ window.addEventListener('DOMContentLoaded', () => {
     window.form = form;
     form.init();
 
-    const playAudio = () => {
-      const audioPlayer = document.querySelector('.tour-card__audio');
-      if (audioPlayer) {
-        const playButton = audioPlayer.querySelector('.tour-card__play-button');
-        let source = playButton.getAttribute('href');
-        playButton.addEventListener('click', (evt) => {
-          evt.preventDefault();
-          playButton.style.display = 'none';
-          const newIframe = document.createElement('iframe');
-          newIframe.classList.add('video-player__audio');
-          newIframe.style.display = 'block';
-          newIframe.style.width = '100%';
-          newIframe.style.height = '100%';
-          audioPlayer.style.zIndex = '6';
-          newIframe.src = source;
-          newIframe.title = 'Audio records';
-          playButton.style.display = 'none';
-          audioPlayer.appendChild(newIframe);
+    const playAudio = function () {
+      const audioPlayer = document.querySelectorAll('.tour-card__audio');
+      if (audioPlayer.length) {
+        audioPlayer.forEach((item) => {
+          const playButton = item.querySelector('.tour-card__play-button');
+          playButton.addEventListener('click', (evt) => {
+            evt.preventDefault();
+            playButton.style.display = 'none';
+            const newIframe = document.createElement('iframe');
+            newIframe.classList.add('video-player__audio');
+            newIframe.style.display = 'block';
+            newIframe.style.width = '100%';
+            newIframe.style.height = 'auto';
+            item.style.zIndex = '6';
+            newIframe.src = 'https://music.yandex.ru/iframe/#track/112912322/25474374';
+            newIframe.title = 'Audio records';
+            newIframe.insertAdjacentHTML('afterbegin', 'Слушайте <a href=\'https://music.yandex.ru/album/25474374/track/112912322\'>001. Конец фронтенда, одинаковые фреймворки и логические свойства</a> на Яндекс Музыке');
+            playButton.style.display = 'none';
+            item.appendChild(newIframe);
+          });
         });
       } else {
         return;
       }
     };
     playAudio();
+
+    const playVideo = function () {
+      const videoPlayer = document.querySelector('.tour-card__video');
+      if (videoPlayer) {
+        const playButton = videoPlayer.querySelector('.tour-card__play-button');
+        const previewer = videoPlayer.querySelector('picture');
+        let source = playButton.getAttribute('href');
+        playButton.addEventListener('click', (evt) => {
+          evt.preventDefault();
+          playButton.style.display = 'none';
+          const newIframe = document.createElement('iframe');
+          newIframe.classList.add('video-player__video');
+          newIframe.style.display = 'block';
+          newIframe.style.width = '100%';
+          newIframe.style.height = '100%';
+          videoPlayer.style.zIndex = '6';
+          newIframe.src = source;
+          newIframe.title = 'YouTube video player';
+          newIframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+          newIframe.allowFullscreen = true;
+          previewer.style.display = 'none';
+          videoPlayer.appendChild(newIframe);
+        });
+      } else {
+        return;
+      }
+    };
+    playVideo();
+
   });
-  const playVideo = function () {
-    const videoPlayer = document.querySelector('.tour-card__video');
-    if (videoPlayer) {
-      const playButton = videoPlayer.querySelector('.tour-card__play-button');
-      const previewer = videoPlayer.querySelector('picture');
-      let source = playButton.getAttribute('href');
-      playButton.addEventListener('click', (evt) => {
-        evt.preventDefault();
-        playButton.style.display = 'none';
-        const newIframe = document.createElement('iframe');
-        newIframe.classList.add('video-player__video');
-        newIframe.style.display = 'block';
-        newIframe.style.width = '100%';
-        newIframe.style.height = '100%';
-        videoPlayer.style.zIndex = '6';
-        newIframe.src = source;
-        newIframe.title = 'YouTube video player';
-        newIframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
-        newIframe.allowFullscreen = true;
-        previewer.style.display = 'none';
-        videoPlayer.appendChild(newIframe);
-      });
-    } else {
-      return;
-    }
-  };
-  playVideo();
+
 });
 
 // ---------------------------------

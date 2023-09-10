@@ -9,6 +9,7 @@
   background: $SecondaryColor;
   right: 1px;
   top: -90px;
+  cursor: pointer;
 }
 
 .navigation-slider__button-prev {
@@ -39,6 +40,7 @@
 .navigation-slider__button-next:focus {
   background: none;
   border: 1px solid #1c3374;
+  outline: none;
 }
 
 .navigation-slider__button-prev:hover.navigation-slider__button-prev::after,

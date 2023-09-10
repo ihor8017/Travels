@@ -6,6 +6,7 @@
   margin: 0 auto;
   color: $BaseDark;
   overflow: hidden;
+  scroll-behavior: smooth;
 }
 
 .gallery__wrapper {
@@ -81,7 +82,7 @@
   }
 
   .gallery__title {
-    margin-bottom: 22px;
+    margin-bottom: 24px;
     font-size: 25px;
     line-height: 25px;
   }
@@ -148,7 +149,7 @@
   }
 
   .gallery__description {
-    margin-bottom: 63px;
+    margin-bottom: 65px;
     padding-right: 20px;
     font-size: 12px;
     line-height: 18px;

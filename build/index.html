@@ -10,11 +10,11 @@
     <link rel="preload" href="./fonts/Montserrat-Medium.woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="./fonts/Montserrat-Regular.woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="./fonts/Montserrat-Light.woff2" as="font" crossorigin="anonymous">
-    <link rel="preload" href="./img/hero/desktop1@2x.webp" as="image">
-    <link rel="preload" href="./img/tours/desktop2@2x.webp" as="image">
-    <link rel="preload" href="./img/tours/desktop1@2x.webp" as="image">
-    <link rel="preload" href="./img/tours/desktop3@2x.webp" as="image">
-    <link rel="preload" href="./img/about/desktop@2x.webp" as="image">
+    <link rel="preload" href="./img/hero/desktop1@2x.webp" as="image" type="image/webp">
+    <link rel="preload" href="./img/tours/desktop2@2x.webp" as="image" type="image/webp">
+    <link rel="preload" href="./img/tours/desktop1@2x.webp" as="image" type="image/webp">
+     <!--<link rel="preload" href="./img/tours/desktop3@2x.webp" as="image" type="image/webp"> -->
+    <!-- <link rel="preload" href="./img/about/desktop@2x.webp" as="image" type="image/webp"> -->
     <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body>
@@ -22,8 +22,8 @@
       <div class="header__wrapper">
         <nav class="header__navigation no-js">
           <a class="header__logo logo" href="index.html">
-            <svg class="" xmlns="http://www.w3.org/2000/svg" width="205" height="62" viewBox="0 0 205 62" fill="currentColor"  aria-labelledby="uniqueTitleID" role="img">
-              <title id="uniqueTitleID">Логотип сайта Путешествия</title>
+            <svg class="" xmlns="http://www.w3.org/2000/svg" width="205" height="62" viewBox="0 0 205 62" fill="currentColor"  aria-labelledby="headTitleID" role="img">
+              <title id="headTitleID">Логотип сайта Путешествия</title>
               <g>
                 <path d="M22.7109 40.218L28.1507 34.4824L34.3385 40.218H44.9461L28.0827 23.6255L11.3553 40.218H22.7109Z"/>
                 <path d="M38.2827 13.5881L30.259 21.7819L35.5628 27.2445L38.2827 24.5132L53.1742 39.3987C49.7743 48.4802 41.0706 54.967 30.8029 54.967C17.6114 54.967 6.93576 44.2467 6.93576 31C7.00376 17.7533 17.6794 7.03304 30.8709 7.03304C42.5665 7.03304 52.3582 15.5683 54.3301 26.6982L61.5379 34.3458C61.6739 33.2533 61.7419 32.0925 61.7419 31C61.7419 22.7379 58.546 14.9537 52.6982 9.0815C46.8504 3.20925 39.0987 0 30.8709 0C22.5752 0 14.8915 3.20925 9.04369 9.0815C3.19589 14.9537 0 22.6696 0 31C0 39.3304 3.19589 47.0463 9.04369 52.9185C14.8915 58.7907 22.6432 62 30.8709 62C39.0987 62 46.8504 58.7907 52.6982 52.9185C56.3021 49.2996 58.886 44.9978 60.3139 40.2863C60.5859 39.467 60.7899 38.5793 60.9939 37.7599L54.7381 31.1366L38.2827 13.5881Z"/>
@@ -67,22 +67,22 @@
             </button>
             <ul class="header__navigation-list navigation">
               <li class="navigation__item">
-                <a class="navigation__link link" href="#">Туры</a>
+                <a class="navigation__link link" href="#tours">Туры</a>
               </li>
               <li class="navigation__item">
-                <a class="navigation__link link" href="#">Обучение</a>
+                <a class="navigation__link link" href="#training">Обучение</a>
               </li>
               <li class="navigation__item">
-                <a class="navigation__link link" href="#">О нас</a>
+                <a class="navigation__link link" href="#about">О нас</a>
               </li>
               <li class="navigation__item">
-                <a class="navigation__link link" href="#">Отзывы</a>
+                <a class="navigation__link link" href="#reviews">Отзывы</a>
               </li>
               <li class="navigation__item">
-                <a class="navigation__link link" href="#">Фотографии</a>
+                <a class="navigation__link link" href="#gallery">Фотографии</a>
               </li>
               <li class="navigation__item">
-                <a class="navigation__link link" href="#">Контакты</a>
+                <a class="navigation__link link" href="#contacts">Контакты</a>
               </li>
             </ul>
           </div>
@@ -138,6 +138,7 @@
                 <source type="image/webp" srcset="img/hero/mobile2@1x.webp 1x, img/hero/mobile2@2x.webp 2x">
                 <img class="hero__image" src="img/hero/mobile2@1x.jpg" srcset="img/hero/mobile2@2x.jpg 2x" width="1440" height="800" alt="вершины Кавказа" loading="lazy">
               </picture>
+              <div class="hero__overlay"></div>
               <div class="hero__tour tour-card tour-card--kamchatka">
                 <h3 class="tour-card__title tour-card__title--kamchatka">Невероятная <span>природа Камчатки</span></h3>
                 <p class="tour-card__description tour-card__description--kamchatka">Незабываемое приключение, во&nbsp;время которого вы&nbsp;отправитесь в&nbsp;путешествие по&nbsp;одному из&nbsp;самых нетронутых уголков дикой природы в&nbsp;мире.</p>
@@ -171,6 +172,7 @@
                 <source type="image/webp" srcset="img/hero/mobile3@1x.webp 1x, img/hero/mobile3@2x.webp 2x">
                 <img class="hero__image" src="img/hero/mobile3@1x.jpg" srcset="img/hero/mobile3@2x.jpg 2x" width="1440" height="800" alt="вершины Кавказа" loading="lazy">
               </picture>
+              <div class="hero__overlay"></div>
               <div class="hero__tour tour-card tour-card--audio">
                 <h3 class="tour-card__title tour-card__title--audio">Магические пейзажи Алтайского Края</h3>
                 <p class="tour-card__description tour-card__description--audio">Алтайский трекинг-тур&nbsp;&mdash; это захватывающее приключение с&nbsp;посещением магических и&nbsp;захватывающих дух ландшафтов Алтайских гор.</p>
@@ -187,7 +189,6 @@
               </div>
             </div>
           </div>
-          <!-- If we need pagination -->
           <div class="hero__pagination-wrapper">
             <div class="hero__pagination"><span class="visually-hidden">пагинация, переход по слайдам</span></div>
           </div>
@@ -195,7 +196,7 @@
       </section>
     </header>
     <main class="main-content">
-      <section class="upcoming-tours no-js">
+      <section class="upcoming-tours no-js" id="tours">
         <div class="upcoming-tours__wrapper-content">
           <h2 class="upcoming-tours__title">Ближайшие туры</h2>
           <p class="upcoming-tours__title-shadow">Ближайшие туры</p>
@@ -230,14 +231,16 @@
                   <img class="tours-card__image" src="img/tours/mobile1@1x.jpg" width="380" height="412" srcset="img/tours/mobile1@2x.jpg 2x" alt="вид на горное ущелье" loading="lazy">
                 </picture>
                 <div class="tours-card__overlay"></div>
-                <div class="tours-card__info">
-                  <a class="tours-card__button button" href="#">Кавказ</a>
-                  <p class="tours-card__days"><span>4 дня</span></p>
-                  <p class="tours-card__nights"><span>3 ночи</span></p>
-                  <h3 class="tours-card__title">Путешествие <span>вокруг Эльбруса</span></h3>
-                  <p class="tours-card__dificulty"><span>Сложность:</span> <span class="tours-card__dificulty-rate"></span></p>
-                  <p class="tours-card__dates"><span>Даты набора:</span><span>12.06-19.06</span></p>
-                  <p class="tours-card__group"><span>Группа:</span><span>до 15 чел.</span></p>
+                <div class="tours-card__wrapper-info">
+                  <div class="tours-card__info">
+                    <a class="tours-card__button button" href="#">Кавказ</a>
+                    <p class="tours-card__days"><span>4 дня</span></p>
+                    <p class="tours-card__nights tours-card__nights--kavkaz"><span>3 ночи</span></p>
+                    <h3 class="tours-card__title">Путешествие <span>вокруг Эльбруса</span></h3>
+                    <p class="tours-card__dificulty"><span>Сложность:</span> <span class="tours-card__dificulty-rate"></span></p>
+                    <p class="tours-card__dates"><span>Даты набора:</span><span>12.06-19.06</span></p>
+                    <p class="tours-card__group"><span>Группа:</span><span>до 15 чел.</span></p>
+                  </div>
                 </div>
               </div>
               <div class="swiper-slide upcoming-tours__slide tours-card">
@@ -250,14 +253,16 @@
                   <img class="tours-card__image" src="img/tours/mobile2@1x.jpg" width="380" height="412" srcset="img/tours/mobile2@2x.jpg 2x" alt="вид на горное ущелье" loading="lazy">
                 </picture>
                 <div class="tours-card__overlay"></div>
-                <div class="tours-card__info">
-                  <a class="tours-card__button button" href="#">Алтай</a>
-                  <p class="tours-card__days"><span>14 дней</span></p>
-                  <p class="tours-card__nights"><span>13 ночей</span></p>
-                  <h3 class="tours-card__title">Путь к&nbsp;подножию <span>Белухи</span></h3>
-                  <p class="tours-card__dificulty"><span>Сложность:</span> <span class="tours-card__dificulty-rate tours-card__dificulty-altay"></span></p>
-                  <p class="tours-card__dates"><span>Даты набора:</span><span>14.06-23.06</span></p>
-                  <p class="tours-card__group"><span>Группа:</span><span>до 25 чел.</span></p>
+                <div class="tours-card__wrapper-info">
+                  <div class="tours-card__info">
+                    <a class="tours-card__button button" href="#">Алтай</a>
+                    <p class="tours-card__days"><span>14 дней</span></p>
+                    <p class="tours-card__nights"><span>13 ночей</span></p>
+                    <h3 class="tours-card__title">Путь к&nbsp;подножию <span>Белухи</span></h3>
+                    <p class="tours-card__dificulty"><span>Сложность:</span> <span class="tours-card__dificulty-rate tours-card__dificulty-altay"></span></p>
+                    <p class="tours-card__dates"><span>Даты набора:</span><span>14.06-23.06</span></p>
+                    <p class="tours-card__group"><span>Группа:</span><span>до 25 чел.</span></p>
+                </div>
                 </div>
               </div>
               <div class="swiper-slide upcoming-tours__slide tours-card">
@@ -270,7 +275,8 @@
                   <img class="tours-card__image" src="img/tours/mobile3@1x.jpg" width="380" height="412" srcset="img/tours/mobile3@2x.jpg 2x" alt="вид на горное ущелье" loading="lazy">
                 </picture>
                 <div class="tours-card__overlay"></div>
-                <div class="tours-card__info">
+                <div class="tours-card__wrapper-info">
+                  <div class="tours-card__info">
                   <a class="tours-card__button button" href="#">Адыгея</a>
                   <p class="tours-card__days"><span>7 дней</span></p>
                   <p class="tours-card__nights"><span>6 ночей</span></p>
@@ -278,6 +284,7 @@
                   <p class="tours-card__dificulty"><span>Сложность:</span> <span class="tours-card__dificulty-rate"></span></p>
                   <p class="tours-card__dates"><span>Даты набора:</span><span>15.07-19.07</span></p>
                   <p class="tours-card__group"><span>Группа:</span><span>до 22 чел.</span></p>
+                  </div>
                 </div>
               </div>
               <div class="swiper-slide upcoming-tours__slide tours-card">
@@ -290,14 +297,16 @@
                   <img class="tours-card__image" src="img/tours/mobile2@1x.jpg" width="380" height="412" srcset="img/tours/mobile2@2x.jpg 2x" alt="вид на горное ущелье" loading="lazy">
                 </picture>
                 <div class="tours-card__overlay"></div>
-                <div class="tours-card__info">
-                  <a class="tours-card__button button" href="#">Алтай</a>
-                  <p class="tours-card__days"><span>14 дней</span></p>
-                  <p class="tours-card__nights"><span>13 ночей</span></p>
-                  <h3 class="tours-card__title">Путь к&nbsp;подножию <span>Белухи</span></h3>
-                  <p class="tours-card__dificulty"><span>Сложность:</span> <span class="tours-card__dificulty-rate"></span></p>
-                  <p class="tours-card__dates"><span>Даты набора:</span><span>14.06-23.06</span></p>
-                  <p class="tours-card__group"><span>Группа:</span><span>до 25 чел.</span></p>
+                <div class="tours-card__wrapper-info">
+                  <div class="tours-card__info">
+                    <a class="tours-card__button button" href="#">Алтай</a>
+                    <p class="tours-card__days"><span>14 дней</span></p>
+                    <p class="tours-card__nights"><span>13 ночей</span></p>
+                    <h3 class="tours-card__title">Путь к&nbsp;подножию <span>Белухи</span></h3>
+                    <p class="tours-card__dificulty"><span>Сложность:</span> <span class="tours-card__dificulty-rate"></span></p>
+                    <p class="tours-card__dates"><span>Даты набора:</span><span>14.06-23.06</span></p>
+                    <p class="tours-card__group"><span>Группа:</span><span>до 25 чел.</span></p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -307,7 +316,7 @@
           </div>
         </div>
       </section>
-      <section class="training no-js">
+      <section class="training no-js" id="training">
         <div class="training__wrapper-content">
           <h2 class="training__title">Обучение</h2>
           <p class="training__title-shadow">Обучение</p>
@@ -324,7 +333,7 @@
               <div class="swiper-slide training__slide trainer-card">
                 <div class="trainer-card__wrapper">
                   <picture>
-                    <source media="(min-width: 1200px)" type="image/webp"  srcset="img/trainers/desktop1@1x.webp 1x, img/trainers/desktop1@2x.webp 2x">
+                    <source type="image/webp" media="(min-width: 1200px)" srcset="img/trainers/desktop1@1x.webp 1x, img/trainers/desktop1@2x.webp 2x">
                     <source media="(min-width: 1200px)" srcset="img/trainers/desktop1@1x.jpg 1x, img/trainers/desktop1@2x.jpg 2x">
                     <source media="(min-width: 768px)" type="image/webp" srcset="img/trainers/tablet1@1x.webp 1x, img/trainers/tablet1@2x.webp 2x">
                     <source media="(min-width: 768px)" srcset="img/trainers/tablet1@1x.jpg 1x, img/trainers/tablet1@2x.jpg 2x">
@@ -333,6 +342,28 @@
                   </picture>
                   <p class="trainer-card__name">
                     Александр<span>Прокофьев</span>
+                    <a class="trainer-card__link" href="vk.com">
+                      <svg width="16" height="9">
+                        <use xlink:href="./img/sprite.svg#vk"></use>
+                      </svg>
+                      <span class="visually-hidden">перейти на профиль вконтакте</span>
+                    </a>
+                  </p>
+                  <p class="trainer-card__info">Строгий и&nbsp;внимательный инструктор, веселый и&nbsp;общительный человек. Любит природу.      </p>
+                </div>
+              </div>
+              <div class="swiper-slide training__slide trainer-card">
+                <div class="trainer-card__wrapper">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 1200px)" srcset="img/trainers/desktop2@1x.webp 1x, img/trainers/desktop2@2x.webp 2x">
+                    <source media="(min-width: 1200px)" srcset="img/trainers/desktop2@1x.jpg 1x, img/trainers/desktop2@2x.jpg 2x">
+                    <source media="(min-width: 768px)" type="image/webp" srcset="img/trainers/tablet2@1x.webp 1x, img/trainers/tablet2@2x.webp 2x">
+                    <source media="(min-width: 768px)" srcset="img/trainers/tablet2@1x.jpg 1x, img/trainers/tablet2@2x.jpg 2x">
+                    <source type="image/webp" srcset="img/trainers/mobile2@1x.webp 1x, img/trainers/mobile2@2x.webp 2x">
+                    <img class="trainer-card__image" src="img/trainers/mobile2@1x.jpg" width="250" height="212" srcset="img/trainers/mobile2@2x.jpg 2x" alt="фото тренера" loading="lazy">
+                  </picture>
+                  <p class="trainer-card__name">
+                    Светлана<span>Афиногенова</span>
                     <a class="trainer-card__link" href="#">
                       <svg width="16" height="9">
                         <use xlink:href="./img/sprite.svg#vk"></use>
@@ -340,30 +371,8 @@
                       <span class="visually-hidden">перейти на профиль вконтакте</span>
                     </a>
                   </p>
-                  <p class="trainer-card__info">Строгий и&nbsp;внимательный инструктор, веселый и&nbsp;общительный человек. Любит природу.</p>
+                  <p class="trainer-card__info">Видеть мир вокруг, познавать его опасности, находить друг друга, становиться ближе, чувствовать&nbsp;&mdash; в&nbsp;этом назначение жизни.</p>
                 </div>
-              </div>
-              <div class="swiper-slide training__slide trainer-card">
-                <div class="trainer-card__wrapper">
-                <picture>
-                  <source type="image/webp" media="(min-width: 1200px)" srcset="img/trainers/desktop2@1x.webp 1x, img/trainers/desktop2@2x.webp 2x">
-                  <source media="(min-width: 1200px)" srcset="img/trainers/desktop2@1x.jpg 1x, img/trainers/desktop2@2x.jpg 2x">
-                  <source media="(min-width: 768px)" type="image/webp" srcset="img/trainers/tablet2@1x.webp 1x, img/trainers/tablet2@2x.webp 2x">
-                  <source media="(min-width: 768px)" srcset="img/trainers/tablet2@1x.jpg 1x, img/trainers/tablet2@2x.jpg 2x">
-                  <source type="image/webp" srcset="img/trainers/mobile2@1x.webp 1x, img/trainers/mobile2@2x.webp 2x">
-                  <img class="trainer-card__image" src="img/trainers/mobile2@1x.jpg" width="250" height="212" srcset="img/trainers/mobile2@2x.jpg 2x" alt="фото тренера" loading="lazy">
-                </picture>
-                <p class="trainer-card__name">
-                  Светлана<span>Афиногенова</span>
-                  <a class="trainer-card__link" href="#">
-                    <svg width="16" height="9">
-                      <use xlink:href="./img/sprite.svg#vk"></use>
-                    </svg>
-                    <span class="visually-hidden">перейти на профиль вконтакте</span>
-                  </a>
-                </p>
-                <p class="trainer-card__info">Видеть мир вокруг, познавать его опасности, находить друг друга, становиться ближе, чувствовать&nbsp;&mdash; в&nbsp;этом назначение жизни.</p>
-              </div>
               </div>
               <div class="swiper-slide training__slide trainer-card">
                 <div class="trainer-card__wrapper">
@@ -444,7 +453,7 @@
           </ul>
         </div>
       </section>
-      <section class="about-us">
+      <section class="about-us" id="about">
         <div class="about-us__wrapper">
           <picture>
             <source type="image/webp" media="(min-width: 1200px)" srcset="img/about/desktop@1x.webp 1x, img/about/desktop@2x.webp 2x">
@@ -452,7 +461,7 @@
             <source media="(min-width: 768px)" type="image/webp" srcset="img/about/tablet@1x.webp 1x, img/about/tablet@2x.webp 2x">
             <source media="(min-width: 768px)" srcset="img/about/tablet@1x.jpg 1x, img/about/tablet@2x.jpg 2x">
             <source type="image/webp" srcset="img/about/mobile@1x.webp 1x, img/about/mobile@2x.webp 2x">
-            <img class="about-us__image" src="img/about/mobile@1x.jpg" width="320" height="402" srcset="img/about/mobile@2x.jpg 2x" alt="Группа людей идёт по тропинке в горах" loading="lazy">
+            <img class="about-us__image" src="img/about/mobile@1x.jpg" width="808" height="474" srcset="img/about/mobile@2x.jpg 2x" alt="Группа людей идёт по тропинке в горах" loading="lazy">
           </picture>
           <picture>
             <source type="image/webp" srcset="img/about/clouds@1x.webp 1x, img/about/clouds@2x.webp 2x">
@@ -475,7 +484,7 @@
           </div>
         </div>
       </section>
-      <section class="reviews no-js">
+      <section class="reviews no-js" id="reviews">
         <div class="reviews__wrapper-content">
           <h2 class="reviews__title">Отзывы</h2>
           <p class="reviews__title-shadow title-shadow">Отзывы</p>
@@ -665,7 +674,7 @@
           <div class="advantages__button-next navigation-slider__button-next"><span class="visually-hidden">следующий слайд</span></div>
         </div>
       </section>
-      <section class="gallery no-js">
+      <section class="gallery no-js" id="gallery">
         <div class="gallery__wrapper">
           <h2 class="gallery__title">Фотогалерея</h2>
           <p class="gallery__title-shadow title-shadow">Фотогалерея</p>
@@ -767,10 +776,10 @@
           <p class="questions__descriptions">Заполните форму и&nbsp;наш оператор свяжется с&nbsp;вами для консультации.</p>
           <div class="questions__form-wrapper" data-form-validate data-callback="base">
             <form class="questions__form form-questions" method="post" action="https://echo.htmlacademy.ru/" data-on-input-validate>
-              <div class="form-questions__input-wrapper" data-validate-type="text" data-limitation="name" data-message-base="Поле обязательно к заполнению" data-message-extra="Максимальная длина  20 символов" data-required >
+              <div class="form-questions__input-wrapper" data-validate-type="text" data-limitation="name" data-required>
                 <input class="form-questions__text form-questions__input" type="text"  aria-label="Ваше имя" name="question" placeholder="Как к вам обращаться?">
               </div>
-              <div class="form-questions__input-wrapper" data-validate-type="phone" data-on-input-validate data-message-base="Поле обязательно к заполнению" data-message-extra="Проверьте корректность заполнения поля" data-required>
+              <div class="form-questions__input-wrapper" data-validate-type="phone" data-on-input-validate  data-required>
                 <input class="form-questions__phone form-questions__input" aria-label="Ваш номер телефона" type="tel" name="phone" placeholder="Телефон">
               </div>
               <button class="form-questions__button button" type="submit">Отправить</button>
@@ -778,14 +787,14 @@
           </div>
         </div>
       </section>
-      <section class="contacts">
+      <section class="contacts" id="contacts">
         <div class="contacts__container">
           <div class="contacts__text-wrapper">
             <h2 class="contacts__title">Контакты</h2>
             <p class="contacts__title-shadow title-shadow">Контакты</p>
             <p class="contacts__descriptions">
-              Свяжитесь с нами любым удобным для вас способом или приходите к нам в гости.
-              Мы будем рады поделиться увлекательными историями и подобрать для вас тур.
+              Свяжитесь с&nbsp;нами любым удобным для вас способом или приходите к&nbsp;нам в&nbsp;гости.
+              Мы&nbsp;будем рады поделиться увлекательными историями и&nbsp;подобрать для вас тур.
               </p>
             <ul class="contacts__list contacts-list">
               <li class="contacts-list__item">
@@ -821,9 +830,9 @@
     </main>
     <footer class="footer">
       <div class="footer__navigation">
-        <a class="footer__logo logo" href="index.html" aria-labelledby="uniqueTitleID" role="img">
+        <a class="footer__logo logo" href="index.html" aria-labelledby="footerTitleID" role="img">
           <svg class="" xmlns="http://www.w3.org/2000/svg" width="205" height="60" viewBox="0 0 205 62" fill="currentColor">
-            <title id="uniqueTitleID">Логотип сайта Путешествия</title>
+            <title id="footerTitleID">Логотип сайта Путешествия</title>
             <g>
               <path d="M22.7109 40.218L28.1507 34.4824L34.3385 40.218H44.9461L28.0827 23.6255L11.3553 40.218H22.7109Z"/>
               <path d="M38.2827 13.5881L30.259 21.7819L35.5628 27.2445L38.2827 24.5132L53.1742 39.3987C49.7743 48.4802 41.0706 54.967 30.8029 54.967C17.6114 54.967 6.93576 44.2467 6.93576 31C7.00376 17.7533 17.6794 7.03304 30.8709 7.03304C42.5665 7.03304 52.3582 15.5683 54.3301 26.6982L61.5379 34.3458C61.6739 33.2533 61.7419 32.0925 61.7419 31C61.7419 22.7379 58.546 14.9537 52.6982 9.0815C46.8504 3.20925 39.0987 0 30.8709 0C22.5752 0 14.8915 3.20925 9.04369 9.0815C3.19589 14.9537 0 22.6696 0 31C0 39.3304 3.19589 47.0463 9.04369 52.9185C14.8915 58.7907 22.6432 62 30.8709 62C39.0987 62 46.8504 58.7907 52.6982 52.9185C56.3021 49.2996 58.886 44.9978 60.3139 40.2863C60.5859 39.467 60.7899 38.5793 60.9939 37.7599L54.7381 31.1366L38.2827 13.5881Z"/>
@@ -863,22 +872,22 @@
         </a>
           <ul class="footer__navigation-list navigation">
             <li class="navigation__item">
-              <a class="navigation__link footer__link link" href="#">Туры</a>
+              <a class="navigation__link footer__link link" href="#tours">Туры</a>
             </li>
             <li class="navigation__item">
-              <a class="navigation__link footer__link link" href="#">Обучение</a>
+              <a class="navigation__link footer__link link" href="#training">Обучение</a>
             </li>
             <li class="navigation__item">
-              <a class="navigation__link footer__link link" href="#">О нас</a>
+              <a class="navigation__link footer__link link" href="#about">О нас</a>
             </li>
             <li class="navigation__item">
-              <a class="navigation__link footer__link link" href="#">Отзывы</a>
+              <a class="navigation__link footer__link link" href="#reviews">Отзывы</a>
             </li>
             <li class="navigation__item">
-              <a class="navigation__link footer__link link" href="#">Фотографии</a>
+              <a class="navigation__link footer__link link" href="#gallery">Фотографии</a>
             </li>
             <li class="navigation__item">
-              <a class="navigation__link footer__link link" href="#">Контакты</a>
+              <a class="navigation__link footer__link link" href="#contacts">Контакты</a>
             </li>
           </ul>
         <div class="footer__phones-wrapper">

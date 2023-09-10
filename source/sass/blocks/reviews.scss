@@ -1,10 +1,13 @@
 .reviews {
+  position: relative;
   width: 100%;
-  max-width: 1440px;
+  max-width: 100%;
   padding-top: 75px;
   margin: 0 auto;
   color: $BaseDark;
   overflow-x: clip;
+  scroll-behavior: smooth;
+  z-index: 1;
 }
 
 .reviews__wrapper-content {
@@ -37,8 +40,11 @@
 
 .reviews__slider {
   width: 1610px;
-  overflow-x: hidden;
   box-shadow: 0 0 30px 0 rgba(28, 51, 116, 0.1);
+}
+
+.reviews__wrapper {
+  align-items: stretch;
 }
 
 .reviews.no-js .reviews__slider {
@@ -55,9 +61,10 @@
   .reviews {
     width: 100%;
     box-sizing: border-box;
-    padding-top: 65px;
+    padding-top: 42px;
     padding-left: 45px;
     padding-right: 45px;
+    overflow-x: clip;
   }
 
   .reviews__wrapper-content {
@@ -112,7 +119,6 @@
 
   .reviews__slider {
     width: 100%;
-    height: fit-content;
-    overflow: hidden;
+    height: auto;
   }
 }
