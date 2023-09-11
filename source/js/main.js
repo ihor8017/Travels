@@ -7,6 +7,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
   // Utils
   // ---------------------------------
+
   function setTabindexes(slider) {
     let sliderElement = slider.wrapperEl;
     let AllInteractiveElements = sliderElement.querySelectorAll('a, button, iframe');
@@ -20,6 +21,42 @@ window.addEventListener('DOMContentLoaded', () => {
         interractivElementInActive.forEach((item) => {
           item.setAttribute('tabindex', '0');
         });
+      }
+    });
+  }
+
+  function renderIframe(slider) {
+    let sliderElement = slider.wrapperEl;
+    let iframes = sliderElement.querySelectorAll('iframe');
+    if (isActiveVideo || isActiveAudio) {
+      iframes.forEach((element) => {
+        element.src = '';
+      });
+    }
+    let slides = sliderElement.querySelectorAll('.swiper-slide');
+    slides.forEach((item, index) => {
+      if (index === slider.activeIndex && item.closest('iframe') && item.closest('.tour-card__audio')) {
+        let audioBlock = item.querySelector('.tour-card__audio');
+        audioFrame.src = audioSrc;
+        audioBlock.innerHTML = '';
+        audioBlock.appendChild(audioFrame);
+      }
+      if (isActiveAudio && !item.closest('iframe') && (item.closest('.tour-card__audio'))) {
+        let audioBlock = item.querySelector('.tour-card__audio');
+        audioBlock.innerHTML = '';
+        audioFrame.src = '';
+        audioBlock.appendChild(audioFrame);
+      }
+      if (item.closest('.swiper-slide-active') && item.closest('iframe') && item.closest('.tour-card__video')) {
+        let videoBlock = item.querySelector('.tour-card__video');
+        videoFrame.src = videoSrc;
+        videoBlock.innerHTML = '';
+        videoBlock.appendChild(videoFrame);
+      }
+      if (isActiveVideo && !item.closest('iframe') && (item.closest('.tour-card__video'))) {
+        let videoBlock = item.querySelector('.tour-card__video');
+        videoBlock.innerHTML = '';
+        videoBlock.appendChild(videoFrame);
       }
     });
   }
@@ -46,9 +83,6 @@ window.addEventListener('DOMContentLoaded', () => {
       heroSlider.classList.remove('hero__no-js');
       const slider = new Swiper('.hero__swiper', {
         // Optional parameters
-        preventClicksPropagation: false,
-        passiveListeners: true,
-        slidesPerView: 1,
         loop: true,
         speed: 300,
         pagination: {
@@ -59,6 +93,8 @@ window.addEventListener('DOMContentLoaded', () => {
       });
       slider;
       setTabindexes(slider);
+      renderIframe(slider);
+      slider.on('slideChange', renderIframe);
       slider.on('slideChange', setTabindexes);
     } else {
       return;
@@ -321,6 +357,7 @@ window.addEventListener('DOMContentLoaded', () => {
               element.style.background = 'linear-gradient(143deg, rgba(15, 20, 41, 0.33) 0%, rgba(15, 20, 41, 0) 100%)';
               element.style.zIndex = '0';
             });
+            document.body.style.overflow = 'visible';
           } else {
             button.classList.add('header__toggle--open');
             button.classList.remove('header__toggle--closed');
@@ -329,6 +366,7 @@ window.addEventListener('DOMContentLoaded', () => {
               element.style.background = 'rgba(0, 0, 0, 0.5)';
               element.style.zIndex = '10';
             });
+            document.body.style.overflow = 'hidden';
           }
         });
         window.addEventListener('resize', () => {
@@ -340,6 +378,7 @@ window.addEventListener('DOMContentLoaded', () => {
             button.classList.add('header__toggle--closed');
             button.classList.remove('header__toggle--open');
             navigation.classList.remove('header__navigation--open');
+            document.body.style.overflow = 'visible';
           }
         });
         const navigationList = document.querySelector('.header__navigation-list');
@@ -353,6 +392,7 @@ window.addEventListener('DOMContentLoaded', () => {
               element.style.background = 'linear-gradient(143deg, rgba(15, 20, 41, 0.33) 0%, rgba(15, 20, 41, 0) 100%)';
               element.style.zIndex = '0';
             });
+            document.body.style.overflow = 'visible';
           }
         });
       };
@@ -423,8 +463,12 @@ window.addEventListener('DOMContentLoaded', () => {
     }
   };
   mapViewer();
-
-
+  let videoSrc = 'https://www.youtube.com/embed/9TZXsZItgdw?&autoplay=1';
+  let audioSrc = 'https://music.yandex.ru/iframe/#track/112912322/25474374';
+  let videoFrame;
+  let audioFrame;
+  let isActiveAudio = false;
+  let isActiveVideo = false;
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана
   window.addEventListener('load', () => {
@@ -445,13 +489,15 @@ window.addEventListener('DOMContentLoaded', () => {
             newIframe.classList.add('video-player__audio');
             newIframe.style.display = 'block';
             newIframe.style.width = '100%';
-            newIframe.style.height = 'auto';
+            newIframe.style.height = '100%';
             item.style.zIndex = '6';
-            newIframe.src = 'https://music.yandex.ru/iframe/#track/112912322/25474374';
+            newIframe.src = audioSrc;
             newIframe.title = 'Audio records';
             newIframe.insertAdjacentHTML('afterbegin', 'Слушайте <a href=\'https://music.yandex.ru/album/25474374/track/112912322\'>001. Конец фронтенда, одинаковые фреймворки и логические свойства</a> на Яндекс Музыке');
             playButton.style.display = 'none';
             item.appendChild(newIframe);
+            isActiveAudio = true;
+            audioFrame = newIframe;
           });
         });
       } else {
@@ -461,26 +507,31 @@ window.addEventListener('DOMContentLoaded', () => {
     playAudio();
 
     const playVideo = function () {
-      const videoPlayer = document.querySelector('.tour-card__video');
-      if (videoPlayer) {
-        const playButton = videoPlayer.querySelector('.tour-card__play-button');
-        const previewer = videoPlayer.querySelector('picture');
-        let source = playButton.getAttribute('href');
-        playButton.addEventListener('click', (evt) => {
-          evt.preventDefault();
-          playButton.style.display = 'none';
-          const newIframe = document.createElement('iframe');
-          newIframe.classList.add('video-player__video');
-          newIframe.style.display = 'block';
-          newIframe.style.width = '100%';
-          newIframe.style.height = '100%';
-          videoPlayer.style.zIndex = '6';
-          newIframe.src = source;
-          newIframe.title = 'YouTube video player';
-          newIframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
-          newIframe.allowFullscreen = true;
-          previewer.style.display = 'none';
-          videoPlayer.appendChild(newIframe);
+      const videoPlayer = document.querySelectorAll('.tour-card__video');
+      if (videoPlayer.length) {
+        videoPlayer.forEach((item) => {
+          const playButton = item.querySelector('.tour-card__play-button');
+          const previewer = item.querySelector('picture');
+          let source = playButton.getAttribute('href');
+          playButton.addEventListener('click', (evt) => {
+            evt.preventDefault();
+            playButton.style.display = 'none';
+            const newIframe = document.createElement('iframe');
+            newIframe.classList.add('video-player__video');
+            newIframe.style.display = 'block';
+            newIframe.style.width = '100%';
+            newIframe.style.height = '100%';
+            item.style.zIndex = '6';
+            newIframe.src = source;
+            newIframe.title = 'YouTube video player';
+            newIframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+            newIframe.allowFullscreen = true;
+            previewer.style.display = 'none';
+            item.appendChild(newIframe);
+            isActiveVideo = true;
+            videoFrame = newIframe;
+            videoFrame.allow = 'accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+          });
         });
       } else {
         return;
