@@ -3204,7 +3204,6 @@ button,
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  box-sizing: border-box;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
@@ -3254,6 +3253,14 @@ button,
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: end;
+}
+
+.tour-card__video--videoActivated .tour-card__play-button {
+  display: none;
+}
+
+.tour-card__video--videoActivated picture {
+  display: none;
 }
 
 .tour-card__photo {
@@ -3313,6 +3320,10 @@ button,
   left: 43.1%;
   width: 47px;
   height: 47px;
+}
+
+.tour-card__audio--audioActivated .tour-card__play-button {
+  display: none;
 }
 
 .tour-card__button {
@@ -4175,19 +4186,17 @@ button,
   }
   .tours-card__nights {
     padding-right: 21px;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2/3;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1/2;
   }
   .tours-card__days {
     -ms-grid-column: 1;
     -ms-grid-column-span: 1;
     grid-column: 1/2;
-    -ms-grid-row: 1;
-    -ms-grid-row-span: 1;
-    grid-row: 1/2;
-  }
-  .tours-card__nights {
-    -ms-grid-column: 2;
-    -ms-grid-column-span: 1;
-    grid-column: 2/3;
     -ms-grid-row: 1;
     -ms-grid-row-span: 1;
     grid-row: 1/2;

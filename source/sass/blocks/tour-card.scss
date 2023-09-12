@@ -51,6 +51,14 @@
   }
 }
 
+.tour-card__video--videoActivated .tour-card__play-button {
+  display: none;
+}
+
+.tour-card__video--videoActivated picture {
+  display: none;
+}
+
 .tour-card__photo {
   position: absolute;
   display: grid;
@@ -98,6 +106,10 @@
     width: 47px;
     height: 47px;
   }
+}
+
+.tour-card__audio--audioActivated .tour-card__play-button {
+  display: none;
 }
 
 .tour-card__button {

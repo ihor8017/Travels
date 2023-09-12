@@ -25,42 +25,6 @@ window.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  function renderIframe(slider) {
-    let sliderElement = slider.wrapperEl;
-    let iframes = sliderElement.querySelectorAll('iframe');
-    if (isActiveVideo || isActiveAudio) {
-      iframes.forEach((element) => {
-        element.src = '';
-      });
-    }
-    let slides = sliderElement.querySelectorAll('.swiper-slide');
-    slides.forEach((item, index) => {
-      if (index === slider.activeIndex && item.closest('iframe') && item.closest('.tour-card__audio')) {
-        let audioBlock = item.querySelector('.tour-card__audio');
-        audioFrame.src = audioSrc;
-        audioBlock.innerHTML = '';
-        audioBlock.appendChild(audioFrame);
-      }
-      if (isActiveAudio && !item.closest('iframe') && (item.closest('.tour-card__audio'))) {
-        let audioBlock = item.querySelector('.tour-card__audio');
-        audioBlock.innerHTML = '';
-        audioFrame.src = '';
-        audioBlock.appendChild(audioFrame);
-      }
-      if (item.closest('.swiper-slide-active') && item.closest('iframe') && item.closest('.tour-card__video')) {
-        let videoBlock = item.querySelector('.tour-card__video');
-        videoFrame.src = videoSrc;
-        videoBlock.innerHTML = '';
-        videoBlock.appendChild(videoFrame);
-      }
-      if (isActiveVideo && !item.closest('iframe') && (item.closest('.tour-card__video'))) {
-        let videoBlock = item.querySelector('.tour-card__video');
-        videoBlock.innerHTML = '';
-        videoBlock.appendChild(videoFrame);
-      }
-    });
-  }
-
   iosVhFix();
 
   // Modules
@@ -93,9 +57,23 @@ window.addEventListener('DOMContentLoaded', () => {
       });
       slider;
       setTabindexes(slider);
-      renderIframe(slider);
-      slider.on('slideChange', renderIframe);
       slider.on('slideChange', setTabindexes);
+      slider.on('slideChange', function () {
+        if (document.querySelector('.hero__swiper .video-player__video')) {
+          document.querySelector('.hero__swiper .video-player__video').remove();
+        }
+        if (document.querySelector('.tour-card__video--videoActivated')) {
+          document.querySelector('.tour-card__video--videoActivated').classList.remove('tour-card__video--videoActivated');
+        }
+      });
+      slider.on('slideChange', function () {
+        if (document.querySelector('.hero__swiper .audio-player__audio')) {
+          document.querySelector('.hero__swiper .audio-player__audio').remove();
+        }
+        if (document.querySelector('.tour-card__audio--audioActivated')) {
+          document.querySelector('.tour-card__audio--audioActivated').classList.remove('tour-card__audio--audioActivated');
+        }
+      });
     } else {
       return;
     }
@@ -465,10 +443,7 @@ window.addEventListener('DOMContentLoaded', () => {
   mapViewer();
   let videoSrc = 'https://www.youtube.com/embed/9TZXsZItgdw?&autoplay=1';
   let audioSrc = 'https://music.yandex.ru/iframe/#track/112912322/25474374';
-  let videoFrame;
-  let audioFrame;
-  let isActiveAudio = false;
-  let isActiveVideo = false;
+
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана
   window.addEventListener('load', () => {
@@ -484,9 +459,9 @@ window.addEventListener('DOMContentLoaded', () => {
           const playButton = item.querySelector('.tour-card__play-button');
           playButton.addEventListener('click', (evt) => {
             evt.preventDefault();
-            playButton.style.display = 'none';
+            item.classList.add('tour-card__audio--audioActivated');
             const newIframe = document.createElement('iframe');
-            newIframe.classList.add('video-player__audio');
+            newIframe.classList.add('audio-player__audio');
             newIframe.style.display = 'block';
             newIframe.style.width = '100%';
             newIframe.style.height = '100%';
@@ -494,10 +469,7 @@ window.addEventListener('DOMContentLoaded', () => {
             newIframe.src = audioSrc;
             newIframe.title = 'Audio records';
             newIframe.insertAdjacentHTML('afterbegin', 'Слушайте <a href=\'https://music.yandex.ru/album/25474374/track/112912322\'>001. Конец фронтенда, одинаковые фреймворки и логические свойства</a> на Яндекс Музыке');
-            playButton.style.display = 'none';
             item.appendChild(newIframe);
-            isActiveAudio = true;
-            audioFrame = newIframe;
           });
         });
       } else {
@@ -511,11 +483,10 @@ window.addEventListener('DOMContentLoaded', () => {
       if (videoPlayer.length) {
         videoPlayer.forEach((item) => {
           const playButton = item.querySelector('.tour-card__play-button');
-          const previewer = item.querySelector('picture');
           let source = playButton.getAttribute('href');
           playButton.addEventListener('click', (evt) => {
             evt.preventDefault();
-            playButton.style.display = 'none';
+            item.classList.add('tour-card__video--videoActivated');
             const newIframe = document.createElement('iframe');
             newIframe.classList.add('video-player__video');
             newIframe.style.display = 'block';
@@ -526,11 +497,7 @@ window.addEventListener('DOMContentLoaded', () => {
             newIframe.title = 'YouTube video player';
             newIframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
             newIframe.allowFullscreen = true;
-            previewer.style.display = 'none';
             item.appendChild(newIframe);
-            isActiveVideo = true;
-            videoFrame = newIframe;
-            videoFrame.allow = 'accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
           });
         });
       } else {
