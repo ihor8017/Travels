@@ -41,6 +41,8 @@
 }
 
 .contacts-list__item-info {
+  display: flex;
+  flex-direction: column;
   margin: 0;
   font-size: 16px;
   font-weight: 400;

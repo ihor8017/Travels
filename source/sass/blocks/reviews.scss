@@ -5,7 +5,6 @@
   padding-top: 75px;
   margin: 0 auto;
   color: $BaseDark;
-  overflow-x: clip;
   scroll-behavior: smooth;
   z-index: 1;
 }
@@ -64,7 +63,6 @@
     padding-top: 42px;
     padding-left: 45px;
     padding-right: 45px;
-    overflow-x: clip;
   }
 
   .reviews__wrapper-content {

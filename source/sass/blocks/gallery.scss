@@ -68,6 +68,12 @@
   gap: 10px;
 }
 
+@media (max-width: 1439px) {
+  .gallery__wrapper {
+    width: 1180px;
+  }
+}
+
 @media (max-width: $tablet-maxwidth) {
   .gallery {
     padding-top: 38px;

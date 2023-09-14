@@ -3,7 +3,6 @@
   width: 100%;
   max-width: 100%;
   margin: 0 auto;
-  overflow-x: clip;
   scroll-behavior: smooth;
   z-index: 1;
 }
@@ -50,7 +49,7 @@
   position: relative;
   width: 1200px;
   margin: 0 auto;
-  height: auto;
+  height: 100%;
   overflow: hidden;
   margin-bottom: 49px;
 }
@@ -135,6 +134,10 @@
   width: 30px;
 }
 
+.upcoming-tours__wrapper {
+  align-items: stretch;
+}
+
 @media (max-width: 1439px) {
   .upcoming-tours__bg-clouds {
     display: grid;
@@ -144,6 +147,14 @@
     bottom: -653px;
     right: auto;
     transform: translateX(717px);
+  }
+
+  .upcoming-tours__title {
+    padding-left: 10px;
+  }
+
+  .upcoming-tours__title-shadow {
+    left: 10px;
   }
 }
 
@@ -171,6 +182,7 @@
   }
 
   .upcoming-tours__title {
+    padding-left: 0;
     font-size: 25px;
     line-height: 25px;
     margin-left: -5px;

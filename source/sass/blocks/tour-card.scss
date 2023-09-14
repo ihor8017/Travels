@@ -198,6 +198,12 @@
   height: 24px;
 }
 
+@media (max-width: 1439px) {
+  .tour-card {
+    width: 1180px;
+  }
+}
+
 @media (max-width: $tablet-maxwidth) {
   .tour-card {
     flex-direction: column;

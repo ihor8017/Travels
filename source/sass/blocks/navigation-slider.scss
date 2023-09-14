@@ -71,6 +71,7 @@
 .navigation-slider__button-next:active.swiper-button-disabled {
   background-color: rgba(2, 102, 193, 0.1);
   border: 1px solid rgba(2, 102, 193, 0.1);
+  cursor: auto;
 }
 
 .navigation-slider__button-prev:hover.swiper-button-disabled.navigation-slider__button-prev::after,

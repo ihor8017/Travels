@@ -323,54 +323,57 @@ window.addEventListener('DOMContentLoaded', () => {
     if (navigation) {
       const button = document.querySelector('.header__toggle');
       let overlays = document.querySelectorAll('.hero__overlay');
+      let overlay = document.querySelector('.overlay');
+      function closeMenu() {
+        button.classList.add('header__toggle--closed');
+        button.classList.remove('header__toggle--open');
+        navigation.classList.remove('header__navigation--open');
+        overlays.forEach((element) => {
+          element.style.background = 'linear-gradient(143deg, rgba(15, 20, 41, 0.33) 0%, rgba(15, 20, 41, 0) 100%)';
+          element.style.zIndex = '0';
+          overlay.style.display = 'none';
+        });
+        document.body.style.overflowX = 'hidden';
+      }
+      function openMenu() {
+        button.classList.add('header__toggle--open');
+        button.classList.remove('header__toggle--closed');
+        navigation.classList.add('header__navigation--open');
+        overlays.forEach((element) => {
+          element.style.background = 'rgba(0, 0, 0, 0.5)';
+          element.style.zIndex = '10';
+        });
+        overlay.style.display = 'block';
+        document.body.style.overflow = 'hidden';
+      }
+      function onExternClick(evt) {
+        if (!evt.target.closest('.header__navigation')) {
+          document.removeEventListener('click', onExternClick, true);
+          closeMenu();
+        }
+      }
+
       const toggleNavigation = () => {
         navigation.classList.remove('no-js');
         button.addEventListener('click', (evt) => {
           evt.preventDefault();
           if (button.classList.contains('header__toggle--open')) {
-            button.classList.add('header__toggle--closed');
-            button.classList.remove('header__toggle--open');
-            navigation.classList.remove('header__navigation--open');
-            overlays.forEach((element) => {
-              element.style.background = 'linear-gradient(143deg, rgba(15, 20, 41, 0.33) 0%, rgba(15, 20, 41, 0) 100%)';
-              element.style.zIndex = '0';
-            });
-            document.body.style.overflow = 'visible';
+            closeMenu();
           } else {
-            button.classList.add('header__toggle--open');
-            button.classList.remove('header__toggle--closed');
-            navigation.classList.add('header__navigation--open');
-            overlays.forEach((element) => {
-              element.style.background = 'rgba(0, 0, 0, 0.5)';
-              element.style.zIndex = '10';
-            });
-            document.body.style.overflow = 'hidden';
+            document.addEventListener('click', onExternClick);
+            openMenu();
           }
         });
         window.addEventListener('resize', () => {
           if (desktop.matches) {
-            overlays.forEach((element) => {
-              element.style.background = 'linear-gradient(143deg, rgba(15, 20, 41, 0.33) 0%, rgba(15, 20, 41, 0) 100%)';
-              element.style.zIndex = '0';
-            });
-            button.classList.add('header__toggle--closed');
-            button.classList.remove('header__toggle--open');
-            navigation.classList.remove('header__navigation--open');
-            document.body.style.overflow = 'visible';
+            closeMenu();
           }
         });
         const navigationList = document.querySelector('.header__navigation-list');
         navigationList.addEventListener('click', (evt) => {
           const target = evt.target;
           if (target.closest('.navigation__link')) {
-            button.classList.add('header__toggle--closed');
-            button.classList.remove('header__toggle--open');
-            navigation.classList.remove('header__navigation--open');
-            overlays.forEach((element) => {
-              element.style.background = 'linear-gradient(143deg, rgba(15, 20, 41, 0.33) 0%, rgba(15, 20, 41, 0) 100%)';
-              element.style.zIndex = '0';
-            });
-            document.body.style.overflow = 'visible';
+            closeMenu();
           }
         });
       };

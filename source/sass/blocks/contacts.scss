@@ -55,6 +55,12 @@
   height: 324px;
 }
 
+@media (max-width: 1439px) {
+  .contacts__container {
+    width: 1180px;
+  }
+}
+
 @media (max-width: $tablet-maxwidth) {
   .contacts {
     padding-top: 90px;

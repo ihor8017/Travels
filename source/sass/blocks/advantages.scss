@@ -1,11 +1,11 @@
 .advantages {
+  position: relative;
   width: 100%;
   max-width: 100%;
   margin: 0 auto;
   padding-top: 136px;
   padding-bottom: 100px;
   color: $BaseDark;
-  overflow-x: clip;
 
   .advantages__slide {
     width: 380px;
@@ -73,7 +73,7 @@
 .advantages__title-shadow {
   left: 50%;
   transform: translateX(-50%);
-  top: -72px;
+  top: 65px;
 }
 
 .advantages__slider {
@@ -104,7 +104,6 @@
   .advantages {
     padding-top: 89px;
     padding-bottom: 50px;
-    overflow: clip;
   }
 
   .advantages__wrapper {

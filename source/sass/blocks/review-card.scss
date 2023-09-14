@@ -22,8 +22,7 @@
 .review-card__text-content {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  align-items: stretch;
+  justify-content: flex-start;
   padding-top: 15px;
 }
 
