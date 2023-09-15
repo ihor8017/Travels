@@ -88,3 +88,23 @@
   background-color: rgba(2, 102, 193, 0.1);
   border: 1px solid rgba(2, 102, 193, 0.1);
 }
+
+@media (max-width: 1439px) {
+  .navigation-slider__button-next {
+    right: 11px;
+  }
+
+  .navigation-slider__button-prev {
+    right: 54px;
+  }
+}
+
+@media (max-width: $tablet-maxwidth) {
+  .navigation-slider__button-next {
+    right: 1px;
+  }
+
+  .navigation-slider__button-prev {
+    right: 44px;
+  }
+}

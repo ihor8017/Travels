@@ -333,6 +333,10 @@ window.addEventListener('DOMContentLoaded', () => {
           element.style.zIndex = '0';
           overlay.style.display = 'none';
         });
+        const cards = document.querySelectorAll('.hero__tour');
+        cards.forEach((element) => {
+          element.classList.add('hero__tour--padding');
+        });
         document.body.style.overflowX = 'hidden';
       }
       function openMenu() {
@@ -342,6 +346,10 @@ window.addEventListener('DOMContentLoaded', () => {
         overlays.forEach((element) => {
           element.style.background = 'rgba(0, 0, 0, 0.5)';
           element.style.zIndex = '10';
+        });
+        const cards = document.querySelectorAll('.hero__tour--padding');
+        cards.forEach((element) => {
+          element.classList.remove('hero__tour--padding');
         });
         overlay.style.display = 'block';
         document.body.style.overflow = 'hidden';
@@ -444,7 +452,6 @@ window.addEventListener('DOMContentLoaded', () => {
     }
   };
   mapViewer();
-  let videoSrc = 'https://www.youtube.com/embed/9TZXsZItgdw?&autoplay=1';
   let audioSrc = 'https://music.yandex.ru/iframe/#track/112912322/25474374';
 
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
@@ -455,6 +462,23 @@ window.addEventListener('DOMContentLoaded', () => {
     window.form = form;
     form.init();
 
+    const addPadding = () => {
+      const card = document.querySelector('.tour-card');
+      if (card.classList.contains('hero__tour--padding')) {
+        const phonesWrapper = document.querySelector('.header__phones-wrapper');
+        const phones = phonesWrapper.children;
+        const cards = document.querySelectorAll('.hero__tour--padding.tour-card');
+        let mobile = window.matchMedia('(min-width: 320px) and (max-width: 1199px)');
+        if (mobile && (phones.length > 1)) {
+          let heightWrapper = phonesWrapper.clientHeight;
+          let heightPhone = phones[0].clientHeight;
+          cards.forEach((element) => {
+            element.style.marginTop = (heightWrapper - heightPhone) + 'px';
+          });
+        }
+      }
+    };
+    addPadding();
     const playAudio = function () {
       const audioPlayer = document.querySelectorAll('.tour-card__audio');
       if (audioPlayer.length) {

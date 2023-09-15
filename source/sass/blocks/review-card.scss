@@ -80,6 +80,7 @@
   }
 
   .review-card__name {
+    margin-top: 16px;
     font-size: 12px;
     line-height: normal;
   }
@@ -120,5 +121,11 @@
 
   .review-card__reviewer-info {
     padding-bottom: 0;
+  }
+
+  .review-card__name {
+    margin-top: 5px;
+    font-size: 12px;
+    line-height: normal;
   }
 }

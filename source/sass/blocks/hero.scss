@@ -179,7 +179,7 @@
 
 @media (max-width: $mobile-maxwidth) {
   .hero__swiper {
-    aspect-ratio: 320 / 579;
+    aspect-ratio: 320 / 568;
     max-height: 768px;
   }
 
@@ -220,7 +220,7 @@
 
     .hero__image {
       width: 100%;
-      height: auto;
+      height: 100%;
     }
   }
 }
