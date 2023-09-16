@@ -6527,6 +6527,7 @@ body {
   font-family: "Montserrat", "Arial", sans-serif;
   color: #ffffff;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 a {
