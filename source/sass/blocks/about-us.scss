@@ -92,6 +92,10 @@
     left: auto;
     transform: translateX(-120px);
   }
+
+  .about-us__wrapper-text {
+    padding-right: 10px;
+  }
 }
 
 @media (max-width: $tablet-maxwidth) {

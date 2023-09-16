@@ -124,6 +124,12 @@
   object-fit: cover;
 }
 
+@media (max-width: 1439px) {
+  .hero__pagination {
+    right: 10px;
+  }
+}
+
 @media (max-width: $tablet-maxwidth) {
   .hero__swiper {
     aspect-ratio: 768 / 1024;
