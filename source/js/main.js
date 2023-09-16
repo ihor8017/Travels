@@ -337,7 +337,9 @@ window.addEventListener('DOMContentLoaded', () => {
         cards.forEach((element) => {
           element.classList.add('hero__tour--padding');
         });
+        document.body.style.overflow = 'visible';
         document.body.style.overflowX = 'hidden';
+        console.log('otrabotal close');
       }
       function openMenu() {
         button.classList.add('header__toggle--open');
